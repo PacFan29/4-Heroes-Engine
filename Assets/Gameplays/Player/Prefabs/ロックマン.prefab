@@ -6714,7 +6714,7 @@ MonoBehaviour:
   SlopeRollDown: 0
   Fall: 12.5
   PassSpeed: 45
-  MaxSpeed: 80
+  MaxSpeed: 40
   AirAcc: 2.5
   AirFrc: 15.5
   JumpForce: 63

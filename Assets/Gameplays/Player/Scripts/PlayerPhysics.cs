@@ -16,8 +16,6 @@ public abstract class PlayerPhysics : DimensionManager
     public float Slope = 0.625f;
     public float SlopeRollUp = 0.390625f;
     public float SlopeRollDown = 1.5625f;
-    public float Fall = 12.5f;
-    public float PassSpeed = 0f;
     public float MaxSpeed = 80f;
     //空中速度定数
     [Header("空中速度定数（通常）")]
@@ -629,7 +627,7 @@ public abstract class PlayerPhysics : DimensionManager
         SpeedC["slp"] = Slope;
         SpeedC["slprollup"] = SlopeRollUp;
         SpeedC["slprolldown"] = SlopeRollDown;
-        SpeedC["fall"] = Fall;
+        SpeedC["fall"] = 12.5f;
 
         AirborneC["airacc"] = AirAcc;
         AirborneC["airfrc"] = AirFrc;
