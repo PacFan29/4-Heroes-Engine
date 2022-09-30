@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Gameplays/Scenes/TitleScreen.unity
+    guid: 5a8e8679e93d75447b29bc8a89045f23
+  - enabled: 1
+    path: Assets/Gameplays/Scenes/WorldMap.unity
+    guid: 43abaa17a98db9245adf8a8736b518f0
+  - enabled: 1
+    path: Assets/Gameplays/Scenes/ZoneScreen.unity
+    guid: 1838624769733bb43be5218badea0829
+  - enabled: 1
+    path: Assets/Gameplays/Scenes/Stages/Test/OpenWorld.unity
+    guid: a52fa4e26d5033944819f8a4be9160f8
+  - enabled: 1
+    path: Assets/Gameplays/Scenes/Stages/Test/Mario1-1.unity
+    guid: 1e8c9f3b4ef68c14f8db5e3be485fd07
+  - enabled: 1
+    path: Assets/Gameplays/Scenes/Stages/Test/ModernSonicStage.unity
+    guid: fa447ba0677de7a4c91af571816acd3a
+  - enabled: 1
+    path: Assets/Gameplays/Scenes/Stages/Test/BossStageTest.unity
+    guid: 17f6d01be62708b47a656c749affc0c0
+  - enabled: 1
+    path: Assets/Gameplays/Scenes/ResultScreen.unity
+    guid: 2351d4c15f57a0e4b9dbdeffd185521f
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 044922be283c51549b8723967242c52c, type: 2}
