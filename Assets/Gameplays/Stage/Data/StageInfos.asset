@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58cc967b9abde7e41bbd8a2d8fb5bcbf, type: 3}
+  m_Name: StageInfos
+  m_EditorClassIdentifier: 
+  worlds:
+  - stages:
+    - targetScore: 200000
+      targetTime: 600
+      stageType: 0
+      openWorldAsDefault: 1
+      subtitle: "\u30AA\u30FC\u30D7\u30F3\u30EF\u30FC\u30EB\u30C9"
+      cleared: 0
+      unlocked: 1
+      highScore: 0
+      bestTime: 5999999
+      bestCoins: 0
+      maxCombo: 0
+      averageSpeed: 0
+      noDamage: 0
+      greenStars: 000000
+      bestRank: 0
+    - targetScore: 70000
+      targetTime: 300
+      stageType: 0
+      openWorldAsDefault: 0
+      subtitle: "\u521D\u4EE3\u30B9\u30FC\u30D1\u30FC\u30DE\u30EA\u30AA\u30D6\u30E9\u30B6\u30FC\u30BA\u3088\u308A"
+      cleared: 0
+      unlocked: 1
+      highScore: 0
+      bestTime: 5999999
+      bestCoins: 20
+      maxCombo: 9
+      averageSpeed: 0
+      noDamage: 0
+      greenStars: 
+      bestRank: 0
+    - targetScore: 120000
+      targetTime: 300
+      stageType: 2
+      openWorldAsDefault: 1
+      subtitle: "\u30BD\u30CB\u30C3\u30AF\u30B9\u30C6\u30FC\u30B8"
+      cleared: 0
+      unlocked: 1
+      highScore: 0
+      bestTime: 5999999
+      bestCoins: 0
+      maxCombo: 0
+      averageSpeed: 0
+      noDamage: 0
+      greenStars: 000000
+      bestRank: 0
+    - targetScore: 50000
+      targetTime: 60
+      stageType: 1
+      openWorldAsDefault: 0
+      subtitle: "\u30DC\u30B9\u30B9\u30C6\u30FC\u30B8"
+      cleared: 0
+      unlocked: 1
+      highScore: 0
+      bestTime: 5999999
+      bestCoins: 0
+      maxCombo: 0
+      averageSpeed: 0
+      noDamage: 0
+      greenStars: 
+      bestRank: 0

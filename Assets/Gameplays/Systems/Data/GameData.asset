@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1dbf0c9116b0d48932468372589a65, type: 3}
+  m_Name: GameData
+  m_EditorClassIdentifier: 
+  coins: 2914
+  HUDType: 0
+  character: 2
+  HUDStyle: 0
+  openWorldAsDefault: 0
+  characterIds: 0c000000ffffffffffffffffffffffff
+  HPs: e7030000e7030000e7030000e7030000
+  lives: 02000000020000000200000002000000
+  powerUps: 01000000000000000000000000000000
+  shields: 00000000000000000000000000000000
+  stockItems:
+  - amounts: 1
+    megaManOnly: 0
+    special: 0
+    limit: 1
+    sprites:
+    - {fileID: 21300000, guid: cc0d31a03e8b72c41bba261499ac4741, type: 3}
+  - amounts: 0
+    megaManOnly: 1
+    special: 0
+    limit: 1
+    sprites:
+    - {fileID: 21300000, guid: cc0d31a03e8b72c41bba261499ac4741, type: 3}
+  - amounts: 1
+    megaManOnly: 0
+    special: 0
+    limit: 3
+    sprites:
+    - {fileID: 21300000, guid: 842a3eabba86650428e03577fc54f929, type: 3}
+    - {fileID: 21300000, guid: 67ccb4efd909fd149be33bc02699450d, type: 3}
+    - {fileID: 21300000, guid: b408821e289c9a84698ae6e5a729a67d, type: 3}
+  - amounts: 1
+    megaManOnly: 0
+    special: 0
+    limit: 4
+    sprites:
+    - {fileID: 21300000, guid: 30e34b2a9cbaf204e8655a9643707f8b, type: 3}
+    - {fileID: 21300000, guid: c6413e16db3a18e4e88c943a2cee394f, type: 3}
+    - {fileID: 21300000, guid: 0027cc37dea47694f92ebe29df7fc034, type: 3}
+    - {fileID: 21300000, guid: 702cc474acf92254b95315de3e36009a, type: 3}
+  - amounts: 0
+    megaManOnly: 0
+    special: 1
+    limit: 9
+    sprites:
+    - {fileID: 21300000, guid: f515755f16dfa2d49a0c47f62889688e, type: 3}
+  - amounts: 0
+    megaManOnly: 1
+    special: 1
+    limit: 9
+    sprites:
+    - {fileID: 21300000, guid: b710911821d68d447aaa67c2d32706ab, type: 3}
+  - amounts: 0
+    megaManOnly: 0
+    special: 1
+    limit: 1
+    sprites:
+    - {fileID: 21300000, guid: 9046cc54e02b8674fade9302636e001c, type: 3}
+  greenStars: 00000000000000
+  totalTime: 0
+  isCpPassed: 0
+  CpPosition: {x: 0, y: 0, z: 0}

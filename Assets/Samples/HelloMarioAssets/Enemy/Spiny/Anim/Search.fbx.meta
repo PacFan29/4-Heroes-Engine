@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: aea5933a16786f84aa1ba47686a05bfb
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bone0000
+    100002: bone0001
+    100004: bone0002
+    100006: bone0003
+    100008: bone0004
+    100010: bone0005
+    100012: bone0006
+    100014: bone0007
+    100016: bone0008
+    100018: bone0009
+    100020: bone0010
+    100022: bone0011
+    100024: bone0012
+    100026: bone0013
+    100028: bone0014
+    100030: bone0015
+    100032: bone0016
+    100034: bone0017
+    100036: //RootNode
+    100038: AllRoot
+    100040: BLegLeft1
+    100042: BLegLeft2
+    100044: BLegRight1
+    100046: BLegRight2
+    100048: FLegLeft1
+    100050: FLegLeft2
+    100052: FLegRight1
+    100054: FLegRight2
+    100056: Head
+    100058: JointRoot
+    100060: Model
+    100062: nw4f_root
+    100064: polySurface116
+    100066: polySurface117
+    100068: polySurface118
+    100070: polySurface135
+    100072: Shell
+    400000: bone0000
+    400002: bone0001
+    400004: bone0002
+    400006: bone0003
+    400008: bone0004
+    400010: bone0005
+    400012: bone0006
+    400014: bone0007
+    400016: bone0008
+    400018: bone0009
+    400020: bone0010
+    400022: bone0011
+    400024: bone0012
+    400026: bone0013
+    400028: bone0014
+    400030: bone0015
+    400032: bone0016
+    400034: bone0017
+    400036: //RootNode
+    400038: AllRoot
+    400040: BLegLeft1
+    400042: BLegLeft2
+    400044: BLegRight1
+    400046: BLegRight2
+    400048: FLegLeft1
+    400050: FLegLeft2
+    400052: FLegRight1
+    400054: FLegRight2
+    400056: Head
+    400058: JointRoot
+    400060: Model
+    400062: nw4f_root
+    400064: polySurface116
+    400066: polySurface117
+    400068: polySurface118
+    400070: polySurface135
+    400072: Shell
+    7400000: Noesis Frames
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Noesis Frames
+      takeName: Noesis Frames
+      firstFrame: 5
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: nw4f_root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: e77847ea32bbc2442ac360b20499cac1,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

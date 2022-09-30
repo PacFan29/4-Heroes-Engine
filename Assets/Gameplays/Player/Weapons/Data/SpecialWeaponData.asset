@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52595e948e80a4a469f7f7ba625dfa67, type: 3}
+  m_Name: SpecialWeaponData
+  m_EditorClassIdentifier: 
+  weapons:
+  - Enable: 0
+    Name: "\u30EF\u30A4\u30C9\u30EC\u30FC\u30B6\u30FC"
+    WeaponColor: {r: 0, g: 1, b: 0.5646708, a: 1}
+    Type: 3
+    Energy: 32
+    Consumption: 1
+    prefab: {fileID: 0}
+  - Enable: 1
+    Name: "\u30B9\u30E9\u30A4\u30B9\u30AD\u30E3\u30C3\u30C1\u30E3\u30FC"
+    WeaponColor: {r: 0, g: 0.6226415, b: 0.21422318, a: 1}
+    Type: 4
+    Energy: 32
+    Consumption: 0
+    prefab: {fileID: 8767434622220690901, guid: f18c7d3da3bde4046b4a12885009422e, type: 3}
+  - Enable: 0
+    Name: "\u30A6\u30A9\u30FC\u30BF\u30FC\u30B8\u30A7\u30C3\u30C8"
+    WeaponColor: {r: 0, g: 0.8106625, b: 1, a: 1}
+    Type: 5
+    Energy: 32
+    Consumption: 1
+    prefab: {fileID: 0}
+  - Enable: 0
+    Name: "\u30D6\u30EC\u30A4\u30D6\u30B9\u30D4\u30A2"
+    WeaponColor: {r: 0.66253996, g: 0, b: 1, a: 1}
+    Type: 6
+    Energy: 32
+    Consumption: 1
+    prefab: {fileID: 0}
+  - Enable: 1
+    Name: "\u30B9\u30D7\u30EC\u30C3\u30C9\u30C0\u30A4\u30CA\u30DE\u30A4\u30C8"
+    WeaponColor: {r: 1, g: 0.5231711, b: 0, a: 1}
+    Type: 7
+    Energy: 32
+    Consumption: 0
+    prefab: {fileID: 589707998981146735, guid: 2835b6384eb86b5468561a005a06748f, type: 3}
+  - Enable: 0
+    Name: "\u30DC\u30EB\u30C0\u30FC\u30A6\u30A9\u30FC\u30EB"
+    WeaponColor: {r: 0.6886792, g: 0.28574985, b: 0, a: 1}
+    Type: 0
+    Energy: 32
+    Consumption: 4
+    prefab: {fileID: 0}
+  - Enable: 0
+    Name: "\u30B3\u30ED\u30CA\u30D0\u30FC\u30B9\u30C8"
+    WeaponColor: {r: 0.8867924, g: 0, b: 0, a: 1}
+    Type: 0
+    Energy: 32
+    Consumption: 3
+    prefab: {fileID: 0}
+  - Enable: 0
+    Name: "\u30D5\u30E9\u30C3\u30B7\u30E5\u30C0\u30C3\u30B7\u30E5 "
+    WeaponColor: {r: 1, g: 0.9118239, b: 0, a: 1}
+    Type: 0
+    Energy: 20
+    Consumption: 2
+    prefab: {fileID: 0}

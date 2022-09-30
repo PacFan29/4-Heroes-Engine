@@ -1,0 +1,65 @@
+@startuml playerSettings
+actor プレイヤー as player
+boundary SonicPhysics.cs as sonicP
+boundary Object_Interactions.cs as obj
+participant Input as input
+boundary MarioActions.cs as marioA
+control _00Mario.cs as id00
+control _01Luigi.cs as id01
+control _02Peach.cs as id02
+control _03Yoshi.cs as id03
+control _04Wario.cs as id04
+boundary PacManActions.cs as pacA
+control _05PacMan.cs as id05
+control _06MsPacMan.cs as id06
+control _07PacJunior.cs as id07
+boundary MegaManActions.cs as rockA
+control _08MegaMan.cs as id08
+control _09Roll.cs as id09
+control _10ProtoMan.cs as id10
+control _11Bass.cs as id11
+boundary SonicActions.cs as sonicA
+control _12CSonic.cs as id12
+control _13Tails.cs as id13
+control _14Amy.cs as id14
+control _15Knuckles.cs as id15
+control _16MSonic.cs as id16
+
+player->sonicP:物理共通
+player->obj:オブジェクト管理
+player->input:基本操作：ジャンプ
+
+player->marioA:基本操作：360°歩行（物理）、ダッシュ、ヒップドロップ
+input<-marioA
+alt : public class _(id)Name{}、new _(id)Name().input();
+marioA<-id00:壁キック
+marioA<-id01:ハイジャンプ
+marioA<-id02:傘でゆっくり降りる
+marioA<-id03:踏ん張り、卵投げ等
+marioA<-id04:体当たり、特殊パワーアップ等
+end
+player->pacA:基本操作：360°歩行（x・z速度一定状態）
+input<-pacA
+alt : public class _(id)Name{}、new _(id)Name().input();
+pacA<-id05:バウンド、パックダッシュ、キック
+pacA<-id06:ID = 6
+pacA<-id07:ID = 7
+end
+player->rockA:基本操作：360°歩行（x・z速度一定状態）、スライディング（ダッシュ）
+input<-rockA
+alt : public class _(id)Name{}、new _(id)Name().input();
+rockA<-id08:チャージショット（攻撃力3）
+rockA<-id09:箒で攻撃
+rockA<-id10:ブルースストライク（攻撃力5）
+rockA<-id11:多方向バスター、ダッシュ＋ジャンプ
+end
+player->sonicA:基本操作：360°歩行（物理）、スピンダッシュ、転がり
+input<-sonicA
+alt : public class _(id)Name{}、new _(id)Name().input();
+sonicA<-id12:ドロップダッシュ等
+sonicA<-id13:飛行
+sonicA<-id14:ピコピコハンマー
+sonicA<-id15:滑空
+sonicA<-id16:ブースト、トリック等
+end
+@enduml
