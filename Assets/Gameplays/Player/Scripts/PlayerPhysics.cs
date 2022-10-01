@@ -78,6 +78,7 @@ public abstract class PlayerPhysics : DimensionManager
     protected bool onIce = false;
     private bool onIcePrevious = false;
     //水中
+    public bool underwaterTrigger = false;
     public bool underwater = false;
     private bool underwaterPrevious = false;
     //スピードアップ
@@ -250,10 +251,19 @@ public abstract class PlayerPhysics : DimensionManager
 
         rb.velocity = finalVelocity + conveyorVelocity + extraVelocity;
 
-        if (underwater != underwaterPrevious) {
-            constantSetUp();
+        if (metal) {
+            underwater = false;
+            if (underwater != underwaterPrevious) {
+                constantSetUp();
+            }
+            underwaterPrevious = false;
+        } else {
+            underwater = underwaterTrigger;
+            if (underwater != underwaterPrevious) {
+                constantSetUp();
+            }
+            underwaterPrevious = underwater;
         }
-        underwaterPrevious = underwater;
         
         if (speedUp != speedUpPrevious) {
             constantSetUp();
