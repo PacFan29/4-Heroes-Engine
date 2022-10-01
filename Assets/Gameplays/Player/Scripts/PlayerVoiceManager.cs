@@ -41,7 +41,7 @@ public class PlayerVoiceManager : MonoBehaviour
         VoicePlay(OtherVoices[index]);
     }
 
-    void VoicePlay(AudioClip[] voices) {
+    public void VoicePlay(AudioClip[] voices) {
         if (voices.Length < 1) return;
         
         int voiceIndex = UnityEngine.Random.Range(0, voices.Length);

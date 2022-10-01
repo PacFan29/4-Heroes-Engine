@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class _00Mario : MarioActions
 {
+    [Header("効果音(限定)")]
     public AudioClip wallJump;
     public AudioClip hipDropPre;
     public AudioClip hipDropLand;

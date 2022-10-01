@@ -16408,8 +16408,6 @@ MonoBehaviour:
   Slope: 0
   SlopeRollUp: 1.75
   SlopeRollDown: 1.75
-  Fall: 12.5
-  PassSpeed: 40
   MaxSpeed: 45
   AirAcc: 0.546875
   AirFrc: 0
@@ -16522,6 +16520,9 @@ MonoBehaviour:
   jumpBroad: {fileID: 8300000, guid: d27e7da25e254ac4f95e38468346931e, type: 3}
   throwFireball: {fileID: 8300000, guid: 72a9a056485fad647a12884278c9b496, type: 3}
   throwIceball: {fileID: 8300000, guid: 4210de45f324efa4781d8170165b6a80, type: 3}
+  jumpBroadVoices:
+  - {fileID: 8300000, guid: 8e7f5dabb893d2745bbfd2907f2ca8f7, type: 3}
+  - {fileID: 8300000, guid: a9bc27edb91cd1d4c9d8c1f23685f8f9, type: 3}
   wallJump: {fileID: 8300000, guid: b98240f95e8e83f47b21a2b9e86c07df, type: 3}
   hipDropPre: {fileID: 8300000, guid: 418854852677863489b661f0c0b3eb10, type: 3}
   hipDropLand: {fileID: 8300000, guid: 23d034b0ee75de44bb4c258149c689fa, type: 3}

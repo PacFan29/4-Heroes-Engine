@@ -23,6 +23,8 @@ public abstract class MarioActions : MonoBehaviour
     public AudioClip jumpBroad;
     public AudioClip throwFireball;
     public AudioClip throwIceball;
+    [Header("ボイス")]
+    public AudioClip[] jumpBroadVoices;
 
     void Start()
     {
@@ -71,6 +73,7 @@ public abstract class MarioActions : MonoBehaviour
 
             if (info.input.magnitude > 0 && crouchButton && info.XZmag > 0 && !info.isNarrow()) {
                 //幅跳び
+                voices.VoicePlay(jumpBroadVoices);
                 info.SoundPlay(jumpBroad);
                 actionId = 2;
                 info.Crouching = false;
@@ -213,6 +216,7 @@ public abstract class MarioActions : MonoBehaviour
         if (info.isGroundLayerC(hit)) {
             ContactPoint contact = hit.contacts[0];
             if (!info.Grounded && contact.normal.y < 0.1f && !info.canWallJump && !info.underwater && actionId == 2) {
+                voices.VoicePlay(voices.HurtVoices);
                 info.SoundPlay(info.damageSound);
                 StartCoroutine("HitWall", -info.skin.forward);
             }
