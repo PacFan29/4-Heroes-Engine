@@ -158,5 +158,6 @@ public class _08MegaMan : MegaManActions
         } else {
             bust.power = 1f;
         }
+        bust.powerUp = info.powerUpActive;
     }
 }

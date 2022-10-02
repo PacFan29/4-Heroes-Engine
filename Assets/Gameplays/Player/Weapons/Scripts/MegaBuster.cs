@@ -10,6 +10,13 @@ public class MegaBuster : ComboManager
     public bool stronger;
     private Rigidbody rb;
     public GameObject hitEffect;
+    [HideInInspector] public int powerUp = 0;
+
+    [Header("スキン")]
+    public GameObject[] normalBullets = new GameObject[3];
+    public GameObject[] fireBullets = new GameObject[3];
+    public GameObject[] iceBullets = new GameObject[3];
+    public GameObject[] thunderBullets = new GameObject[3];
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +29,28 @@ public class MegaBuster : ComboManager
     {
         rb.velocity = this.transform.forward * 50;
 
+        //スキン、サイズ
+        foreach (GameObject obj in normalBullets) {
+            if (obj != null) {
+                obj.SetActive(false);
+            }
+        }
+        foreach (GameObject obj in fireBullets) {
+            if (obj != null) {
+                obj.SetActive(false);
+            }
+        }
+        foreach (GameObject obj in iceBullets) {
+            if (obj != null) {
+                obj.SetActive(false);
+            }
+        }
+        foreach (GameObject obj in thunderBullets) {
+            if (obj != null) {
+                obj.SetActive(false);
+            }
+        }
+        
         switch (level) {
             case 2:
             //チャージショット(攻撃力 3)
@@ -38,6 +67,42 @@ public class MegaBuster : ComboManager
             default:
             this.transform.localScale = Vector3.one;
             break;
+        }
+        if (level == 3) {
+            switch (powerUp) {
+                case 0:
+                break;
+
+                case 1:
+                fireBullets[2].SetActive(true);
+                break;
+
+                case 2:
+                iceBullets[2].SetActive(true);
+                break;
+
+                case 3:
+                thunderBullets[2].SetActive(true);
+                break;
+            }
+        } else {
+            switch (powerUp) {
+                case 0:
+                normalBullets[level].SetActive(true);
+                break;
+                
+                case 1:
+                fireBullets[level].SetActive(true);
+                break;
+
+                case 2:
+                iceBullets[level].SetActive(true);
+                break;
+
+                case 3:
+                thunderBullets[level].SetActive(true);
+                break;
+            }
         }
 
         //追従
