@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,8 +22,8 @@ public class TrickBonusManager : MonoBehaviour
         "Radical!",
         "Tight!",
         "Awesome!",
-        "Extreme!",
-        "Perfect!"
+        "Wonderful!",
+        "Excellent!"
     };
     private int[] bonuses = {
         500,
@@ -68,17 +69,30 @@ public class TrickBonusManager : MonoBehaviour
 
     public void GetClassification() {
         increased = false;
-        trickBonus.text = bonusHeaders[index];
-        trickBonus.color = bonusColors[index];
+        if (BonusValue() >= 100000) {
+            trickBonus.text = "Unbelievable!";
+            trickBonus.color = new Color(0.8f, 1.0f, 0.95f, 1.0f);
+        } else {
+            trickBonus.text = bonusHeaders[Math.Min(index, 9)];
+            trickBonus.color = bonusColors[Math.Min(index, 9)];
+        }
 
         anim.enabled = true;
         anim.Play("TrickBonus", 0, 0);
     }
     public void GetPoints() {
-        trickBonus.text = bonuses[index].ToString("+###,###,##0");
+        trickBonus.text = BonusValue().ToString("+###,###,##0");
 	}
     public void ScoreIncrease() {
         increased = true;
-        player.scoreIncrease(bonuses[index]);
+        player.scoreIncrease(BonusValue());
+    }
+
+    int BonusValue() {
+        if (index >= 9) {
+            return (index - 5) * 2500;
+        } else {
+            return bonuses[index];
+        }
     }
 }

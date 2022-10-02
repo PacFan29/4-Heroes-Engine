@@ -626,7 +626,7 @@ public class _16MSonic : SonicActions
 
     void TrickBonus(int combo) {
         TrickBonusManager.player = info;
-        TrickBonusManager.startBonus = Math.Min(10, combo);
+        TrickBonusManager.startBonus = combo;
     }
 
     /* 壁キック前の設定 */
