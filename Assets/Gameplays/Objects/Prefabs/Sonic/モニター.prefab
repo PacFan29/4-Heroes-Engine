@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: fc3ea490e0308a54f90012d9282e46d3, type: 2}
-  monitorType: 3
+  monitorType: 0
   player: {fileID: 0}
   destroyed: 0
   monitorSkin: {fileID: 900631792494054989}

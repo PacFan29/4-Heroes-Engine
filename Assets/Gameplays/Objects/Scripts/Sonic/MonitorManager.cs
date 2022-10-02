@@ -163,6 +163,9 @@ public class MonitorManager : MonoBehaviour
             player.OneUp();
             break;
         }
+
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 
     void OnCollisionEnter(Collision col) {
