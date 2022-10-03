@@ -17,6 +17,12 @@ public class _08MegaMan : MegaManActions
     public AudioClip mBusterSound;
     public AudioClip chargeShotSound;
     public AudioClip slidingSound;
+    public AudioClip fireSound;
+    public AudioClip chargeFireSound;
+    public AudioClip iceSound;
+    public AudioClip chargeIceSound;
+    public AudioClip thunderSound;
+    public AudioClip chargeThunderSound;
 
     public void Update()
     {
@@ -48,7 +54,23 @@ public class _08MegaMan : MegaManActions
         クールダウン（ダブルギア）：20秒（バスター一弾しか撃てない）
         */
         if (info.ButtonsDown["X"] && (weaponId == 0 || weaponId >= 9)){
-            info.SoundPlay(busterSound);
+            switch (info.powerUpActive) {
+                case 1:
+                info.SoundPlay(fireSound);
+                break;
+                
+                case 2:
+                info.SoundPlay(iceSound);
+                break;
+                
+                case 3:
+                info.SoundPlay(thunderSound);
+                break;
+                
+                default:
+                info.SoundPlay(busterSound);
+                break;
+            }
 
             BusterShot(0, false);
         }
@@ -74,9 +96,35 @@ public class _08MegaMan : MegaManActions
             if (time >= 1.5) {
                 voices.Attack();
                 
+                switch (info.powerUpActive) {
+                    case 1:
+                    info.SoundPlay(chargeFireSound);
+                    break;
+                    
+                    case 2:
+                    info.SoundPlay(chargeIceSound);
+                    break;
+                    
+                    case 3:
+                    info.SoundPlay(chargeThunderSound);
+                    break;
+                }
                 info.SoundPlay(chargeShotSound);
                 BusterShot(2, false);
             } else if (time >= 0.5) {
+                switch (info.powerUpActive) {
+                    case 1:
+                    info.SoundPlay(fireSound);
+                    break;
+                    
+                    case 2:
+                    info.SoundPlay(iceSound);
+                    break;
+                    
+                    case 3:
+                    info.SoundPlay(thunderSound);
+                    break;
+                }
                 info.SoundPlay(mBusterSound);
                 BusterShot(1, false);
             }
