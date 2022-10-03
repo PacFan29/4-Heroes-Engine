@@ -109,12 +109,15 @@ public class _00Mario : MarioActions
         if (info.isGroundLayerC(hit)) {
             ContactPoint contact = hit.contacts[0];
             if (!info.Grounded && contact.normal.y < 0.1f && !info.canWallJump && !info.underwater && actionId != 2 && actionId >= 0 && info.finalVelocity.y < 0) {
-                if (!info.axisInput) info.axisInput = true;
-                if (actionId != 4) info.ForwardSetUp(Vector3.zero, 0f);
-                actionId = 4;
-                Debug.DrawRay(contact.point, contact.normal, Color.red, 1.25f);
-                contactNormal = contact.normal;
-                info.canWallJump = true;
+                Debug.Log(Vector3.Angle(info.skin.forward, contact.normal));
+                if (Vector3.Angle(info.skin.forward, contact.normal) >= 135f) {
+                    if (!info.axisInput) info.axisInput = true;
+                    if (actionId != 4) info.ForwardSetUp(Vector3.zero, 0f);
+                    actionId = 4;
+                    Debug.DrawRay(contact.point, contact.normal, Color.red, 1.25f);
+                    contactNormal = contact.normal;
+                    info.canWallJump = true;
+                }
             }
         }
     }
