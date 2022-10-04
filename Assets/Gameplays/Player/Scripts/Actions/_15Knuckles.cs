@@ -20,6 +20,12 @@ public class _15Knuckles : SonicActions
         //共通アクションの実行
         actions();
 
+        /*
+        ナックルズでしかできない技
+        ・滑空
+        ・壁に登る
+        */
+
         if (jumped) {
             info.rolling = false;
             jumpTime = 0.1f;

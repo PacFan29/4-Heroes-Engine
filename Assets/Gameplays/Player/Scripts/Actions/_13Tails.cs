@@ -18,6 +18,11 @@ public class _13Tails : SonicActions
     {
         //共通アクションの実行
         actions();
+        
+        /*
+        テイルスでしかできない技
+        ・飛行
+        */
 
         if (jumped) {
             info.rolling = false;

@@ -297,6 +297,11 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_02Peach.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_03Yoshi.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_09Roll.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_10ProtoMan.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_11Bass.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

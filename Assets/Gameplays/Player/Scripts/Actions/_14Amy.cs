@@ -21,6 +21,11 @@ public class _14Amy : SonicActions
         //共通アクションの実行
         actions();
 
+        /*
+        エミーでしかできない技
+        ・ハンマーで攻撃
+        */
+
         //スライディング
         if ((info.GetCrouchButton("RB") || info.GetCrouchButton("B")) && info.Grounded && !sliding && !info.rolling && actionId != 5) {
             if (info.XZmag <= 0 && info.input != Vector3.zero) {
