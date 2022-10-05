@@ -86,6 +86,7 @@
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_13Tails.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Mario\RingManager.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\WorldMapMainUI.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_09Roll.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Boss\Mega Man\Scripts\MegaManBossTemplate.cs" />
      <Compile Include="Assets\Gameplays\Player\Shields\ShieldAnimations.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\PlayerFootsteps.cs" />
@@ -132,6 +133,7 @@
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
      <Compile Include="Assets\Samples\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\SonicActions.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_03Yoshi.cs" />
      <Compile Include="Assets\Gameplays\Player\Weapons\Scripts\IceBall.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Bezier\CurveSample.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\LoopingSoundManager.cs" />
@@ -217,6 +219,7 @@
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_00Goomba.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_02PiranhaPlant.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\MeshProcessing\MeshVertex.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_02Peach.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Scripts\EnemyManager.cs" />
      <Compile Include="Assets\Gameplays\Player\Weapons\Scripts\MegaBuster.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\MeshProcessing\ExtrusionSegment.cs" />
@@ -237,6 +240,7 @@
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_05PacMan.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\CustomHUDs\MegaMan11HUD.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_11Bass.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\CameraFacing.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Example\RopeBuilder.cs" />
@@ -274,6 +278,7 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\PathFollower.cs" />
      <Compile Include="Assets\Gameplays\Player\Weapons\Data\SpecialWeaponData.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Boss\Scripts\VoiceManager.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_10ProtoMan.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
      <Compile Include="Assets\Samples\IgniteCoders\Simple Water Shader\Resources\WaterReflection.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
@@ -297,11 +302,6 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
-     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_02Peach.cs" />
-     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_03Yoshi.cs" />
-     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_09Roll.cs" />
-     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_10ProtoMan.cs" />
-     <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_11Bass.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

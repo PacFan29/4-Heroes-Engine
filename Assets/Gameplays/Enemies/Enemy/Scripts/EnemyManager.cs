@@ -14,6 +14,8 @@ public abstract class EnemyManager : DimensionManager
     protected bool active = true;
     public GameObject skin;
     public LayerMask GroundLayer;
+    public bool defended = false;
+    public bool spiked = false;
 
     [Header("エフェクト")]
     public GameObject vanishEffect;
@@ -54,12 +56,18 @@ public abstract class EnemyManager : DimensionManager
             DamageManager(player);
         }
     }
-    void OnCollisionStay(Collision col){
+    void OnCollisionEnter(Collision col){
         if (col.gameObject.tag == "Player" && HP > 0 && active){
             player = col.gameObject.GetComponent<PlayerInfo>();
             if (PlayerAttacking(col.gameObject)) {
                 DamageManager(player);
-            } else {
+            }
+        }
+    }
+    void OnCollisionStay(Collision col){
+        if (col.gameObject.tag == "Player" && HP > 0 && active){
+            player = col.gameObject.GetComponent<PlayerInfo>();
+            if (!PlayerAttacking(col.gameObject)) {
                 player.TakeDamage(5, this.transform.position);
             }
         }
@@ -71,12 +79,12 @@ public abstract class EnemyManager : DimensionManager
             TakeDamage(true, player, 99, 0, false, null);
         } else if (player.rolling) {
             if (player.playerType != 0) player.Stomp();
-            TakeDamage(true, player, 6, 0, Stomped(player.gameObject), null);
-        } else if (Stomped(player.gameObject)) {
+            TakeDamage(true, player, 6, 0, Stomped(player.gameObject, false), null);
+        } else if (Stomped(player.gameObject, true)) {
             player.Stomp();
             TakeDamage(true, player, 6, 0, true, null);
         } else if (player.attacking) {
-            TakeDamage(true, player, 6, 0, Stomped(player.gameObject), null);
+            TakeDamage(true, player, 6, 0, Stomped(player.gameObject, true), null);
         }
     }
 
@@ -158,6 +166,10 @@ public abstract class EnemyManager : DimensionManager
 
     public void TakeDamage(bool atkByPl, PlayerInfo playerObj, float damage, int normalAtk, bool stomped, ComboManager comboM){
         if (active) {
+            if (defended) {
+                this.GetComponent<EnemyMovements>().DamageDefended();
+                return;
+            }
             attackedByPlayer = atkByPl;
             HP -= damage;
             if (stomped) {
@@ -218,11 +230,14 @@ public abstract class EnemyManager : DimensionManager
         }
     }
 
-    bool Stomped(GameObject col) {
+    bool Stomped(GameObject col, bool stompable) {
         float playerY = col.transform.position.y - 2f + (colliderRadius * this.transform.localScale.y);
         float thisY = this.transform.position.y;
 
-        return player.Stompable && playerY >= thisY;
+        if (stompable) {
+            return player.Stompable && playerY >= thisY;
+        }
+        return playerY >= thisY;
     }
 
     public void SoundPlay(AudioClip[] soundClips){
@@ -257,6 +272,6 @@ public abstract class EnemyManager : DimensionManager
 
     bool PlayerAttacking(GameObject playerObj) {
         player = playerObj.GetComponent<PlayerInfo>();
-        return (player.invincible || player.rolling || player.attacking || Stomped(playerObj) && !player.tookDamage);
+        return (player.invincible || player.rolling || player.attacking || Stomped(playerObj, true) && !player.tookDamage);
     }
 }

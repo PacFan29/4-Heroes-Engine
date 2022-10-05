@@ -35,6 +35,10 @@ public class EnemyMovements : MonoBehaviour
         ;
     }
 
+    public virtual void DamageDefended() {
+        ;
+    }
+
     public void SetPlayer() {
         float minDistance = Mathf.Infinity;
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
@@ -73,7 +77,7 @@ public class EnemyMovements : MonoBehaviour
     public bool PlayerFound() {
         if (targetPlayer != null) {
             PlayerInfo plInfo = targetPlayer.GetComponent<PlayerInfo>();
-            return GetDistance() >= 2 && GetDistance() <= 30 && IsLooking() && SeenPlayer() && plInfo.HP > 0 && !plInfo.tookDamage;
+            return GetDistance() >= 2 && GetDistance() <= 30 && SeenPlayer() && plInfo.HP > 0 && !plInfo.tookDamage;
         } else {
             return false;
         }
