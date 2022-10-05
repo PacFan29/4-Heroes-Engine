@@ -76,7 +76,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a872bf407d96c3b4085c9d52717f42f2, type: 3}
   - {fileID: 8300000, guid: a872bf407d96c3b4085c9d52717f42f2, type: 3}
   - {fileID: 8300000, guid: a872bf407d96c3b4085c9d52717f42f2, type: 3}
-  - {fileID: 8300000, guid: a872bf407d96c3b4085c9d52717f42f2, type: 3}
+  - {fileID: 8300000, guid: 867c862ce1bc3944094501bda7a7136f, type: 3}
   index: 0
 --- !u!135 &8137625058805525814
 SphereCollider:
