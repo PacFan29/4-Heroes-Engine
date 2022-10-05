@@ -106,17 +106,6 @@ public class ShellManager : ComboManager
                 isMoving = false;
             }
             ComboReset();
-        } else if (LayerMask.LayerToName(col.gameObject.layer) == "Default") {
-            //跳ね返る
-            // 当たった物体の法線ベクトルを取得
-            objNomalVector = col.contacts[0].normal;
-            if (objNomalVector.y < 0.1f) {
-                Vector3 reflectVec = Vector3.Reflect (afterReflectVero, objNomalVector);
-                reflectVec.y = 0;
-                this.transform.forward = reflectVec.normalized;
-                // 計算した反射ベクトルを保存
-                afterReflectVero = this.transform.forward;
-            }
         } else if (LayerMask.LayerToName(col.gameObject.layer) == "Enemy" && isMoving) {
             EnemyManager enemy = col.gameObject.GetComponent<EnemyManager>();
             enemy.TakeDamage(true, player, 99, 0, false, this);
@@ -132,6 +121,20 @@ public class ShellManager : ComboManager
             player = col.gameObject.GetComponent<PlayerInfo>();
             if (!player.rolling && !player.attacking && !Stomped(col)) {
                 player.TakeDamage(6, this.transform.position);
+            }
+        } else if (LayerMask.LayerToName(col.gameObject.layer) == "Default") {
+            //跳ね返る
+            // 当たった物体の法線ベクトルを取得
+            objNomalVector = col.contacts[0].normal;
+            Debug.Log(objNomalVector);
+            if (objNomalVector.y < 0.1f) {
+                Vector3 reflectVec = Vector3.Reflect (afterReflectVero, objNomalVector);
+                reflectVec.y = 0;
+                this.transform.forward = reflectVec.normalized;
+                // 計算した反射ベクトルを保存
+                afterReflectVero = this.transform.forward;
+
+                this.transform.position += reflectVec;
             }
         }
     }

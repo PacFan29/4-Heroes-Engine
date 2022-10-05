@@ -42,7 +42,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026695906906202608}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e913b2ce2499c0d44af77c304839c159, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -235,6 +235,26 @@ PrefabInstance:
     - target: {fileID: 2384057882374268878, guid: bc53d2a5d7d63a84fba8c869096c9c42, type: 3}
       propertyPath: m_Name
       value: Shell
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384057882374268878, guid: bc53d2a5d7d63a84fba8c869096c9c42, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384057882374268878, guid: bc53d2a5d7d63a84fba8c869096c9c42, type: 3}
+      propertyPath: m_TagString
+      value: Other
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000474004407800691, guid: bc53d2a5d7d63a84fba8c869096c9c42, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838927646911064553, guid: bc53d2a5d7d63a84fba8c869096c9c42, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8870073917522506535, guid: bc53d2a5d7d63a84fba8c869096c9c42, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc53d2a5d7d63a84fba8c869096c9c42, type: 3}

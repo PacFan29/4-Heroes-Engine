@@ -2,21 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _01Koopa : MonoBehaviour
+public class _01Koopa : EnemyMovements
 {
-    private EnemyManager manager;
-    private GameObject targetPlayer;
+    [Header("アニメーション")]
+    public Animator nakedAnim;
 
-    private int action = 0;
-    // Start is called before the first frame update
-    void Start()
+    [Header("スキン")]
+    public GameObject normalSkin;
+    public GameObject nakedSkin;
+
+    [Header("甲羅")]
+    public GameObject shell;
+    
+    void FixedUpdate()
     {
-        
+        bool defended = this.GetComponent<EnemyManager>().defended;
+        normalSkin.SetActive(defended);
+        nakedSkin.SetActive(!defended);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public override void DamageDefended() {
+        Instantiate(shell, this.transform.position, this.GetComponent<EnemyManager>().skin.transform.rotation);
+        this.transform.position += this.GetComponent<EnemyManager>().skin.transform.forward * 2f;
+        this.GetComponent<EnemyManager>().defended = false;
     }
 }

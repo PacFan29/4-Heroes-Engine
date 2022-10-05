@@ -72,6 +72,8 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 1
+  defended: 1
+  spiked: 0
   vanishEffect: {fileID: 3849198628105354450}
   velocity: {x: 0, y: 0, z: 0}
   Grounded: 1
@@ -97,6 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dace252283fe2694585e36fdd4bb8197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalSkin: {fileID: 2005536943809449362}
+  nakedSkin: {fileID: 1699771142663395772}
+  shell: {fileID: 1026695906906202608, guid: 0e20038e6a6acde48b4835da36784d78, type: 3}
 --- !u!82 &5892320994644405678
 AudioSource:
   m_ObjectHideFlags: 0
@@ -237,6 +242,7 @@ Transform:
   m_LocalScale: {x: 1.875, y: 1.875, z: 1.875}
   m_Children:
   - {fileID: 2005536943809024498}
+  - {fileID: 2435766808670612399}
   m_Father: {fileID: 5892320994644405665}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -311,6 +317,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1605398975689006596, guid: c99867c05eb88e44597a3bf45fda6c75, type: 3}
   m_PrefabInstance: {fileID: 2534572347103109866}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7257306499014590645
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3216600757276636976}
+    m_Modifications:
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_Name
+      value: KoopaNaked
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+--- !u!1 &1699771142663395772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+  m_PrefabInstance: {fileID: 7257306499014590645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2435766808670612399 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 27ee4027c430a834ea3b00c938328c04, type: 3}
+  m_PrefabInstance: {fileID: 7257306499014590645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7564674747773757349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,6 +398,10 @@ PrefabInstance:
     - target: {fileID: 8299578464495954487, guid: b6f258506bba1e248a715f7cede4166b, type: 3}
       propertyPath: m_Name
       value: Koopa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299578464495954487, guid: b6f258506bba1e248a715f7cede4166b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8299578464496055895, guid: b6f258506bba1e248a715f7cede4166b, type: 3}
       propertyPath: m_RootOrder
@@ -368,6 +449,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6f258506bba1e248a715f7cede4166b, type: 3}
+--- !u!1 &2005536943809449362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8299578464495954487, guid: b6f258506bba1e248a715f7cede4166b, type: 3}
+  m_PrefabInstance: {fileID: 7564674747773757349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2005536943809024498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8299578464496055895, guid: b6f258506bba1e248a715f7cede4166b, type: 3}
