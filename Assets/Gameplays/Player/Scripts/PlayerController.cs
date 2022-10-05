@@ -120,10 +120,8 @@ public abstract class PlayerController : PlayerPhysics
             if (!is3D()) {
                 //2D
                 float inputWay;
-                if (Axises["Horizontal"] > 0.2 || Axises["Alt Horizontal"] > 0.2){
-                    inputWay = 1;
-                } else if (Axises["Horizontal"] < -0.2 || Axises["Alt Horizontal"] < -0.2){
-                    inputWay = -1;
+                if (Math.Abs(Axises["Horizontal"]) > 0.2){
+                    inputWay = Axises["Horizontal"];
                 } else {
                     inputWay = 0;
                 }
