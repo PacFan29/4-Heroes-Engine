@@ -995,10 +995,6 @@ MonoBehaviour:
   CollectableIcon: {fileID: 328596794046858923}
   playerParent: {fileID: 328596795494934782}
   playerHealth: {fileID: 328596793880757523}
-  playerGroups:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   TimeType: 0
   SecSetUp: 90
   CollectableSprites:
@@ -9453,7 +9449,7 @@ GameObject:
   - component: {fileID: 8854328670403546826}
   - component: {fileID: 5010153876092065573}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ItemStockControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9473,9 +9469,9 @@ RectTransform:
   m_Father: {fileID: 328596794175264510}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -520.3, y: -213.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 25, y: 79.1}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8854328670403546826
