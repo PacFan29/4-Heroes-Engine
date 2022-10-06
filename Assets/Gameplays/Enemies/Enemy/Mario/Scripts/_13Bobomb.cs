@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _13Bobomb : MonoBehaviour
+public class _13Bobomb : EnemyMovements
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Movements()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ;
     }
 }

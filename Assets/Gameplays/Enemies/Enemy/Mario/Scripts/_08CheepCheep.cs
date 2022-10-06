@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _08CheepCheep : MonoBehaviour
+public class _08CheepCheep : EnemyMovements
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Movements()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ;
     }
 }

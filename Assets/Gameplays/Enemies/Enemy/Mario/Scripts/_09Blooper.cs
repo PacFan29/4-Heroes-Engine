@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _09Blooper : MonoBehaviour
+public class _09Blooper : EnemyMovements
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Movements()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ;
     }
 }

@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 2914
   HUDType: 0
-  character: 3
+  character: 2
   HUDStyle: 0
   openWorldAsDefault: 1
-  characterIds: 0c000000ffffffffffffffffffffffff
+  characterIds: 08000000ffffffffffffffffffffffff
   HPs: e7030000e7030000e7030000e7030000
   lives: 02000000020000000200000002000000
   powerUps: 00000000000000000000000000000000
   shields: 00000000000000000000000000000000
   stockItems:
-  - amounts: 0
+  - amounts: 1
     megaManOnly: 0
     special: 0
     limit: 1

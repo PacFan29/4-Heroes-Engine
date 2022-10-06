@@ -21,6 +21,11 @@ public class _01Koopa : EnemyMovements
         nakedSkin.SetActive(!defended);
     }
 
+    public override void Movements()
+    {
+        ;
+    }
+
     public override void DamageDefended() {
         Instantiate(shell, this.transform.position, this.GetComponent<EnemyManager>().skin.transform.rotation);
         this.transform.position += this.GetComponent<EnemyManager>().skin.transform.forward * 2f;
