@@ -47,6 +47,7 @@ public class QuestionBlockManager : MonoBehaviour
     private AudioSource source;
 
     private float whackedTime = 0f;
+    private float time = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +74,14 @@ public class QuestionBlockManager : MonoBehaviour
         float movement = (float)Math.Sin(((double)whackedTime / 0.2) * 180 * Math.PI / 180.0);
         skinGroup.localPosition = Vector3.up * 0.4f * movement;
         skinGroup.localScale = Vector3.one * (1f + 0.2f * movement);
+
+        if (leftCoins < 10 && leftCoins > 1 && blockType == BlockType.TenCoins) {
+            time -= Time.deltaTime;
+            if (time <= 0) {
+                leftCoins--;
+                time = 1f;
+            }
+        }
     }
 
     public void BlockHit(PlayerInfo player, bool downWard) {
@@ -80,6 +89,7 @@ public class QuestionBlockManager : MonoBehaviour
             if (blockType != BlockType.None && this.GetComponent<BrickManager>() != null || this.GetComponent<BrickManager>() == null) {
                 source.PlayOneShot(upperPunched);
             }
+            time = 1f;
             whackedTime = 0.2f;
 
             this.GetComponent<BoxCollider>().isTrigger = false;

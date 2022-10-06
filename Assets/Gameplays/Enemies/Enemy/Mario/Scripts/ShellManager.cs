@@ -134,7 +134,11 @@ public class ShellManager : ComboManager
                 // 計算した反射ベクトルを保存
                 afterReflectVero = this.transform.forward;
 
-                this.transform.position += reflectVec;
+                this.transform.position += reflectVec.normalized;
+
+                if (col.gameObject.GetComponent<QuestionBlockManager>() != null) {
+                    col.gameObject.GetComponent<QuestionBlockManager>().BlockHit(player, false);
+                }
             }
         }
     }
