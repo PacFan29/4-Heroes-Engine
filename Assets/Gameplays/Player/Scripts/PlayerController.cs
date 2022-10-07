@@ -149,14 +149,14 @@ public abstract class PlayerController : PlayerPhysics
         if (is3D()){
             return Buttons[buttonName];
         } else {
-            return Buttons[buttonName] || (Axises["Vertical"] < -0.5) || (Axises["Alt Vertical"] < -0.5);
+            return Buttons[buttonName] || (Axises["Vertical"] < -0.5);
         }
     }
     public bool GetCrouchButtonDown(string buttonName) {
         if (is3D()){
             return ButtonsDown[buttonName];
         } else {
-            return ButtonsDown[buttonName] || (Axises["Vertical"] < -0.5) || (Axises["Alt Vertical"] < -0.5);
+            return ButtonsDown[buttonName] || (Axises["Vertical"] < -0.5);
         }
     }
 }
