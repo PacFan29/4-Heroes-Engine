@@ -1162,7 +1162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8c9654a2b76f66741a0abe2c60aabc30, type: 2}
+  - {fileID: 2100000, guid: 38bd116651565974eb32daee95e17283, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6495,7 +6495,7 @@ GameObject:
   - component: {fileID: 8200664812584776986}
   - component: {fileID: 5017266846124911096}
   m_Layer: 2
-  m_Name: "\u30ED\u30C3\u30AF\u30DE\u30F3"
+  m_Name: "\u30D5\u30A9\u30EB\u30C6"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6739,7 +6739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8200664813326289104}
   - component: {fileID: 8200664813326289118}
-  - component: {fileID: 8200664813326289117}
+  - component: {fileID: 7017934274684582802}
   - component: {fileID: 8130771972027621950}
   - component: {fileID: 8200664813326289116}
   - component: {fileID: 4522923486489540824}
@@ -6871,7 +6871,7 @@ MonoBehaviour:
   axisInput: 1
   playerNumber: 0
   playerId: 0
-  maxHP: 30
+  maxHP: 35
   HP: 0
   lives: 0
   localScore: 0
@@ -6889,7 +6889,7 @@ MonoBehaviour:
   shieldActive: 0
   data: {fileID: 11400000, guid: fc3ea490e0308a54f90012d9282e46d3, type: 2}
   options: {fileID: 11400000, guid: d9d9c64414f5e944f9fd4a43f1ba4868, type: 2}
---- !u!114 &8200664813326289117
+--- !u!114 &7017934274684582802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6898,25 +6898,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 8200664813326289111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef6255956ca22fd428e88f4f3a94078e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fcc0464f96f57d43a86251046a8b57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weapons: {fileID: 11400000, guid: f66288058b870a6478c62062daf054a4, type: 2}
   weaponId: 0
   deathEffect: {fileID: 1161674138428046916, guid: 5ece69af35f12bc4a9b0fb4fe32ab56b, type: 3}
-  charge1: {fileID: 7268182553353805507, guid: c302200bd2612bc49b7fe1eb9b0243d6, type: 3}
-  charge2: {fileID: 8533931536725973821, guid: d76b66e95ec363e4899aa69926eca615, type: 3}
   buster: {fileID: 2215140303060223192, guid: 7eb349af911eee249bfb451bb89fb189, type: 3}
   busterSound: {fileID: 8300000, guid: 2a4560c7a32428041a74265e3d734e4c, type: 3}
-  mBusterSound: {fileID: 8300000, guid: a624abebaa2a7054a8e3a747c9530d76, type: 3}
-  chargeShotSound: {fileID: 8300000, guid: 09857304bf66e904c80b4fb666415c9e, type: 3}
-  slidingSound: {fileID: 8300000, guid: 73b95c05b8bec054cb378741111b414d, type: 3}
+  dashSound: {fileID: 8300000, guid: 73b95c05b8bec054cb378741111b414d, type: 3}
   fireSound: {fileID: 8300000, guid: 72a9a056485fad647a12884278c9b496, type: 3}
-  chargeFireSound: {fileID: 8300000, guid: 47b1eaa1bbaf54d448887988cda42f3c, type: 3}
   iceSound: {fileID: 8300000, guid: 4210de45f324efa4781d8170165b6a80, type: 3}
-  chargeIceSound: {fileID: 0}
   thunderSound: {fileID: 0}
-  chargeThunderSound: {fileID: 0}
 --- !u!114 &8130771972027621950
 MonoBehaviour:
   m_ObjectHideFlags: 0

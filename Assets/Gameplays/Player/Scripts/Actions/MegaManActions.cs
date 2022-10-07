@@ -9,7 +9,7 @@ public abstract class MegaManActions : MonoBehaviour
     public int weaponId = 0;
     protected PlayerInfo info;
 
-    private bool inputA;
+    protected bool inputA;
     protected bool canJump = true;
     [Header("エフェクト")]
     public GameObject deathEffect;
@@ -44,6 +44,9 @@ public abstract class MegaManActions : MonoBehaviour
 
         if (info.ButtonsDown["A"] && canJump && info.Grounded) {
             info.constantSetUp();
+            if (this.GetComponent<_08MegaMan>() != null && info.XZmag > 22.5f) {
+                info.ForwardSetUp(info.skin.forward, 0f);
+            }
             info.Crouching = false;
             inputA = true;
             info.Jump();
@@ -54,14 +57,15 @@ public abstract class MegaManActions : MonoBehaviour
             this.GetComponent<CapsuleCollider>().height = 3.5f;
         }
         
-        if (inputA && info.finalVelocity.y > 0 && !info.gravityLock){
+        if (inputA && !info.gravityLock){
             //ジャンプの勢い
             //Aを押し続けるとより高く跳べる。
             if (info.finalVelocity.y > 0 && info.ButtonsUp["A"]){
                 //途中でAを離したとき
                 info.YvelSetUp(0);
                 inputA = false;
-            } else if (info.finalVelocity.y <= 0){
+            }
+            if (info.finalVelocity.y <= -0.1){
                 //高く跳びきったとき
                 inputA = false;
             }

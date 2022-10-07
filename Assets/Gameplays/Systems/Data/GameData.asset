@@ -17,7 +17,7 @@ MonoBehaviour:
   character: 2
   HUDStyle: 0
   openWorldAsDefault: 1
-  characterIds: 08000000ffffffffffffffffffffffff
+  characterIds: 0b000000ffffffffffffffffffffffff
   HPs: e7030000e7030000e7030000e7030000
   lives: 02000000020000000200000002000000
   powerUps: 00000000000000000000000000000000

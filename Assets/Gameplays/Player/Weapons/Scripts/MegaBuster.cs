@@ -183,6 +183,10 @@ public class MegaBuster : ComboManager
                     Destroy(gameObject);
                 }
             }
+        } else if (LayerMask.LayerToName(col.gameObject.layer) == "Default") {
+            if (power < 1) {
+                Destroy(gameObject);
+            }
         }
     }
     IEnumerator LifeTime(){

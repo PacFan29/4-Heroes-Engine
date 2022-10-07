@@ -72,7 +72,7 @@ public class _08MegaMan : MegaManActions
                 break;
             }
 
-            BusterShot(0, false);
+            BusterShot(0);
         }
 
         if (info.Buttons["X"] && weaponId == 0) {
@@ -110,7 +110,7 @@ public class _08MegaMan : MegaManActions
                     break;
                 }
                 info.SoundPlay(chargeShotSound);
-                BusterShot(2, false);
+                BusterShot(2);
             } else if (time >= 0.5) {
                 switch (info.powerUpActive) {
                     case 1:
@@ -126,7 +126,7 @@ public class _08MegaMan : MegaManActions
                     break;
                 }
                 info.SoundPlay(mBusterSound);
-                BusterShot(1, false);
+                BusterShot(1);
             }
             time = 0;
         }
@@ -144,8 +144,19 @@ public class _08MegaMan : MegaManActions
             Vector3 XZvel = new Vector3(info.finalVelocity.x, 0, info.finalVelocity.z);
             info.skin.transform.forward = XZvel.normalized;
             
-            if (info.isNarrow() && Vector3.Angle(XZvel, info.input) >= 130) {
-                info.ForwardSetUp(-XZvel.normalized, info.TopSpeed*2);
+            if (Vector3.Angle(XZvel, info.input) >= 130 || !info.Grounded) {
+                if (info.isNarrow()) {
+                    info.ForwardSetUp(-XZvel.normalized, info.TopSpeed*2);
+                } else {
+                    info.ForwardSetUp(-XZvel.normalized, 5f);
+                    sliding = false;
+                    info.Crouching = false;
+                    info.constantSetUp();
+                    info.ForwardSetUp(Vector3.zero, 0);
+                    info.axisInput = true;
+
+                    StopCoroutine("Sliding");
+                }
             }
         }
 
@@ -156,22 +167,6 @@ public class _08MegaMan : MegaManActions
             StopCoroutine("Sliding");
             info.constantSetUp();
             if (info.input != Vector3.zero) info.ForwardSetUp(Vector3.zero, info.TopSpeed);
-        }
-        
-        // if (info.ButtonsDown["X"]){
-        //     info.ComboReset();
-        //     StartCoroutine("ForteShoot");
-        // } else if (info.ButtonsUp["X"]) {
-        //     StopCoroutine("ForteShoot");
-        // }
-    }
-
-    IEnumerator ForteShoot() {
-        while (info.Buttons["X"]) {
-            info.SoundPlay(busterSound);
-
-            BusterShot(0, true);
-            yield return new WaitForSeconds(0.075f);
         }
     }
 
@@ -195,17 +190,13 @@ public class _08MegaMan : MegaManActions
         info.axisInput = true;
     }
 
-    void BusterShot(int level, bool weak) {
+    void BusterShot(int level) {
         GameObject solarbrit = Instantiate(buster, transform.position, info.skin.rotation);
         MegaBuster bust = solarbrit.GetComponent<MegaBuster>();
         bust.player = GetComponent<PlayerInfo>();
         bust.level = level;
 
-        if (weak) {
-            bust.power = 0.5f;
-        } else {
-            bust.power = 1f;
-        }
+        bust.power = 1f;
         bust.powerUp = info.powerUpActive;
     }
 }
