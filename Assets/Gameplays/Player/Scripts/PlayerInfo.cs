@@ -363,8 +363,13 @@ public class PlayerInfo : PlayerController
         //通常攻撃か否かを取得
         return true;
     }
-    public void TakeDamage(int value, Vector3 colPos){
+    public void TakeDamage(int value, Vector3 colPos, int damageType = 0){
         if (metal) {
+            //メタルでダメージ無効化
+            return;
+        }
+        if (damageType == 1 && shieldActive == 2) {
+            //フレイムバリアで火によるダメージを防ぐ
             return;
         }
         Vector3 thisPos = this.transform.position;
@@ -409,7 +414,32 @@ public class PlayerInfo : PlayerController
             } else {
                 voices.Hurt();
                 Instantiate(hitEffect, transform.position, Quaternion.identity);
-                SoundPlay(damageSound);
+                switch (damageType) {
+                    case 1:
+                    //火によるダメージ
+                    SoundPlay(fireDamageSound);
+                    break;
+                    
+                    case 2:
+                    //氷によるダメージ
+                    SoundPlay(iceDamageSound);
+                    break;
+                    
+                    case 3:
+                    //電撃によるダメージ
+                    SoundPlay(elecDamageSound);
+                    break;
+                    
+                    case 4:
+                    //トゲによるダメージ
+                    SoundPlay(spikeDamageSound);
+                    break;
+
+                    default:
+                    //通常ダメージ
+                    SoundPlay(damageSound);
+                    break;
+                }
                 damageTime = 2f;
                 tookDamage = true;
 

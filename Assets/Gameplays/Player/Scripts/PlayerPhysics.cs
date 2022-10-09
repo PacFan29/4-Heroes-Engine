@@ -122,6 +122,10 @@ public abstract class PlayerPhysics : DimensionManager
     public AudioClip skiddingSound;
     public AudioClip healSound;
     public AudioClip damageSound;
+    public AudioClip fireDamageSound;
+    public AudioClip iceDamageSound;
+    public AudioClip elecDamageSound;
+    public AudioClip spikeDamageSound;
     public AudioClip deathSound;
     public AudioClip drownSound;
     public AudioClip oneUpSound;

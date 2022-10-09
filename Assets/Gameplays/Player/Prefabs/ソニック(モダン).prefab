@@ -13234,8 +13234,6 @@ MonoBehaviour:
   Slope: 0.625
   SlopeRollUp: 0.390625
   SlopeRollDown: 1.5625
-  Fall: 12.5
-  PassSpeed: 0
   MaxSpeed: 120
   AirAcc: 0.46875
   AirFrc: 0
@@ -13269,6 +13267,7 @@ MonoBehaviour:
   attacking: 0
   skidding: 0
   groundAttack: 0
+  underwaterTrigger: 0
   underwater: 0
   speedUp: 0
   invincible: 0
@@ -13298,6 +13297,10 @@ MonoBehaviour:
   skiddingSound: {fileID: 8300000, guid: c0bfe7991ab7af04abdced2aa18055f3, type: 3}
   healSound: {fileID: 8300000, guid: c46b0f6cc4e23e740be66607177af5cf, type: 3}
   damageSound: {fileID: 8300000, guid: d89da5c5ec0f4ee41a4823f719f97482, type: 3}
+  fireDamageSound: {fileID: 0}
+  iceDamageSound: {fileID: 0}
+  elecDamageSound: {fileID: 0}
+  spikeDamageSound: {fileID: 8300000, guid: c307bbbacc953bf4fbe792523cd27811, type: 3}
   deathSound: {fileID: 8300000, guid: d89da5c5ec0f4ee41a4823f719f97482, type: 3}
   drownSound: {fileID: 0}
   oneUpSound: {fileID: 8300000, guid: 8cdbb7558909d4b41aa2c0774c70ef20, type: 3}

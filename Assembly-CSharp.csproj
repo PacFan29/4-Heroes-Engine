@@ -69,6 +69,7 @@
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_11Boo.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Bezier\SplineNode.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\CustomHUDs\PacManWorldHUD.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Hazards\Scripts\FireBar.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Sonic\MSonicCheckPoint.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\InstaShield.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Mario\GreenCoinRing.cs" />
@@ -145,7 +146,7 @@
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Pac-Man\PacManSwitch.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\BossHealthBar.cs" />
-     <Compile Include="Assets\Gameplays\Objects\Scripts\Common\TriggerDamage.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Hazards\Scripts\TriggerDamage.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\CustomHUDs\Mario3DWorldHUD.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
@@ -302,6 +303,8 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Hazards\Scripts\ParticleDamage.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\MarioSwitch.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

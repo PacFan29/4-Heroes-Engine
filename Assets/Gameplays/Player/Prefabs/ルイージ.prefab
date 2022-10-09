@@ -6335,6 +6335,10 @@ MonoBehaviour:
   skiddingSound: {fileID: 8300000, guid: 4b8b6fb585681804f89a41dbbd244b7b, type: 3}
   healSound: {fileID: 8300000, guid: c46b0f6cc4e23e740be66607177af5cf, type: 3}
   damageSound: {fileID: 8300000, guid: 1e5287237fed50542a077b51ee42ae95, type: 3}
+  fireDamageSound: {fileID: 0}
+  iceDamageSound: {fileID: 0}
+  elecDamageSound: {fileID: 0}
+  spikeDamageSound: {fileID: 8300000, guid: c307bbbacc953bf4fbe792523cd27811, type: 3}
   deathSound: {fileID: 8300000, guid: f20c8a0f887567c4f871b93c5db0c9bb, type: 3}
   drownSound: {fileID: 8300000, guid: f20c8a0f887567c4f871b93c5db0c9bb, type: 3}
   oneUpSound: {fileID: 8300000, guid: e29373ce5dd218548bf82e3ddb49d4d6, type: 3}

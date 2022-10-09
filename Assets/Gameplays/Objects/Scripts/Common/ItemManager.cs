@@ -33,6 +33,8 @@ public class ItemManager : MonoBehaviour
     private int skinIndex;
     private bool floating = false;
 
+    [HideInInspector] public bool stock = false;
+
     [Header("エフェクト")]
     public GameObject healEffect;
     public GameObject effect;
@@ -47,6 +49,7 @@ public class ItemManager : MonoBehaviour
     public void Split() {
         this.GetComponent<AudioSource>().Play();
 
+        velocity = this.transform.forward * 3;
         velocity.y = 8f;
         afterReflectVelo = velocity;
     }
@@ -179,7 +182,7 @@ public class ItemManager : MonoBehaviour
                 break;
             }
             
-            if (itemType != ItemType.PoisonShroom) {
+            if (itemType != ItemType.PoisonShroom && !stock) {
                 player.scoreIncrease(50);
             }
             
@@ -221,7 +224,7 @@ public class ItemManager : MonoBehaviour
             if (groundHit && velocity.y <= 0) {
                 transform.position += Vector3.up * ((5.4f - Ghit.distance) - 1.35f);
                 Grounded = true;
-                velocity.y = 0f;
+                velocity = Vector3.zero;
             }
             if (wallHit) {
                 objNormalVector = Whit.normal;

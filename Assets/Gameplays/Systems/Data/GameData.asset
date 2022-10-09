@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   coins: 2914
-  HUDType: 0
-  character: 1
+  HUDType: 2
+  character: 3
   HUDStyle: 0
   openWorldAsDefault: 1
   characterIds: 00000000ffffffffffffffffffffffff
-  HPs: 19000000e7030000e7030000e7030000
+  HPs: 01000000e7030000e7030000e7030000
   lives: 02000000020000000200000002000000
-  powerUps: 01000000000000000000000000000000
+  powerUps: 00000000000000000000000000000000
   shields: 00000000000000000000000000000000
   stockItems:
-  - amounts: 0
+  - amounts: 1
     megaManOnly: 0
     special: 0
     limit: 1
@@ -43,7 +43,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 842a3eabba86650428e03577fc54f929, type: 3}
     - {fileID: 21300000, guid: 67ccb4efd909fd149be33bc02699450d, type: 3}
     - {fileID: 21300000, guid: b408821e289c9a84698ae6e5a729a67d, type: 3}
-  - amounts: 0
+  - amounts: 1
     megaManOnly: 0
     special: 0
     limit: 4
@@ -71,6 +71,6 @@ MonoBehaviour:
     sprites:
     - {fileID: 21300000, guid: 9046cc54e02b8674fade9302636e001c, type: 3}
   greenStars: 000000
-  totalTime: 0
-  isCpPassed: 0
-  CpPosition: {x: 0, y: 0, z: 0}
+  totalTime: 161686.44
+  isCpPassed: 1
+  CpPosition: {x: 154.6, y: 0.80836415, z: 140.58}
