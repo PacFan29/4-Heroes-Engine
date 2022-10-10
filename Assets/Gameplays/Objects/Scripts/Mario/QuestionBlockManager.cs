@@ -28,7 +28,7 @@ public class QuestionBlockManager : MonoBehaviour
     public bool isEmpty;
     public bool isHidden;
     public bool isLong;
-    private bool breaked = false;
+    [HideInInspector] public bool breaked = false;
     public Transform skinGroup;
     public GameObject fullBlock;
     public GameObject emptyBlock;

@@ -15,7 +15,7 @@ public class MarioSwitch : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        if (other.gameObject.GetComponent<PlayerInfo>() != null) {
+        if (other.gameObject.GetComponent<PlayerInfo>() != null && !pressed) {
             // this.GetComponent<AudioSource>().Play();
             pressed = true;
 

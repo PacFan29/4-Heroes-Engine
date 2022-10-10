@@ -124,6 +124,7 @@
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_12DryBones.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Scripts\SonicEnemyManager.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_06HammerBros.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\CharacterSwitch.cs" />
      <Compile Include="Assets\Gameplays\SpecialStage\Maze\Scripts\MazeCookie.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Boss\Scripts\BossManager.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Pac-Man\OrangeSwitch.cs" />
@@ -204,6 +205,7 @@
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_14Thwomp.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Components\DitheringComponent.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\MegaManActions.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\PSwitch.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\BulletBillCannon.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Example\ExampleContortAlong.cs" />
      <Compile Include="Assets\Gameplays\Stage\Data\StageInfos.cs" />
@@ -259,6 +261,7 @@
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\CommandButton.cs" />
      <Compile Include="Assets\Gameplays\Systems\Scripts\InputImageManager.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\GameOver.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\MarioSwitch.cs" />
      <Compile Include="Assets\Gameplays\Stage\WorldMap\StagePin.cs" />
      <Compile Include="Assets\Samples\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_01Luigi.cs" />
@@ -279,6 +282,7 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\PathFollower.cs" />
      <Compile Include="Assets\Gameplays\Player\Weapons\Data\SpecialWeaponData.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Boss\Scripts\VoiceManager.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Hazards\Scripts\ParticleDamage.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_10ProtoMan.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
      <Compile Include="Assets\Samples\IgniteCoders\Simple Water Shader\Resources\WaterReflection.cs" />
@@ -303,10 +307,7 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
-     <Compile Include="Assets\Gameplays\Stage\Hazards\Scripts\ParticleDamage.cs" />
-     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\MarioSwitch.cs" />
-     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\PSwitch.cs" />
-     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\CharacterSwitch.cs" />
+     <Compile Include="Assets\Gameplays\Objects\Scripts\Mario\BlueCoin.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
