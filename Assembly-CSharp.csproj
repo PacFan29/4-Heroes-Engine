@@ -161,6 +161,7 @@
      <Compile Include="Assets\Gameplays\Objects\Scripts\Common\ObjectMaker.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Bezier\SplineSmoother.cs" />
      <Compile Include="Assets\Samples\EffectExamples\Shared\Scripts\GunAim.cs" />
+     <Compile Include="Assets\Gameplays\Objects\Scripts\Mario\BlueCoin.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\DitheringModel.cs" />
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\PathSpawner.cs" />
      <Compile Include="Assets\Samples\AllSkyFree\AllSkyFree_Menu.cs" />
@@ -307,10 +308,10 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
-     <Compile Include="Assets\Gameplays\Objects\Scripts\Mario\BlueCoin.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Gameplays\Objects\Next.txt" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\GrainGen.shader" />
      <None Include="Assets\Samples\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\FXAA3.cginc" />
@@ -339,6 +340,7 @@
      <None Include="Assets\Samples\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
      <None Include="Assets\Samples\HelloMarioAssets\Readme.txt" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+     <None Include="Assets\Gameplays\Stage\Gimmicks\Next.txt" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Gameplays\Systems\Settings\プログラミング歴10年記念メモ.txt" />
      <None Include="Assets\Samples\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -359,6 +361,7 @@
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\Fog.shader" />
      <None Include="Assets\Samples\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Gameplays\Stage\Hazards\Next.txt" />
      <None Include="Assets\Gameplays\Objects\Models\Mario\Volt Shroom\README.txt" />
      <None Include="Assets\Gameplays\Objects\Models\Mario\10, 30, and 50 Coins\README.txt" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
