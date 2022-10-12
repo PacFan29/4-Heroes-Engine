@@ -222,7 +222,9 @@ public class _16MSonic : SonicActions
         boostAmount = Mathf.Clamp(boostAmount, 0, 500);
 
         if (info.ButtonsDown["X"] && !boost && boostAmount > 0) {
-            info.YvelSetUp(0f);
+            if (info.finalVelocity.y < 0) {
+                info.YvelSetUp(0f);
+            }
             voices.Attack();
 
             info.SoundPlay(boostSound);
