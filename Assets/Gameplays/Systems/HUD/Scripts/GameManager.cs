@@ -60,7 +60,8 @@ public class GameManager : MonoBehaviour
     public static float averageSpeed = 0f; //速度60 → 1200km/h（20倍）
     public static List<PlayerStatus> players = new List<PlayerStatus>();
 
-    public static int perfect = 10;
+    public static int damageTaken = 0;
+    public static bool noMiss = true;
 
     public static BossManager bossInfo;
 

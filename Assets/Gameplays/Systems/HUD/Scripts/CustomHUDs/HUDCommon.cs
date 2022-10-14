@@ -21,6 +21,10 @@ public class HUDCommon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		GameManager.Score = 0;
+		if (!data.isCpPassed) {
+			GameManager.TotalTime = 0f;
+		}
         GameManager gm = this.GetComponent<GameManager>();
 		Dictionary<string, string> stageInfo = data.stageInfo;
         gm.Reset(Int32.Parse(stageInfo["targetScore"]), Int32.Parse(stageInfo["targetTime"]), options.beginnerMode && data.HUDType == GameType.Sonic);

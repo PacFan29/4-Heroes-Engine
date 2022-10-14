@@ -392,7 +392,7 @@ public class PlayerInfo : PlayerController
         }
         
         if (damageTime <= 0 && HP > 0 && !invincible) {
-            if (playerNumber == 0 && GameManager.perfect > 3) GameManager.perfect = 3;
+            if (playerNumber == 0 && GameManager.damageTaken < 99) GameManager.damageTaken++;
             bool powerDown = false;
 
             //ダメージの処理
@@ -539,7 +539,7 @@ public class PlayerInfo : PlayerController
 
     IEnumerator LostLife(){
         //やられた
-        if (playerNumber == 0) GameManager.perfect = 0;
+        if (playerNumber == 0) GameManager.noMiss = false;
 
         if (!options.lives && lives < 1) {
             lives = 1;

@@ -75,18 +75,23 @@ public class Results : MonoBehaviour
         }
         uppers[0] = (int)GameManager.TotalTime;
         if (bossStage) {
-            uppers[1] = 1000 * GameManager.perfect;
+            if (GameManager.damageTaken > 0) {
+                uppers[1] = 3000;
+            } else {
+                uppers[1] = 10000;
+            }
         } else {
-            uppers[1] = GameManager.Coins;
             if (sonicStage){
+                uppers[1] = GameManager.Coins;
                 uppers[2] = (int)Math.Ceiling(GameManager.averageSpeed * 10);
             } else {
+                uppers[1] = GameManager.damageTaken;
                 uppers[2] = GameManager.maxCombo;
             }
         }
 
         currents[0] = 5999999;
-        currents[1] = 0;
+        currents[1] = (sonicStage || bossStage) ? 0 : 99;
         currents[2] = 0;
 
         animNo = 0;
@@ -136,8 +141,8 @@ public class Results : MonoBehaviour
                 //平均スピードボーナス(平均スピード × 6.25点)
                 bonuses[2] = (int)Math.Ceiling((float)currents[2] * 0.625f);
             } else {
-                //コインボーナス(獲得コイン枚数 × 30点)
-                bonuses[1] = Math.Min(currents[1] * 30, 99999);
+                //被ダメージボーナス(7000点 - ダメージ数 × 700点)
+                bonuses[1] = Math.Max(7000 - currents[1] * 700, 0);
 
                 //最大コンボボーナス（(最大コンボ ^ 2) * 100点）
                 bonuses[2] = (int)Math.Min(Math.Pow(currents[2], 2) * 100, 10000);
@@ -150,27 +155,7 @@ public class Results : MonoBehaviour
             if (sonicStage){
                 CoinsHeader.text = "リング";
             } else {
-                switch (data.character) {
-                    case Character.Mario:
-                    //コイン
-                    CoinsHeader.text = "コイン";
-                    break;
-                    
-                    case Character.PacMan:
-                    //クッキー
-                    CoinsHeader.text = "クッキー";
-                    break;
-                    
-                    case Character.RockMan:
-                    //ネジ
-                    CoinsHeader.text = "ネジ";
-                    break;
-                    
-                    case Character.Sonic:
-                    //リング
-                    CoinsHeader.text = "リング";
-                    break;
-                }
+                CoinsHeader.text = "被ダメージ";
             }
             CoinsText.text = currents[1].ToString("###,###,##0");
             CoinBonus.text = bonuses[1].ToString("###,###,##0");
@@ -188,8 +173,8 @@ public class Results : MonoBehaviour
             //ノーダメージ・ノーミスボーナス
             bonuses[1] = currents[1];
 
-            if (GameManager.perfect > 0) {
-                if (GameManager.perfect >= 10) {
+            if (GameManager.noMiss) {
+                if (GameManager.damageTaken <= 0) {
                     PerfectHeader.text = "ノーダメージ";
                 } else {
                     PerfectHeader.text = "ノーミス";
@@ -288,7 +273,8 @@ public class Results : MonoBehaviour
                 data.coins += (int)Math.Round(scorePercent) * (bossStage ? 10 : 5);
                 if (data.coins > 999999) data.coins = 999999;
 
-                GameManager.perfect = 10;
+                GameManager.noMiss = true;
+                GameManager.damageTaken = 0;
                 data.HUDType = GameType.Normal;
                 SceneManager.LoadScene("WorldMap");
             }
@@ -330,7 +316,7 @@ public class Results : MonoBehaviour
         }
 
         if (bossStage) {
-            if (GameManager.perfect >= 10 && !info.noDamage) {
+            if (GameManager.damageTaken <= 0 && !info.noDamage) {
                 info.noDamage = true;
             }
         } else {
