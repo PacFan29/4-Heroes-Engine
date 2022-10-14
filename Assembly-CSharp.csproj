@@ -90,6 +90,7 @@
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_09Roll.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Boss\Mega Man\Scripts\MegaManBossTemplate.cs" />
      <Compile Include="Assets\Gameplays\Player\Shields\ShieldAnimations.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\TestGimmick.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\PlayerFootsteps.cs" />
      <Compile Include="Assets\Gameplays\Systems\Scripts\StockItem.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Pac-Man\MetalCookie.cs" />
@@ -203,6 +204,7 @@
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Utils\UOUtility.cs" />
      <Compile Include="Assets\Gameplays\Player\Weapons\Scripts\Special Weapons\_01SliceCatcher.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Boss\Scripts\TestBullet.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\GimmickManager.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_14Thwomp.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Components\DitheringComponent.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\MegaManActions.cs" />
