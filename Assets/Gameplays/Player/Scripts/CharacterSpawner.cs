@@ -49,7 +49,7 @@ public class CharacterSpawner : MonoBehaviour
             }
 
             if (playerId >= 0) {
-                PlayerInfo pl = Instantiate(playerPrefs.Prefabs[playerId], spawnPos, Quaternion.identity).transform.GetChild(0).GetComponent<PlayerInfo>();
+                PlayerInfo pl = Instantiate(playerPrefs.playerData[playerId].prefab, spawnPos, Quaternion.identity).transform.GetChild(0).GetComponent<PlayerInfo>();
                 pl.playerNumber = i;
                 spawnPos += Vector3.right * 4f;
             }

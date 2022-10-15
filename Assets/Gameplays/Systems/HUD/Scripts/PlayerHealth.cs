@@ -31,6 +31,8 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour {
 
 	//変数の宣言
+	[Header("データ")]
+	public PlayerPrefabs prefabs;
 	[Header("オプション")]
 	public Options options;
 	[Header("アイコン")]
@@ -102,54 +104,11 @@ public class PlayerHealth : MonoBehaviour {
 		colors = colorSetUp(characterNo);
 		boost = (characterNo == 16);
 
+		PlayerPrefabs.PlayerData player = prefabs.playerData[characterNo];
+
 		//色の調節
-		switch (colors){
-			case 0: //赤
-			main.color = new Color(1f, 0f, 0f, 1f);
-			break;
-			case 1: //黄
-			main.color = new Color(1f, 0.87f, 0f, 1f);
-			break;
-			case 2: //緑
-			main.color = new Color(0f, 0.85f, 0.25f, 1f);
-			break;
-			case 3: //水
-			main.color = new Color(0f, 0.75f, 1f, 1f);
-			break;
-			case 4: //青
-			main.color = new Color(0f, 0.34f, 1f, 1f);
-			break;
-			case 5: //紫
-			main.color = new Color(0.7f, 0f, 1f, 1f);
-			break;
-			case 6: //桃
-			main.color = new Color(1f, 0.4f, 0.9f, 1f);
-			break;
-		}
+		main.color = player.color;
 		HealthFront.color = main.color;
-		if (boost){
-			healthAmount.color = new Color(0f, 1f, 1f, 1f);
-			pinch = (GameManager.Coins <= 0);
-		} else {
-			int colorIndex = 0;
-			if (GameManager.extra) {
-				colorIndex = Math.Min(2, (int)Math.Ceiling((health_percent * 100) / 20f) - 1);
-			} else {
-				colorIndex = (int)Math.Ceiling((health_percent * 100) / 25f) - 1;
-			}
-			if (colorIndex > 0){
-				pinch = false;
-				if (GameManager.extra){
-					HealthFront.sprite = HealthFrontSprites[1];
-				} else {
-					HealthFront.sprite = HealthFrontSprites[0];
-				}
-				healthAmount.color = barColors[colorIndex];
-			} else {
-				pinch = true;
-				healthAmount.color = new Color(1f, HUDManager.alert[0]*0.8f, HUDManager.alert[0]*0.8f, 1f);
-			}
-		}
 
 		//ライフ（100%バー）
 		if (ready){
@@ -200,6 +159,31 @@ public class PlayerHealth : MonoBehaviour {
 			health = 50;
 		}
 		health_percent = (float)health / max_health;
+
+		if (boost){
+			healthAmount.color = new Color(0f, 1f, 1f, 1f);
+			pinch = (GameManager.Coins <= 0);
+		} else {
+			int colorIndex = 0;
+			if (GameManager.extra) {
+				colorIndex = Math.Min(2, (int)Math.Ceiling((health_percent * 100) / 20f) - 1);
+			} else {
+				colorIndex = (int)Math.Ceiling((health_percent * 100) / 25f) - 1;
+			}
+			if (health <= 5) colorIndex = 0;
+			if (colorIndex > 0){
+				pinch = false;
+				if (GameManager.extra){
+					HealthFront.sprite = HealthFrontSprites[1];
+				} else {
+					HealthFront.sprite = HealthFrontSprites[0];
+				}
+				healthAmount.color = barColors[colorIndex];
+			} else {
+				pinch = true;
+				healthAmount.color = new Color(1f, HUDManager.alert[0]*0.8f, HUDManager.alert[0]*0.8f, 1f);
+			}
+		}
 		
 		//バー
 		if (boost) {
@@ -247,7 +231,7 @@ public class PlayerHealth : MonoBehaviour {
 		livesAnim.SetBool("Lives", livesUp);
 
 		//アイコン
-		icon.sprite = icons[characterNo];
+		icon.sprite = player.icon;
 		//Mario icons ripped by Joshuat1306 (DeviantArt)
 
 		if (boostHeader != null) {

@@ -29,10 +29,6 @@ public class StageInfos : ScriptableObject
         public bool unlocked = true;
         public int highScore = 0;
         public int bestTime = 5999999;
-        public int bestCoins = 0;
-        public int maxCombo = 0;
-        public float averageSpeed = 0f;
-        public bool noDamage = false;
         public bool[] greenStars = new bool[3];
         public int bestRank = 0;
 
@@ -41,11 +37,9 @@ public class StageInfos : ScriptableObject
             unlocked = false;
             highScore = 0;
             bestTime = 5999999;
-            bestCoins = 0;
-            maxCombo = 0;
-            averageSpeed = 0f;
-            noDamage = false;
-            greenStars = new bool[3];
+            for (int i = 0; i < greenStars.Length; i++) {
+                greenStars[i] = false;
+            }
             bestRank = 0;
         }
     }

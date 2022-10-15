@@ -30,3 +30,72 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 2026607292663643459, guid: 5bc278ef78a66ce47823d17850cbce3b, type: 3}
   - {fileID: 8904858760230424853, guid: 8b4838048517b484ba321e0b03711218, type: 3}
+  playerData:
+  - icon: {fileID: 21300000, guid: ce84bf1d452f12e49a9deb1b2b7937d2, type: 3}
+    color: {r: 1, g: 0, b: 0, a: 1}
+    name: "\u30DE\u30EA\u30AA"
+    prefab: {fileID: 8567036679666227802, guid: 4c88481bc280e664b9dcd4674f8c4459, type: 3}
+  - icon: {fileID: 21300000, guid: 6f61301435f9b0b48bb6595b218e5513, type: 3}
+    color: {r: 0, g: 0.8509804, b: 0.2509804, a: 1}
+    name: "\u30EB\u30A4\u30FC\u30B8"
+    prefab: {fileID: 8567036679666227802, guid: 1a5054397e557b740be148f282e5d83b, type: 3}
+  - icon: {fileID: 21300000, guid: 52eb7a03ad495b649b99477883d2ea2a, type: 3}
+    color: {r: 1, g: 0.4, b: 0.9019608, a: 1}
+    name: "\u30D4\u30FC\u30C1\u59EB"
+    prefab: {fileID: 0}
+  - icon: {fileID: 21300000, guid: 4c5bf007132857849964b72c3770b288, type: 3}
+    color: {r: 0.22990493, g: 0.8962264, b: 0, a: 1}
+    name: "\u30E8\u30C3\u30B7\u30FC"
+    prefab: {fileID: 0}
+  - icon: {fileID: 21300000, guid: 0ed11d4fee18c8844bba657297b6e30d, type: 3}
+    color: {r: 1, g: 0.87058824, b: 0, a: 1}
+    name: "\u30EF\u30EA\u30AA"
+    prefab: {fileID: 0}
+  - icon: {fileID: 21300000, guid: 5e227f8daa6699d41ba1d548ff7b6cd4, type: 3}
+    color: {r: 1, g: 0.87058824, b: 0, a: 1}
+    name: "\u30D1\u30C3\u30AF\u30DE\u30F3"
+    prefab: {fileID: 6271109823744772069, guid: efff23dd813b2e441ba1995f817003bf, type: 3}
+  - icon: {fileID: 0}
+    color: {r: 0.9601507, g: 0, b: 1, a: 1}
+    name: "\u30DF\u30BA\u30FB\u30D1\u30C3\u30AF\u30DE\u30F3"
+    prefab: {fileID: 0}
+  - icon: {fileID: 0}
+    color: {r: 0, g: 0.69433475, b: 1, a: 1}
+    name: "\u30D1\u30C3\u30AF\u30FB\u30B8\u30E5\u30CB\u30A2"
+    prefab: {fileID: 0}
+  - icon: {fileID: 21300000, guid: 73e7572b35581914785ac4c039ec1f10, type: 3}
+    color: {r: 0, g: 0.4774542, b: 1, a: 1}
+    name: "\u30ED\u30C3\u30AF\u30DE\u30F3"
+    prefab: {fileID: 8200664812584776985, guid: e45b7a677b6452541872dcfb99bcda8f, type: 3}
+  - icon: {fileID: 21300000, guid: 926a8b4f5fc1d4f47bcb73be329c2186, type: 3}
+    color: {r: 1, g: 0.14508255, b: 0, a: 1}
+    name: "\u30ED\u30FC\u30EB"
+    prefab: {fileID: 0}
+  - icon: {fileID: 21300000, guid: e34d1913b4b280941a03572ef56a64ca, type: 3}
+    color: {r: 1, g: 0, b: 0, a: 1}
+    name: "\u30D6\u30EB\u30FC\u30B9"
+    prefab: {fileID: 8200664812584776985, guid: 51c9604fd26b3be4c948ae14c4c9f86e, type: 3}
+  - icon: {fileID: 21300000, guid: e0280cd44d4ffbc438686e82acebe1a2, type: 3}
+    color: {r: 0.69803923, g: 0, b: 1, a: 1}
+    name: "\u30D5\u30A9\u30EB\u30C6"
+    prefab: {fileID: 8200664812584776985, guid: 31b0164f9700038448267ee8025ce845, type: 3}
+  - icon: {fileID: 21300000, guid: 8e622a106edfb714fac8692eb678ab08, type: 3}
+    color: {r: 0, g: 0.5803922, b: 1, a: 1}
+    name: "\u30BD\u30CB\u30C3\u30AF"
+    prefab: {fileID: 2026607292663643459, guid: 0ed78f4ab74144f4484339a7fe54b5ac, type: 3}
+  - icon: {fileID: 21300000, guid: b1571d9a4d9119d4fac54042ff0cb969, type: 3}
+    color: {r: 1, g: 0.87058824, b: 0, a: 1}
+    name: "\u30C6\u30A4\u30EB\u30B9"
+    prefab: {fileID: 2026607292663643459, guid: b68bb1d2840368044969e7269ffc992f, type: 3}
+  - icon: {fileID: 21300000, guid: 5eae34b9b73f71e4fa6113e10608f30f, type: 3}
+    color: {r: 1, g: 0.4, b: 0.9019608, a: 1}
+    name: "\u30A8\u30DF\u30FC"
+    prefab: {fileID: 0}
+  - icon: {fileID: 21300000, guid: c402992b3c558b745951c6d15d796c40, type: 3}
+    color: {r: 1, g: 0, b: 0, a: 1}
+    name: "\u30CA\u30C3\u30AF\u30EB\u30BA"
+    prefab: {fileID: 2026607292663643459, guid: 5bc278ef78a66ce47823d17850cbce3b, type: 3}
+  - icon: {fileID: 21300000, guid: 752630cdd0a09a34e8fe064a83e1355a, type: 3}
+    color: {r: 0, g: 0.34117648, b: 1, a: 1}
+    name: "\u30BD\u30CB\u30C3\u30AF"
+    prefab: {fileID: 8904858760230424853, guid: 8b4838048517b484ba321e0b03711218, type: 3}

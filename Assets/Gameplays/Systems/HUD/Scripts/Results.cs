@@ -315,25 +315,6 @@ public class Results : MonoBehaviour
             info.bestTime = uppers[0];
         }
 
-        if (bossStage) {
-            if (GameManager.damageTaken <= 0 && !info.noDamage) {
-                info.noDamage = true;
-            }
-        } else {
-            if (uppers[1] > info.bestCoins) {
-                info.bestCoins = uppers[1];
-            }
-            if (sonicStage) {
-                if (uppers[2] > info.averageSpeed) {
-                    info.averageSpeed = uppers[2];
-                }
-            } else {
-                if (uppers[2] > info.maxCombo) {
-                    info.maxCombo = uppers[2];
-                }
-            }
-        }
-
         //グリーンスターの記録
         for (int i = 0; i < info.greenStars.Length; i++) {
             if (GameManager.keyItems[i]) {

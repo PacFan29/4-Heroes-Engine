@@ -6,5 +6,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerPrefabs", menuName = "ScriptableObjects/Player Prefabs")]
 public class PlayerPrefabs : ScriptableObject
 {
-    public GameObject[] Prefabs = new GameObject[17];
+    [Serializable]
+    public class PlayerData {
+        public Sprite icon;
+        public Color color;
+        public string name;
+        public GameObject prefab;
+    }
+    public PlayerData[] playerData = new PlayerData[17];
 }
