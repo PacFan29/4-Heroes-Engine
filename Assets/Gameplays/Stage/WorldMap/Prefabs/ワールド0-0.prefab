@@ -67,6 +67,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 0fc5bc900780f254abc0305de1b03eb2, type: 2}
   - {fileID: 2100000, guid: 88334d86558530d44ac5cecd2fc99939, type: 2}
   - {fileID: 2100000, guid: 6262e8281cd58e64eb1236c0d3a4b502, type: 2}
+  greenStarGroup: {fileID: 7410656172546159804}
+  greenStar: {fileID: 7313216845799463809}
   rank: {fileID: 4834298563289516207}
   rankSprites:
   - {fileID: 21300000, guid: 1d7f1dfc114a164459f0d70dfd77050a, type: 3}
@@ -198,10 +200,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5619992482151566864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2001940228149957089}
+  - {fileID: 7784669905763261711}
   m_Father: {fileID: 7838375299911256080}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -213,7 +215,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2001940228149957089}
+  - component: {fileID: 7784669905763261711}
   m_Layer: 0
   m_Name: "\u30B0\u30EA\u30FC\u30F3\u30B9\u30BF\u30FC"
   m_TagString: Untagged
@@ -221,21 +223,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2001940228149957089
-Transform:
+--- !u!224 &7784669905763261711
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7313216845799463809}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.02, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3261837169831405176}
   m_Father: {fileID: 7410656172546159804}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7573828856869452697
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +368,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2001940228149957089}
+    m_TransformParent: {fileID: 7784669905763261711}
     m_Modifications:
     - target: {fileID: 6228515491340229125, guid: 9f71247b3ecf6d449816c0228115bd2a, type: 3}
       propertyPath: m_RootOrder

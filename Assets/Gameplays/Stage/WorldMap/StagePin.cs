@@ -18,6 +18,11 @@ public class StagePin : MonoBehaviour
     [Header("ステージピン")]
     public MeshRenderer lightPart;
     public Material[] materials = new Material[3];
+    [Header("グリーンスター")]
+    public Transform greenStarGroup;
+    public GameObject greenStar;
+    private List<RectTransform> stars;
+    private double step = 0.0;
     [Header("ランク")]
     public GameObject rank;
     public Sprite[] rankSprites = new Sprite[7];
@@ -29,6 +34,19 @@ public class StagePin : MonoBehaviour
 
         if (stg.stageType == GameType.Boss || stg.stageType == GameType.SonicBoss) {
             stg.targetScore = 50000;
+        }
+
+        stars = new List<RectTransform>();
+        stars.Add(greenStar.GetComponent<RectTransform>());
+
+        greenStar.SetActive(stg.greenStars.Length > 0);
+        double one = 360.0 / (double)stg.greenStars.Length;
+        for (int i = 1; i < stg.greenStars.Length; i++) {
+            RectTransform st = Instantiate(greenStar, greenStarGroup.position, Quaternion.identity, greenStarGroup).GetComponent<RectTransform>();
+            
+            stars.Add(st);
+            double dir = Math.PI * one * i / 180.0;
+            st.localPosition = new Vector3((float)Math.Sin(dir) * 3f, 0f, (float)Math.Cos(dir) * 3f);
         }
     }
 
@@ -59,6 +77,22 @@ public class StagePin : MonoBehaviour
 
         rank.GetComponent<SpriteRenderer>().sprite = rankSprites[stg.bestRank];
         rank.SetActive(stg.cleared);
+    }
+
+    void FixedUpdate() {
+        if (stg.greenStars.Length <= 0) {
+            return;
+        }
+        step -= 3.0;
+        step %= 360.0;
+        for (int i = 0; i < stars.Count; i++) {
+            if (stars[i] != null) {
+                double one = 360.0 / (double)stg.greenStars.Length;
+                double dir = ((Math.PI * one * i) + step) / 180.0;
+                stars[i].localPosition = new Vector3((float)Math.Sin(dir) * 3f, 0f, (float)Math.Cos(dir) * 3f);
+                stars[i].Rotate(0f, -3f, 0f, Space.Self);
+            }
+        }
     }
 
     void OnCollisionStay(Collision col) {

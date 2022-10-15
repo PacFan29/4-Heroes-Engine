@@ -276,7 +276,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8866328, y: 1}
+    m_SensorSize: {x: 1.7871622, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8866328, y: 1}
+    m_SensorSize: {x: 1.7871622, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8866328, y: 1}
+    m_SensorSize: {x: 1.7871622, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8866328, y: 1}
+    m_SensorSize: {x: 1.7871622, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1062,7 +1062,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8529986182743568514}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1332,7 +1332,7 @@ MonoBehaviour:
   loopBegin: 0.582
   loopEnd: 24.372
   speedUpMusic: {fileID: 8300000, guid: d85a248e656d3bf41869215502bd5b22, type: 3}
-  invincibilityMusic: {fileID: 8300000, guid: 79eb5f1b2e9ffa54195ebbdf2982c84d, type: 3}
+  invincibilityMusic: {fileID: 8300000, guid: e934751209783644f96a9b1297c0305b, type: 3}
   sonicInvincibilityMusic: {fileID: 8300000, guid: 3ea2684b1c5c37048a469201d9949022, type: 3}
   metalMarioMusic: {fileID: 8300000, guid: 5612b4186ff445b428ac2a0f2b34b6f2, type: 3}
   deathMusic: {fileID: 8300000, guid: ce3e6ecb136c8ed4eb9401d8d1e699c3, type: 3}
