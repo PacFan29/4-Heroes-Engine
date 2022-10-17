@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Gameplays/Scenes/Stages/Test/BossStageTest.unity
     guid: 17f6d01be62708b47a656c749affc0c0
   - enabled: 1
+    path: Assets/Gameplays/Scenes/Stages/Test/TestStage.unity
+    guid: d05c0bfc89522c64e997aa0237deb764
+  - enabled: 1
     path: Assets/Gameplays/Scenes/ResultScreen.unity
     guid: 2351d4c15f57a0e4b9dbdeffd185521f
   m_configObjects:

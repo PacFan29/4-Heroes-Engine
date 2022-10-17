@@ -63,7 +63,7 @@ public class PlayerInfo : PlayerController
 
         lives = data.lives[playerNumber];
 
-        if (playerId != 16) powerUpActive = data.powerUps[playerNumber];
+        if (this.GetComponent<_16MSonic>() == null) powerUpActive = data.powerUps[playerNumber];
         shieldActive = data.shields[playerNumber];
 
         voices = GetComponent<PlayerVoiceManager>();
@@ -81,7 +81,7 @@ public class PlayerInfo : PlayerController
         maxHP = Mathf.Clamp(maxHP, 5, 100);
         //HP（0～最大HP）
         HP = Mathf.Clamp(HP, 0, (int)((float)maxHP * hpRate));
-        if (playerId != 16) data.HPs[playerNumber] = (HP == maxHP) ? 999 : HP;
+        if (this.GetComponent<_16MSonic>() == null) data.HPs[playerNumber] = (HP == maxHP) ? 999 : HP;
         //残機（0～99）
         lives = Mathf.Clamp(lives, 0, 99);
         //スコア（0～999,999,999）
@@ -796,5 +796,15 @@ public class PlayerInfo : PlayerController
 
         SoundPlay(stockSound);
         data.stockItems[stockIndex].amounts = powerNo;
+    }
+
+    public IEnumerator CourseCleared() {
+        canInput = false;
+        ForwardSetUp(Vector3.zero, 0f);
+
+        yield return new WaitForSeconds(1f);
+
+        data.ResetCheckPoint();
+        SceneManager.LoadScene("ResultScreen");
     }
 }

@@ -60,6 +60,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: fc3ea490e0308a54f90012d9282e46d3, type: 2}
+  skin: {fileID: 4496912306264109196}
+  goalSound: {fileID: 8300000, guid: 73f227f6d4bdc6a4f87ae97c09f4dd5b, type: 3}
 --- !u!82 &919133356556133947
 AudioSource:
   m_ObjectHideFlags: 0

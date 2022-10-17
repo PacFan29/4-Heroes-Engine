@@ -6038,7 +6038,7 @@ PrefabInstance:
     - target: {fileID: 8836046107495465603, guid: 8498b18532869084d8e99e681ea0b261, type: 3}
       propertyPath: invincibilityMusic
       value: 
-      objectReference: {fileID: 8300000, guid: e934751209783644f96a9b1297c0305b, type: 3}
+      objectReference: {fileID: 8300000, guid: 13231250bf3252d4596eb0a954d3d9c1, type: 3}
     - target: {fileID: 8930976365271835898, guid: 8498b18532869084d8e99e681ea0b261, type: 3}
       propertyPath: m_IsActive
       value: 1

@@ -23,10 +23,6 @@ MonoBehaviour:
       unlocked: 1
       highScore: 0
       bestTime: 5999999
-      bestCoins: 0
-      maxCombo: 0
-      averageSpeed: 0
-      noDamage: 0
       greenStars: 000000
       bestRank: 0
     - targetScore: 70000
@@ -38,10 +34,6 @@ MonoBehaviour:
       unlocked: 1
       highScore: 0
       bestTime: 5999999
-      bestCoins: 20
-      maxCombo: 9
-      averageSpeed: 0
-      noDamage: 0
       greenStars: 
       bestRank: 0
     - targetScore: 120000
@@ -53,10 +45,6 @@ MonoBehaviour:
       unlocked: 1
       highScore: 0
       bestTime: 5999999
-      bestCoins: 0
-      maxCombo: 0
-      averageSpeed: 0
-      noDamage: 0
       greenStars: 000000
       bestRank: 0
     - targetScore: 50000
@@ -68,9 +56,16 @@ MonoBehaviour:
       unlocked: 1
       highScore: 0
       bestTime: 5999999
-      bestCoins: 0
-      maxCombo: 0
-      averageSpeed: 0
-      noDamage: 0
       greenStars: 
+      bestRank: 0
+    - targetScore: 300000
+      targetTime: 1200
+      stageType: 0
+      openWorldAsDefault: 1
+      subtitle: "\u30C6\u30B9\u30C8\u30B9\u30C6\u30FC\u30B8"
+      cleared: 0
+      unlocked: 1
+      highScore: 0
+      bestTime: 5999999
+      greenStars: 00000000000000
       bestRank: 0

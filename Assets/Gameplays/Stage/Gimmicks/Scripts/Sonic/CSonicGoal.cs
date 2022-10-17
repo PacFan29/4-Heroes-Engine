@@ -9,6 +9,7 @@ public class CSonicGoal : GoalManager
     public CapsuleCollider bonusCollider;
     private int step = 0;
     private int bonus = 1000;
+    private GameObject playerObj;
     [Header("効果音")]
     public AudioClip goalSound;
     public AudioClip bonusSound;
@@ -43,7 +44,7 @@ public class CSonicGoal : GoalManager
                 this.transform.position += Vector3.up * (2.83f - hit.distance);
                 SoundPlay(landSound);
 
-                GoToResult();
+                cleared(playerObj);
             }
 
             this.GetComponent<Rigidbody>().velocity = velocity;
@@ -52,7 +53,10 @@ public class CSonicGoal : GoalManager
 
     void OnTriggerEnter(Collider col){
         if (col.gameObject.tag == "Player"){
+            GameManager.timeIncrease = false;
+            
             PlayerInfo player = col.gameObject.GetComponent<PlayerInfo>();
+            playerObj = col.gameObject;
             switch (step) {
                 case 0:
                 SoundPlay(goalSound);
@@ -61,7 +65,7 @@ public class CSonicGoal : GoalManager
                     velocity.y = player.XZmag * 0.3f;
                 } else {
                     step = 2;
-                    GoToResult();
+                    cleared(playerObj);
                 }
                 break;
 

@@ -14,6 +14,7 @@ public class MusicManager : MonoBehaviour
     [Header("その他BGM")]
 	public AudioClip speedUpMusic;
 	public AudioClip invincibilityMusic;
+	public AudioClip cSonicInvincibilityMusic;
 	public AudioClip sonicInvincibilityMusic;
 	public AudioClip metalMarioMusic;
 	public AudioClip deathMusic;
@@ -31,7 +32,6 @@ public class MusicManager : MonoBehaviour
     {
         /*
         "All-Star Rest Area" = Begin : 0.582, End : 24.372
-        "Blue Skies, White Clouds" = Begin : 3.086, End : 111.769
         "Green Grove Act 1" = Begin : 1.834, End : 147.698
         */
         musicIndex = 0;
