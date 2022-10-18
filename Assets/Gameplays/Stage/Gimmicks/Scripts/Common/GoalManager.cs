@@ -18,4 +18,10 @@ public abstract class GoalManager : MonoBehaviour
         GameManager.timeIncrease = false;
         StartCoroutine(player.GetComponent<PlayerInfo>().CourseCleared());
     }
+
+    protected void SoundPlay(AudioClip clip) {
+        if (clip != null) {
+            this.GetComponent<AudioSource>().PlayOneShot(clip);
+        }
+    }
 }

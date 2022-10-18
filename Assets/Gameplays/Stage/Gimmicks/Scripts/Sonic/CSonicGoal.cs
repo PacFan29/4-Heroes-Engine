@@ -80,7 +80,4 @@ public class CSonicGoal : GoalManager
             }
         }
     }
-    void SoundPlay(AudioClip clip) {
-        this.GetComponent<AudioSource>().PlayOneShot(clip);
-    }
 }

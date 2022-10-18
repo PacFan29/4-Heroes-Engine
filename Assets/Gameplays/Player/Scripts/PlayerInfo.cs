@@ -798,6 +798,38 @@ public class PlayerInfo : PlayerController
         data.stockItems[stockIndex].amounts = powerNo;
     }
 
+    public IEnumerator GoalPole(MarioGoal goal, bool isTop) {
+        MusicManager.musicIndex = 2;
+
+        canInput = false;
+        VelocitySetUp(Vector3.zero);
+        activeCollision = false;
+        activePhysics = false;
+
+        Vector3 goalPos = goal.gameObject.transform.position;
+        float yPos = Math.Min(goal.upperPos, this.transform.position.y);
+        this.transform.position = new Vector3(goalPos.x, yPos, goalPos.z);
+
+        if (isTop) {
+            yield return new WaitForSeconds(1.5f);
+            goal.step = 2;
+            yield return new WaitForSeconds(0.5f);
+        } else {
+            yield return new WaitForSeconds(1f);
+        }
+
+        float diff = goal.upperPos - goal.bottomPos;
+
+        while (this.transform.position.y > goal.bottomPos) {
+            transform.Translate(0, -diff / 100f, 0);
+            goal.rate += 0.01f;
+            if (this.transform.position.y < goal.bottomPos) {
+                this.transform.position = new Vector3(this.transform.position.x, goal.bottomPos, this.transform.position.z);
+            }
+            yield return new WaitForSeconds(0.01f);
+        }
+        StartCoroutine(CourseCleared());
+    }
     public IEnumerator CourseCleared() {
         canInput = false;
         ForwardSetUp(Vector3.zero, 0f);
