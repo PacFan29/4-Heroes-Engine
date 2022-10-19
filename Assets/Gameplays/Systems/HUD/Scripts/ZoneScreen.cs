@@ -97,7 +97,7 @@ public class ZoneScreen : MonoBehaviour
     IEnumerator LoadData() {
         yield return new WaitForSeconds(1.5f);
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(Int32.Parse(stageInfo["stageNo"]) + 3);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(Int32.Parse(stageInfo["stageNo"]) + 5);
 
         while (!asyncLoad.isDone) {
             yield return null;
