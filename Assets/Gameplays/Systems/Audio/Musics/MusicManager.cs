@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour
 	public AudioClip clearMusic;
 
     public static AudioClip currentMusic;
-    public static int musicIndex = 0; //０＝通常、１＝やられBGM、２＝止める、３＝溺れる！！、４＝スピードアップ、５＝無敵、６＝メタルマリオ
+    public static int musicIndex = 0; //０＝通常、１＝やられBGM、２＝止める、３＝溺れる！！、４＝スピードアップ、５＝無敵、６＝メタルマリオ、７＝クリア
     public static bool musicFade = false;
     private float musicOpacity = 1f;
 	private AudioSource musicManager;
@@ -72,6 +72,8 @@ public class MusicManager : MonoBehaviour
                 InvincibilityMusic();
             } else if (musicIndex == 6) {
                 MetalMusic();
+            } else if (musicIndex == 7) {
+                ClearMusic();
             }
         } else {
             if (musicIndex == 0) {
@@ -150,6 +152,18 @@ public class MusicManager : MonoBehaviour
             musicManager.time = 0f;
         } else {
             musicManager.time = metalMarioMusic.length;
+        }
+        musicManager.Play();
+        musicManager.loop = false;
+    }
+
+    void ClearMusic(){
+        musicOpacity = 1f;
+        musicManager.clip = clearMusic;
+        if (musicManager.pitch > 0) {
+            musicManager.time = 0f;
+        } else {
+            musicManager.time = clearMusic.length;
         }
         musicManager.Play();
         musicManager.loop = false;
