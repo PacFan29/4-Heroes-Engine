@@ -88,7 +88,7 @@ public class MovingRingManager : MonoBehaviour
     }
     void OnTriggerEnter(Collider col){
         if (col.gameObject.tag == "Player" && !touched){
-            AudioSource playerGotit = col.transform.parent.gameObject.GetComponent<AudioSource>();
+            AudioSource playerGotit = col.transform.GetChild(0).gameObject.GetComponent<AudioSource>();
             playerGotit.clip = hyper ? superRingSound : ringSound;
             playerGotit.volume = 0.7f;
             playerGotit.Play();
