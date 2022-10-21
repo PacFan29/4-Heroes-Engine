@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InspiredBy : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class InspiredBy : MonoBehaviour
 
         time -= Time.deltaTime;
 
-        if ((Input.GetButton("A") || Input.GetButton("Start")) && time <= skipTime && step > 0 && step < 4) {
+        if ((Input.GetButtonDown("A") || Input.GetButtonDown("Start")) && time <= skipTime && step > 0 && step < 4) {
             time = 0f;
         }
 
@@ -45,7 +46,7 @@ public class InspiredBy : MonoBehaviour
                 step++;
                 return;
             } if (step == 4) {
-                ;
+                SceneManager.LoadScene("LogoScreen");
             } else {
                 fadeOut = true;
 
