@@ -430,9 +430,17 @@ public abstract class PlayerPhysics : DimensionManager
         if (velocity.y < 0 && (hit.distance > 0 && hit.distance <= ((ColliderHeight/2) + 0.2f)) && activeCollision){
             if (groundAttack) {
                 if (hit.collider.gameObject.GetComponent<QuestionBlockManager>() != null) {
-                    hit.collider.gameObject.GetComponent<QuestionBlockManager>().BlockHit(this.GetComponent<PlayerInfo>(), true);
+                    QuestionBlockManager block = hit.collider.gameObject.GetComponent<QuestionBlockManager>();
+                    block.BlockHit(this.GetComponent<PlayerInfo>(), true);
+
+                    if (block.GetComponent<BrickManager>() != null) {
+                        if (block.blockType == BlockType.None) return;
+                    }
                 } else if (hit.collider.gameObject.GetComponent<PacManSwitch>() != null) {
                     hit.collider.gameObject.GetComponent<PacManSwitch>().press();
+                } else if (hit.collider.gameObject.GetComponent<Box>() != null) {
+                    StartCoroutine(hit.collider.gameObject.GetComponent<Box>().DestroyBox(this.GetComponent<PlayerInfo>()));
+                    return;
                 }
             }
             if (playerType != 1 || (playerType == 1 && !underwater)) {

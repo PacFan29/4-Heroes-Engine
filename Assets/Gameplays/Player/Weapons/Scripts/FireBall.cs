@@ -54,6 +54,12 @@ public class FireBall : ComboManager
             BossManager boss = col.GetComponent<BossManager>();
             boss.Damage(player, 4, false);
             Destroy(gameObject);
+        } else if (col.gameObject.GetComponent<Box>() != null) {
+            if (LayerMask.LayerToName(col.gameObject.layer) != "Ignore Raycast") {
+                StartCoroutine(col.gameObject.GetComponent<Box>().DestroyBox(player));
+
+                Destroy(gameObject);
+            }
         } else if (LayerMask.LayerToName(col.gameObject.layer) == "Default") {
             //跳ね返る
             RaycastHit hit;

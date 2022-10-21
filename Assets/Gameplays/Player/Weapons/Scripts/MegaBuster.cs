@@ -168,6 +168,14 @@ public class MegaBuster : ComboManager
                     Destroy(gameObject);
                 }
             }
+        } else if (col.gameObject.GetComponent<Box>() != null) {
+            if (LayerMask.LayerToName(col.gameObject.layer) != "Ignore Raycast") {
+                StartCoroutine(col.gameObject.GetComponent<Box>().DestroyBox(player));
+
+                if (level <= 1) {
+                    Destroy(gameObject);
+                }
+            }
         } else if (LayerMask.LayerToName(col.gameObject.layer) == "Default") {
             if (power < 1) {
                 Destroy(gameObject);

@@ -152,6 +152,7 @@ public class _16MSonic : SonicActions
 
             if (actionId == 2 && info.finalVelocity.y > 0) {
                 actionId = 0;
+                info.groundAttack = false;
             }
             if (info.GetCrouchButtonDown("B") && !info.Grounded && actionId <= 0 && homingTime <= 0) {
                 //ストンピング
@@ -162,8 +163,10 @@ public class _16MSonic : SonicActions
                 info.ForwardSetUp(Vector3.zero, 0f);
                 info.rolling = false;
                 info.YvelSetUp(-80f);
+                info.groundAttack = true;
             } else if (info.Grounded && actionId == 2) {
                 actionId = 0;
+                info.groundAttack = false;
                 info.groundEvent = false;
                 info.attacking = false;
                 info.StopAllSounds();
@@ -621,6 +624,10 @@ public class _16MSonic : SonicActions
         if (GameManager.Coins > 0) {
             int remained = (int)Math.Floor(GameManager.Coins * Math.Min(0.2, ((double)GameManager.Coins / 1000)));
             if (GameManager.extra) remained = 0;
+            
+            if (info.options.beginnerMode && GameManager.Coins > 32) {
+                remained = Math.Max(0, GameManager.Coins - 32);
+            }
 
             spreader.SpreadRings(GameManager.Coins - remained, false);
             GameManager.Coins = remained;
