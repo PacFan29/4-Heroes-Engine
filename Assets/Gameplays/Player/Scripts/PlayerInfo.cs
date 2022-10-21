@@ -175,8 +175,6 @@ public class PlayerInfo : PlayerController
         if (invincibleTime > 0) {
             //無敵エフェクト
             invincibleEmission.rateOverTime = 100f;
-            ParticleSystem.ShapeModule invincibleShape = invincibleEffect.shape;
-            invincibleShape.position = this.transform.position - this.gameObject.transform.parent.gameObject.transform.position;
 
             //エフェクトタイム
             invincibleTime -= Time.deltaTime;

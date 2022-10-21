@@ -74,8 +74,13 @@ public class _16MSonic : SonicActions
     [Header("ホーミングターゲット")]
     public Animator hTargetAnim;
     [Header("トリック")]
-    public SonicTrickManager trickManager;
+    public GameObject trickUI;
+    [HideInInspector] public SonicTrickManager trickManager;
 
+    void Awake() {
+        trickManager = Instantiate(trickUI, this.transform.position, Quaternion.identity).GetComponent<SonicTrickManager>();
+        trickManager.info = this.GetComponent<PlayerInfo>();
+    }
     void Update()
     {
         //声の出演：金丸 淳一
@@ -585,8 +590,6 @@ public class _16MSonic : SonicActions
             sdEmission.rateOverTime = 125f;
             Vector3 sdRotation = new Vector3(-15f, 180 + info.skin.eulerAngles.y, 0f);
             sdShape.rotation = sdRotation;
-
-            spindashEffect.transform.position = this.transform.position - new Vector3(0, 1.2f, 0f);
         } else {
             sdEmission.rateOverTime = 0f;
         }
@@ -616,8 +619,6 @@ public class _16MSonic : SonicActions
 
     public void RingSpread() {
         if (GameManager.Coins > 0) {
-            spreader.gameObject.transform.position = this.transform.position;
-            
             int remained = (int)Math.Floor(GameManager.Coins * Math.Min(0.2, ((double)GameManager.Coins / 1000)));
             if (GameManager.extra) remained = 0;
 

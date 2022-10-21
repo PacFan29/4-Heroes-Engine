@@ -154,7 +154,6 @@ public class _12CSonic : SonicActions
             }
 
             sdEmission.rateOverTime = 125f;
-            spindashEffect.transform.position = this.transform.position - new Vector3(0, 1.2f, 0f);
             break;
 
             case 2:

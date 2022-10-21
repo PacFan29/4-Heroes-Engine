@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Gameplays/Scenes/InspiredBy.unity
     guid: 6d2c2518e9d48884e8491596fdb19832
   - enabled: 1
-    path: Assets/Gameplays/Scenes/LogoScreen.unity
+    path: Assets/Gameplays/PF2_Logo/LogoScreen.unity
     guid: ab166dac9ea83a4459344f65f810d332
   - enabled: 1
     path: Assets/Gameplays/Scenes/TitleScreen.unity

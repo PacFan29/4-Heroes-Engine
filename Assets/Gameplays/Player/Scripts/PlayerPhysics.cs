@@ -107,7 +107,6 @@ public abstract class PlayerPhysics : DimensionManager
     public Transform skin;
     public Transform metalSkin;
     public LayerMask GroundLayer;
-    public Transform pivot;
     [HideInInspector] public Vector3 input;
     public bool activePhysics = true;
     protected int combo = 0;
@@ -178,9 +177,6 @@ public abstract class PlayerPhysics : DimensionManager
     void FixedUpdate() {
         Quaternion cameraRotation = Camera.main.transform.rotation;
         float CameraY = Camera.main.transform.eulerAngles.y;
-
-        pivot.rotation = Quaternion.Euler(cameraRotation.eulerAngles.x, 0, cameraRotation.eulerAngles.z);
-        pivot.Rotate(0, CameraY, 0f, Space.Self);
         
         rb.velocity = Vector3.zero;
         ColliderRadius = GetComponent<CapsuleCollider>().radius;

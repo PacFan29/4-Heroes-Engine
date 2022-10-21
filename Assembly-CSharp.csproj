@@ -91,6 +91,7 @@
      <Compile Include="Assets\Gameplays\Enemies\Boss\Mega Man\Scripts\MegaManBossTemplate.cs" />
      <Compile Include="Assets\Gameplays\Player\Shields\ShieldAnimations.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\TestGimmick.cs" />
+     <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\InspiredBy.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\PlayerFootsteps.cs" />
      <Compile Include="Assets\Gameplays\Systems\Scripts\StockItem.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Pac-Man\MetalCookie.cs" />
@@ -110,6 +111,7 @@
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\PacManActions.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Scripts\EnemyMaker.cs" />
+     <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\LogoScreen.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\KeyItemDisplay.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\GameManager.cs" />
@@ -311,7 +313,6 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
-     <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\InspiredBy.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
