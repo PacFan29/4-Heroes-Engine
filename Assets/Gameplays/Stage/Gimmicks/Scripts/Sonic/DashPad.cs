@@ -11,7 +11,7 @@ public class DashPad : MonoBehaviour
 
             PlayerInfo player = col.gameObject.GetComponent<PlayerInfo>();
             player.ForwardSetUp(this.transform.forward, 80f);
-            player.controlLockTimer = 0.5f;
+            //player.controlLockTimer = 0.5f;
         }
     }
 }

@@ -2,24 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Experiment : MonoBehaviour
-{
-    Vector3 input;
-    Vector3 velocity;
-    Rigidbody rb;
-    // Start is called before the first frame update
-    void Start()
+namespace SplineMesh {
+    public class Experiment : MonoBehaviour
     {
-        rb = GetComponent<Rigidbody>();
-    }
+        public Spline rail;
+        public float offset = 0.3f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        ;
-    }
+        private float rate = 0.0f;
+        // Start is called before the first frame update
+        void Start()
+        {
+            ;
+        }
 
-    public void BlockHit(RaycastHit hit) {
-        Debug.Log(hit.normal);
+        // Update is called once per frame
+        void Update()
+        {
+            rate += Time.deltaTime;
+
+            if (rate > rail.nodes.Count - 1) {
+                rate = 0.0f;
+            }
+
+            CurveSample sample = rail.GetSample(rate);
+            this.transform.localRotation = sample.Rotation;
+            this.transform.position = rail.gameObject.transform.position + sample.location + (transform.up * offset);
+        }
     }
 }

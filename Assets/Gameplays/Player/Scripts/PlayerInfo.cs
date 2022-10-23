@@ -460,6 +460,7 @@ public class PlayerInfo : PlayerController
     }
     public void HPRestore(int value){
         //回復の処理
+        if (options.beginnerMode) value *= 2;
         HP += Math.Abs(value);
     }
     public void SpeedUp(){
@@ -476,7 +477,6 @@ public class PlayerInfo : PlayerController
     }
     public void MetalCookie(){
         //メタル
-        //MusicManager.musicIndex = 5;
         metal = true;
         metalTime = 20f;
         if (playerType == 0) {

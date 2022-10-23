@@ -15,5 +15,5 @@ MonoBehaviour:
   musicVolume: 0
   soundVolume: 1
   voiceVolume: 1
-  beginnerMode: 1
+  beginnerMode: 0
   lives: 1
