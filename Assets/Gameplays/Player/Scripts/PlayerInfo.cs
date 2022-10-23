@@ -747,6 +747,16 @@ public class PlayerInfo : PlayerController
         powerUpActive = 0;
     }
 
+    public void Breath() {
+        airAmount = maxAirAmount;
+        airCountdown = 5;
+
+        if (playerType == 3) {
+            rolling = false;
+            VelocitySetUp(Vector3.zero);
+        }
+    }
+
     public IEnumerator PipeEnter(Vector3 pipePos, int exitIndex) {
         activeCollision = false;
         activePhysics = false;
