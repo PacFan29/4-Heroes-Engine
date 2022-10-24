@@ -194,6 +194,7 @@
      <Compile Include="Assets\Gameplays\Objects\Scripts\Sonic\SpecialKey.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\LayerShifter.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\BubblePipe.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Components\BloomComponent.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Mario\CoinRing.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\ZoneScreen.cs" />
@@ -301,6 +302,7 @@
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\FadeManager.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_08CheepCheep.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\AirBubble.cs" />
      <Compile Include="Assets\Gameplays\SpecialStage\Maze\Scripts\MazeGhost.cs" />
      <Compile Include="Assets\Gameplays\Systems\Scripts\SpriteNumber.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mega Man\AppearingBlockManager.cs" />
@@ -315,8 +317,8 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
-     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\BubblePipe.cs" />
-     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\AirBubble.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\PlayerGrindRail.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Sonic\GrindRail.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

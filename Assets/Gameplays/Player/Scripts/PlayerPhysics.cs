@@ -139,7 +139,7 @@ public abstract class PlayerPhysics : DimensionManager
     Vector3 YcenterUp;
     protected Vector3 previousLandedPos;
     
-    protected Dictionary<string, float> SpeedC = new Dictionary<string, float>() {
+    public Dictionary<string, float> SpeedC = new Dictionary<string, float>() {
         {"acc", 0.234375f},
         {"dec", 2.5f},
         {"frc", 0.234375f},
@@ -151,7 +151,7 @@ public abstract class PlayerPhysics : DimensionManager
         {"slprolldown", 1.5625f},
         {"fall", 12.5f}
     };
-    protected Dictionary<string, float> AirborneC = new Dictionary<string, float>() {
+    public Dictionary<string, float> AirborneC = new Dictionary<string, float>() {
         {"airacc", 0.46875f},
         {"airfrc", 0f},
         {"jmp", 32.5f},

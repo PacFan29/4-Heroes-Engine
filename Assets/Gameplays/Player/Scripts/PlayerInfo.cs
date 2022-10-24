@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using PathCreation;
 
 public class PlayerInfo : PlayerController
 {
@@ -804,6 +805,18 @@ public class PlayerInfo : PlayerController
 
         SoundPlay(stockSound);
         data.stockItems[stockIndex].amounts = powerNo;
+    }
+
+    public void GrindRailStart(PathCreator rail) {
+        if (this.GetComponent<PlayerGrindRail>() != null) {
+            PlayerGrindRail grindRail = this.GetComponent<PlayerGrindRail>();
+            grindRail.rail = rail;
+            grindRail.speed = XZmag;
+            grindRail.enabled = true;
+            axisInput = false;
+            Grounded = true;
+            activePhysics = false;
+        }
     }
 
     public IEnumerator GoalPole(MarioGoal goal, bool isTop) {

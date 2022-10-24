@@ -1,32 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PathCreation;
 
-namespace SplineMesh {
-    public class Experiment : MonoBehaviour
+public class Experiment : MonoBehaviour
+{
+    public PathCreator rail;
+    public float offset = 0.3f;
+
+    public EndOfPathInstruction endOfPathInstruction;
+    public float speed = 5;
+    float distanceTravelled;
+    // Start is called before the first frame update
+    void Start()
     {
-        public Spline rail;
-        public float offset = 0.3f;
-
-        private float rate = 0.0f;
-        // Start is called before the first frame update
-        void Start()
+        if (rail != null)
         {
-            ;
+            // Subscribed to the pathUpdated event so that we're notified if the path changes during the game
+            rail.pathUpdated += OnPathChanged;
+            OnPathChanged();
         }
+    }
 
-        // Update is called once per frame
-        void Update()
+    // Update is called once per frame
+    void Update()
+    {
+        if (rail != null)
         {
-            rate += Time.deltaTime;
+            distanceTravelled -= speed * Time.deltaTime;
+            transform.position = rail.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction) + (transform.up * 2f);
+            transform.rotation = rail.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
 
-            if (rate > rail.nodes.Count - 1) {
-                rate = 0.0f;
+            if (transform.position - (transform.up * 2f) == rail.path.GetPoint(rail.path.NumPoints - 1)) {
+                Debug.Log("End");
+            } else if (transform.position - (transform.up * 2f) == rail.path.GetPoint(0)) {
+                Debug.Log("Start");
             }
-
-            CurveSample sample = rail.GetSample(rate);
-            this.transform.localRotation = sample.Rotation;
-            this.transform.position = rail.gameObject.transform.position + sample.location + (transform.up * offset);
         }
+    }
+
+    void OnPathChanged() {
+        distanceTravelled = rail.path.GetClosestDistanceAlongPath(transform.position);
     }
 }

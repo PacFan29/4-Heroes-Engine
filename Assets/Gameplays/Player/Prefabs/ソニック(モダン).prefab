@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 5991831755629623262}
   - component: {fileID: 2708694513446790073}
   - component: {fileID: 4885178414973317854}
+  - component: {fileID: 3467081279410618712}
   - component: {fileID: 2708694513446790074}
   - component: {fileID: 2708694513446790075}
   - component: {fileID: 2708694513446790076}
@@ -663,6 +664,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8d0a22c39db6d154dbccd656610e30da, type: 3}
   FallenVoices:
   - {fileID: 8300000, guid: 8d0a22c39db6d154dbccd656610e30da, type: 3}
+--- !u!114 &3467081279410618712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708694513446790078}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5fd276fb696cad499d727cdaf9f547f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rail: {fileID: 0}
+  speed: 5
+  front: 0
 --- !u!136 &2708694513446790074
 CapsuleCollider:
   m_ObjectHideFlags: 0
