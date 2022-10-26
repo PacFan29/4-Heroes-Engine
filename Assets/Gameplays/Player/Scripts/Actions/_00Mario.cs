@@ -6,11 +6,8 @@ public class _00Mario : MarioActions
 {
     [Header("効果音(限定)")]
     public AudioClip wallJump;
-    public AudioClip hipDropPre;
-    public AudioClip hipDropLand;
 
     Vector3 contactNormal;
-    private bool groundPound = false;
     
     public void Update()
     {
@@ -49,6 +46,7 @@ public class _00Mario : MarioActions
                     groundPound = false;
                     gravityControl = false;
                     actionId = 0;
+                    canSlideOnWall = true;
                 }
             } else {
                 if (!info.activePhysics && info.ButtonsDown["X"]) {
@@ -66,8 +64,10 @@ public class _00Mario : MarioActions
             break;
 
             case 6:
+            canSlideOnWall = false;
             gravityControl = false;
             if (info.Grounded) {
+                canSlideOnWall = true;
                 info.axisInput = true;
                 actionId = 0;
             }
@@ -108,7 +108,7 @@ public class _00Mario : MarioActions
     {
         if (info.isGroundLayerC(hit)) {
             ContactPoint contact = hit.contacts[0];
-            if (!info.Grounded && contact.normal.y < 0.1f && !info.canWallJump && !info.underwater && actionId != 2 && actionId >= 0 && info.finalVelocity.y < 0) {
+            if (!info.Grounded && contact.normal.y < 0.1f && !info.canWallJump && !info.underwater && canSlideOnWall && info.finalVelocity.y < 0) {
                 Debug.Log(Vector3.Angle(info.skin.forward, contact.normal));
                 if (Vector3.Angle(info.skin.forward, contact.normal) >= 135f) {
                     if (!info.axisInput) info.axisInput = true;
@@ -123,39 +123,9 @@ public class _00Mario : MarioActions
     }
     void OnCollisionExit(Collision hit) {
         if (info.isGroundLayerC(hit) && info.canWallJump && info.finalVelocity.y < 0) {
+            canSlideOnWall = true;
             actionId = 0;
             info.canWallJump = false;
         }
-    }
-
-    IEnumerator GroundPound() {
-        info.SoundPlay(hipDropPre);
-        info.VelocitySetUp(Vector3.zero);
-        actionId = 5;
-        info.axisInput = false;
-        info.activePhysics = false;
-
-        yield return new WaitForSeconds(0.3f);
-
-        info.groundAttack = true;
-        info.activePhysics = true;
-        info.VelocitySetUp(Vector3.up * info.TerminalVelocity);
-
-        while (!info.Grounded && actionId == 5) {
-            yield return new WaitForSeconds(0f);
-        }
-
-        info.groundAttack = false;
-        info.SoundPlay(hipDropLand);
-        if (info.GroundNormal != Vector3.up) {
-            info.ForwardSetUp(Vector3.zero, 20f);
-            info.rolling = true;
-        } else {
-            yield return new WaitForSeconds(0.5f);
-        }
-
-        info.axisInput = true;
-        groundPound = false;
-        actionId = 0;
     }
 }

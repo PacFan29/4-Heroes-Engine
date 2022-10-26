@@ -23,8 +23,15 @@ public abstract class MarioActions : MonoBehaviour
     public AudioClip jumpBroad;
     public AudioClip throwFireball;
     public AudioClip throwIceball;
+    public AudioClip hipDropPre;
+    public AudioClip hipDropLand;
     [Header("ボイス")]
     public AudioClip[] jumpBroadVoices;
+
+    protected bool canSlideOnWall = true;
+    protected bool continueJumping = false;
+
+    protected bool groundPound = false;
 
     void Start()
     {
@@ -102,10 +109,12 @@ public abstract class MarioActions : MonoBehaviour
         switch (actionId) {
             case 2:
             //幅跳び
+            canSlideOnWall = false;
             gravityControl = false;
             info.axisInput = false;
 
             if (info.Grounded) {
+                canSlideOnWall = true;
                 actionId = 0;
                 info.axisInput = true;
             }
@@ -121,6 +130,11 @@ public abstract class MarioActions : MonoBehaviour
                 info.axisInput = true;
             }
             break;
+
+            case 5:
+            //ヒップドロップ
+            canSlideOnWall = false;
+            break;
         }
         if (info.Grounded && !gravityControl && actionId == 0) {
             gravityControl = true;
@@ -130,7 +144,7 @@ public abstract class MarioActions : MonoBehaviour
             if (info.Grounded) {
                 info.constantChange(true, "top", info.U_TopSpeed);
             } else {
-                info.constantChange(true, "top", 30f);
+                info.constantChange(true, "top", (info.TopSpeed / 3f) * 4f);
             }
             if (info.finalVelocity.y > 0){
                 info.constantChange(false, "grv", 0.625f);
@@ -139,7 +153,7 @@ public abstract class MarioActions : MonoBehaviour
             }
         } else {
             if (gravityControl && !info.gravityLock) {
-                if (info.finalVelocity.y >= 20 && jumpButton){
+                if ((info.finalVelocity.y >= 20 || continueJumping) && jumpButton){
                     info.constantChange(false, "grv", info.Gravity / 3f); //例）0.625f
                 } else {
                     info.constantChange(false, "grv", info.Gravity);
@@ -238,10 +252,42 @@ public abstract class MarioActions : MonoBehaviour
             yield return new WaitForSeconds(0);
         }
 
+        canSlideOnWall = true;
         actionId = 0;
         info.canInput = true;
         info.axisInput = true;
         info.tookDamage = false;
+    }
+    public IEnumerator GroundPound() {
+        info.SoundPlay(hipDropPre);
+        info.VelocitySetUp(Vector3.zero);
+        actionId = 5;
+        info.axisInput = false;
+        info.activePhysics = false;
+
+        yield return new WaitForSeconds(0.3f);
+
+        info.groundAttack = true;
+        info.activePhysics = true;
+        info.VelocitySetUp(Vector3.up * info.TerminalVelocity);
+
+        while (!info.Grounded && actionId == 5) {
+            yield return new WaitForSeconds(0f);
+        }
+
+        info.groundAttack = false;
+        info.SoundPlay(hipDropLand);
+        if (info.GroundNormal != Vector3.up) {
+            info.ForwardSetUp(Vector3.zero, 20f);
+            info.rolling = true;
+        } else {
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        canSlideOnWall = true;
+        info.axisInput = true;
+        groundPound = false;
+        actionId = 0;
     }
 
     public IEnumerator DamageAnimation(Vector3 direction) {
@@ -278,6 +324,7 @@ public abstract class MarioActions : MonoBehaviour
     public void Reset() {
         info.activePhysics = true;
         info.activeCollision = true;
+        canSlideOnWall = true;
         actionId = 0;
         GetComponent<CapsuleCollider>().isTrigger = false;
         GetChildren(info.skin.gameObject, "Ignore Raycast");

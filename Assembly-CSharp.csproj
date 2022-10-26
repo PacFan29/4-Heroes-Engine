@@ -47,6 +47,7 @@
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\Trigger2D.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_03Lakitu.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\PlayerGrindRail.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Common\Box.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Pac-Man\FruitDoor.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
@@ -292,6 +293,7 @@
      <Compile Include="Assets\Gameplays\Player\Weapons\Data\SpecialWeaponData.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Boss\Scripts\VoiceManager.cs" />
      <Compile Include="Assets\Gameplays\Stage\Hazards\Scripts\ParticleDamage.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Sonic\GrindRail.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\Actions\_10ProtoMan.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
      <Compile Include="Assets\Samples\IgniteCoders\Simple Water Shader\Resources\WaterReflection.cs" />
@@ -317,8 +319,6 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
-     <Compile Include="Assets\Gameplays\Player\Scripts\PlayerGrindRail.cs" />
-     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Sonic\GrindRail.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

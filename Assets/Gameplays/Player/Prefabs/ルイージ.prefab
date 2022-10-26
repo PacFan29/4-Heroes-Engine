@@ -434,18 +434,18 @@ MonoBehaviour:
   layerPos: 0
   layerRate: 0
   Acceleration: 1.25
-  Deceleration: 1.25
-  Friction: 1.25
+  Deceleration: 0.625
+  Friction: 0.625
   RollFrc: 0.625
   RollDec: 0.625
-  TopSpeed: 22.5
+  TopSpeed: 23.5
   Slope: 0
   SlopeRollUp: 1.75
   SlopeRollDown: 1.75
   MaxSpeed: 45
   AirAcc: 0.546875
   AirFrc: 0
-  JumpForce: 31.375
+  JumpForce: 33.375
   Gravity: 1.875
   TerminalVelocity: -75
   I_Acceleration: 0.546875
@@ -558,7 +558,10 @@ MonoBehaviour:
   jumpBroad: {fileID: 8300000, guid: d27e7da25e254ac4f95e38468346931e, type: 3}
   throwFireball: {fileID: 8300000, guid: 72a9a056485fad647a12884278c9b496, type: 3}
   throwIceball: {fileID: 8300000, guid: 4210de45f324efa4781d8170165b6a80, type: 3}
+  hipDropPre: {fileID: 0}
+  hipDropLand: {fileID: 0}
   jumpBroadVoices: []
+  wallJump: {fileID: 0}
 --- !u!114 &4328866090020693110
 MonoBehaviour:
   m_ObjectHideFlags: 0

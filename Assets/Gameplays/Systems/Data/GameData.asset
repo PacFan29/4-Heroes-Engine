@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   coins: 0
-  HUDType: 2
-  character: 3
+  HUDType: 0
+  character: 0
   HUDStyle: 0
   openWorldAsDefault: 1
-  characterIds: 0c000000ffffffffffffffffffffffff
-  HPs: e7030000e7030000e7030000e7030000
+  characterIds: 05000000ffffffffffffffffffffffff
+  HPs: 19000000e7030000e7030000e7030000
   lives: 02000000020000000200000002000000
   powerUps: 00000000000000000000000000000000
   shields: 00000000000000000000000000000000
   stockItems:
-  - amounts: 0
+  - amounts: 1
     megaManOnly: 0
     special: 0
     limit: 1
@@ -35,7 +35,7 @@ MonoBehaviour:
     limit: 1
     sprites:
     - {fileID: 21300000, guid: cc0d31a03e8b72c41bba261499ac4741, type: 3}
-  - amounts: 0
+  - amounts: 1
     megaManOnly: 0
     special: 0
     limit: 3
