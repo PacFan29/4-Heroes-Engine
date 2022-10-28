@@ -12,6 +12,7 @@ public class PlayerGrindRail : MonoBehaviour
     float distanceTravelled;
 
     PlayerInfo info;
+    bool grind = true;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -22,12 +23,14 @@ public class PlayerGrindRail : MonoBehaviour
             OnPathChanged();
 
             front = Vector3.Angle(info.skin.forward, GetVector(Vector3.forward)) < 90;
+
+            grind = true;
         }
     }
 
     void Update()
     {
-        if (rail != null)
+        if (rail != null && grind)
         {
             distanceTravelled += speed * Time.deltaTime * (front ? 1f : -1f);
             transform.position = rail.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction) + (transform.up * 2f);
@@ -56,13 +59,17 @@ public class PlayerGrindRail : MonoBehaviour
 
             if (transform.position - (transform.up * 2f) == rail.path.GetPoint(rail.path.NumPoints - 1) && front) {
                 //終端
+                grind = false;
                 ExitFromRail();
             } else if (transform.position - (transform.up * 2f) == rail.path.GetPoint(0) && !front) {
                 //始端
+                grind = false;
                 ExitFromRail();
             }
 
             if (!info.Grounded) {
+                Debug.Log("Jumped!");
+                grind = false;
                 ExitFromRail(true);
             }
         }

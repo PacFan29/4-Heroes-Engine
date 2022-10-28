@@ -6,7 +6,7 @@ public abstract class PacManSwitch : MonoBehaviour
 {
     [Header("アニメーション")]
     public Animator anim;
-    protected bool pressed = false;
+    [HideInInspector] public bool pressed = false;
 
     // Update is called once per frame
     void Update()
