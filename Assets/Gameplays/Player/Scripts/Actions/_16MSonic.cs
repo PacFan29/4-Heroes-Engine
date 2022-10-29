@@ -24,6 +24,7 @@ public class _16MSonic : SonicActions
     public AudioClip lightDashSound;
     public AudioClip slidingSound;
     public AudioClip driftingSound;
+    public AudioClip blueRingSound;
     public LoopingSoundManager lManager;
     [Header("リング散乱")]
     public RingSpreader spreader;
@@ -45,6 +46,8 @@ public class _16MSonic : SonicActions
     private int driftDirection;
 
     private int ringMemory;
+
+    [HideInInspector] public bool blueRing = false;
     /*
     ～ブーストの消費～
     ブースト：-10%
@@ -629,8 +632,9 @@ public class _16MSonic : SonicActions
                 remained = Math.Max(0, GameManager.Coins - 32);
             }
 
-            spreader.SpreadRings(GameManager.Coins - remained, false);
+            spreader.SpreadRings(GameManager.Coins - remained, blueRing);
             GameManager.Coins = remained;
+            blueRing = false;
         }
     }
 
@@ -659,5 +663,10 @@ public class _16MSonic : SonicActions
         if (info.isGroundLayerC(hit)) {
             info.canWallJump = false;
         }
+    }
+
+    public void ActiveBlueRing() {
+        info.SoundPlay(blueRingSound);
+        blueRing = true;
     }
 }

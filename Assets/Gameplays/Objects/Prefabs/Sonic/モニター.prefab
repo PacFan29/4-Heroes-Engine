@@ -229,15 +229,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fd9fa94c5f1940143bb0c399f69cd394, type: 3}
   screen: {fileID: 9177846489990355987}
   screenMaterials:
-  - {fileID: 2100000, guid: 5dd42ba58332a304e8a38ea17130c925, type: 2}
+  - {fileID: 2100000, guid: 2a5ec39b2bdabd143a2dfa6e7680b673, type: 2}
+  - {fileID: 2100000, guid: 8bf932bb25e7f5042a24fdcfaf43839c, type: 2}
   - {fileID: 2100000, guid: 240916798d99ca9458dcca846ad589bf, type: 2}
-  - {fileID: 2100000, guid: c869700d82ebca8468f88e5c6b03f28b, type: 2}
+  - {fileID: 2100000, guid: 572fd75a27731914688d3631391ce86b, type: 2}
   - {fileID: 2100000, guid: e17254e5f795ec44eb3879cc40205d35, type: 2}
   - {fileID: 2100000, guid: 5fee1951c3ecad0499a81d41f76c51f0, type: 2}
   - {fileID: 2100000, guid: 0417904a8299cef45860e81d5b954466, type: 2}
   - {fileID: 2100000, guid: 2507f070b12b18243bdb6d4950899e8f, type: 2}
+  - {fileID: 2100000, guid: 798158db85cbc77418a0071a2e542e68, type: 2}
   - {fileID: 2100000, guid: 1645d51389a4cb040b643f11768c260f, type: 2}
-  - {fileID: 2100000, guid: 01d31931132ca054890014d7266f0949, type: 2}
+  - {fileID: 2100000, guid: 687e2e3d1fb50e042b2d309e75725456, type: 2}
 --- !u!82 &9177846491251764660
 AudioSource:
   m_ObjectHideFlags: 0

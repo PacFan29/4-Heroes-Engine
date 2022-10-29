@@ -80,6 +80,7 @@
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Sonic\MSonicGoal.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\PostProcessingComponent.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Mario\TrampolineManager.cs" />
+     <Compile Include="Assets\Gameplays\Objects\Scripts\Sonic\ItemCapsule.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\HUDManager.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Utils\MeshUtility.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Sonic\SpringManager.cs" />
@@ -226,6 +227,7 @@
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\WipeManager.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Mario\RedCoinRing.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Scripts\MarioEnemyManager.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Pac-Man\BlueSwitchParent.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_16Bully.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Bezier\CubicBezierCurve.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -319,8 +321,6 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
-     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Pac-Man\BlueSwitchParent.cs" />
-     <Compile Include="Assets\Gameplays\Objects\Scripts\Sonic\ItemCapsule.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

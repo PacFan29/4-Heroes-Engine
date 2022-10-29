@@ -4,12 +4,14 @@ using UnityEngine;
 
 public enum MonitorType {
     TenRings,
+    RandomRings,
     SpeedUp,
     Invincible,
     Shield,
     FireShield,
     BubbleShield,
     ThunderShield,
+    BlueRing,
     Eggman,
     Extend
 }
@@ -34,11 +36,6 @@ public class MonitorManager : MonoBehaviour
     [Header("画面")]
     public MeshRenderer screen;
     public Material[] screenMaterials;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -68,14 +65,16 @@ public class MonitorManager : MonoBehaviour
     }
 
     IEnumerator MonitorEffect() {
+        int soundIndex = 0;
+        float soundVolume = 1f;
+        AudioSource playerGotit;
+
         yield return new WaitForSeconds(0.5f);
 
         switch (monitorType) {
             case MonitorType.TenRings:
             GameManager.Coins += 10;
 
-            int soundIndex = 0;
-            float soundVolume = 1f;
             switch (data.character) {
                 case Character.PacMan:
                 //クッキー
@@ -105,7 +104,47 @@ public class MonitorManager : MonoBehaviour
             }
             player.scoreIncrease(200);
 
-            AudioSource playerGotit = player.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>();
+            playerGotit = player.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>();
+            playerGotit.clip = coinSounds[soundIndex];
+            playerGotit.volume = soundVolume;
+            playerGotit.Play();
+            break;
+
+            case MonitorType.RandomRings:
+            int[] randomAmounts = {1, 5, 10, 20, 30, 40, 50};
+            int am = randomAmounts[UnityEngine.Random.Range(0, randomAmounts.Length)];
+            GameManager.Coins += am;
+
+            switch (data.character) {
+                case Character.PacMan:
+                //クッキー
+                player.GotCookie(10);
+                soundIndex = 1;
+                soundVolume = 0.35f;
+                break;
+                    
+                case Character.RockMan:
+                //ネジ
+                soundIndex = 2;
+                soundVolume = 1f;
+                break;
+                    
+                case Character.Sonic:
+                //リング
+                player.GotRing(10);
+                soundIndex = 3;
+                soundVolume = 0.7f;
+                break;
+
+                case Character.Other:
+                //クリスタル
+                soundIndex = 4;
+                soundVolume = 0.7f;
+                break;
+            }
+            player.scoreIncrease(am * 20);
+
+            playerGotit = player.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>();
             playerGotit.clip = coinSounds[soundIndex];
             playerGotit.volume = soundVolume;
             playerGotit.Play();
@@ -153,6 +192,12 @@ public class MonitorManager : MonoBehaviour
                 StartCoroutine(player.ItemStock(3, player.shieldActive));
             }
             player.shieldActive = 4;
+            break;
+
+            case MonitorType.BlueRing:
+            if (player.gameObject.GetComponent<_16MSonic>() != null) {
+                player.gameObject.GetComponent<_16MSonic>().ActiveBlueRing();
+            }
             break;
             
             case MonitorType.Eggman:

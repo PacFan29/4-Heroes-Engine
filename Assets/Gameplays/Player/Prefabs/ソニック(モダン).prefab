@@ -609,8 +609,10 @@ MonoBehaviour:
   lightDashSound: {fileID: 8300000, guid: 53d3cd3c944375544a2119fabbe884d7, type: 3}
   slidingSound: {fileID: 8300000, guid: 078801e2384437d49bb2299640dfecd2, type: 3}
   driftingSound: {fileID: 8300000, guid: cceb25a37687a2648877b7d7126f4e75, type: 3}
+  blueRingSound: {fileID: 8300000, guid: 781b4a8b216681c468335b13f0dca74f, type: 3}
   lManager: {fileID: 8362085323013547073}
   spreader: {fileID: 9019430546118913987}
+  blueRing: 0
   homingEffect: {fileID: 1397600260109740161}
   spindashEffect: {fileID: 2393833442157137756}
   speedLinesEffect: {fileID: 7343250914902783730}
@@ -678,7 +680,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rail: {fileID: 0}
   speed: 5
-  front: 0
 --- !u!136 &2708694513446790074
 CapsuleCollider:
   m_ObjectHideFlags: 0
