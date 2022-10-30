@@ -160,6 +160,16 @@ public class MegaBuster : ComboManager
                     Destroy(gameObject);
                 }
             }
+        } else if (col.gameObject.GetComponent<ItemCapsule>() != null) {
+            if (!col.gameObject.GetComponent<ItemCapsule>().destroyed) {
+                ItemCapsule capsule = col.gameObject.GetComponent<ItemCapsule>();
+                capsule.player = player;
+                capsule.destroyed = true;
+
+                if (level <= 1) {
+                    Destroy(gameObject);
+                }
+            }
         } else if (col.gameObject.GetComponent<QuestionBlockManager>() != null) {
             if (LayerMask.LayerToName(col.gameObject.layer) != "Ignore Raycast") {
                 col.gameObject.GetComponent<QuestionBlockManager>().BlockHit(player, false);

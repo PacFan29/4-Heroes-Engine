@@ -19,6 +19,8 @@ public abstract class EnemyManager : DimensionManager
 
     [Header("エフェクト")]
     public GameObject vanishEffect;
+    public GameObject stompEffect;
+    public GameObject hitEffect;
     protected PlayerInfo player;
 
     private AudioSource sound;
@@ -174,12 +176,15 @@ public abstract class EnemyManager : DimensionManager
             HP -= damage;
             if (stomped) {
                 SoundPlay(stompedSound);
+
+                Instantiate(stompEffect, this.transform.position + Vector3.up * GetComponent<CapsuleCollider>().height, Quaternion.identity);
             } else {
                 if (HP <= 0) {
                     SoundPlay(defeatedSound);
                 } else {
                     SoundPlay(damageSound);
                 }
+                Instantiate(hitEffect, this.transform.position, Quaternion.identity);
             }
             
             if (attackedByPlayer) {

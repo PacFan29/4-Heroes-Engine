@@ -506,6 +506,7 @@ public abstract class PlayerPhysics : DimensionManager
 
         //曲がる速度の調整
         float turnSpeed = Math.Max(0.05f, (60f - XZmag) / 60f);
+        if ((!Grounded && (playerType == 0 || playerType == 3)) || rolling) turnSpeed = 0.05f;
         if (this.GetComponent<_16MSonic>() != null) {
             if (this.GetComponent<_16MSonic>().boost) {
                 turnSpeed = 0.01f;

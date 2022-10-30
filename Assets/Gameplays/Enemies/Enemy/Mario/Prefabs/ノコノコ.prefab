@@ -75,6 +75,8 @@ MonoBehaviour:
   defended: 1
   spiked: 0
   vanishEffect: {fileID: 3849198628105354450}
+  stompEffect: {fileID: 4690657993333693366, guid: 13283df95584e9f4883d42802016e199, type: 3}
+  hitEffect: {fileID: 4690657993333693366, guid: 613121f2993d6de479186796438e4ae0, type: 3}
   velocity: {x: 0, y: 0, z: 0}
   Grounded: 1
   Flying: 0
@@ -99,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dace252283fe2694585e36fdd4bb8197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nakedAnim: {fileID: 0}
   normalSkin: {fileID: 2005536943809449362}
   nakedSkin: {fileID: 1699771142663395772}
   shell: {fileID: 1026695906906202608, guid: 0e20038e6a6acde48b4835da36784d78, type: 3}
