@@ -202,11 +202,13 @@ public class BossManager : MonoBehaviour
     }
 
     protected void OnDestroy() {
-        GameManager.bossHPShow = false;
+        if (HP <= 0) {
+            GameManager.bossHPShow = false;
 
-        if (stageClear) {
-            data.ResetCheckPoint();
-            SceneManager.LoadScene("ResultScreen");
+            if (stageClear) {
+                data.ResetCheckPoint();
+                SceneManager.LoadScene("ResultScreen");
+            }
         }
     }
 

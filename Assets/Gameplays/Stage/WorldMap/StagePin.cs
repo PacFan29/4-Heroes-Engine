@@ -123,7 +123,11 @@ public class StagePin : MonoBehaviour
 
         data.openWorldAsDefault = stg.openWorldAsDefault;
 
-        data.greenStars = stg.greenStars;
+        if (!stg.greenStarsFromScratch) {
+            data.greenStars = stg.greenStars;
+        } else {
+            data.greenStars = new bool[stg.greenStars.Length];
+        }
 
         SceneManager.LoadScene("ZoneScreen");
     }

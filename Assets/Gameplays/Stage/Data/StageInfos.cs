@@ -19,6 +19,7 @@ public class StageInfos : ScriptableObject
         [Header("ステージの形式")]
         public GameType stageType;
         public bool openWorldAsDefault = false;
+        public bool greenStarsFromScratch = false;
         [Header("サブタイトル")]
         public string subtitle = "基本的なステージ";
 

@@ -100,7 +100,7 @@ public class HUDManager : MonoBehaviour {
 				keyRect.localPosition.x - (keyRect.sizeDelta.x * (KeyItemAmounts-1) / 2f),
 				keyRect.localPosition.y
 			);
-
+			
 			GameManager.keyItems[0] = data.greenStars[0];
 			switch (data.character){
 				case Character.Mario:

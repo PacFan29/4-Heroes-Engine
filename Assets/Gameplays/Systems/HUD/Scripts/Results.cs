@@ -75,10 +75,14 @@ public class Results : MonoBehaviour
         }
         uppers[0] = (int)GameManager.TotalTime;
         if (bossStage) {
-            if (GameManager.damageTaken > 0) {
-                uppers[1] = 3000;
+            if (GameManager.noMiss) {
+                if (GameManager.damageTaken > 0) {
+                    uppers[1] = 3000;
+                } else {
+                    uppers[1] = 10000;
+                }
             } else {
-                uppers[1] = 10000;
+                uppers[1] = 0;
             }
         } else {
             if (sonicStage){

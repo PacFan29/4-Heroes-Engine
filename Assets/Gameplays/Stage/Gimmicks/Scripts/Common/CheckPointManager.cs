@@ -33,6 +33,10 @@ public abstract class CheckPointManager : MonoBehaviour
             data.isCpPassed = true;
             data.CpPosition = this.transform.position;
 
+            for (int g = 0; g < data.greenStars.Length; g++) {
+                data.greenStars[g] = GameManager.keyItems[g];
+            }
+
             PlayerInfo player = col.gameObject.GetComponent<PlayerInfo>();
             playerId = player.playerId;
 
