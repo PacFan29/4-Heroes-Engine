@@ -172,31 +172,43 @@ public class PlayerInfo : PlayerController
             }
         }
 
-        var invincibleEmission = invincibleEffect.emission;
+        var invincibleEmission0 = marioInvincibleEffect.emission;
+        var invincibleEmission1 = pacInvincibleEffect.emission;
+        var invincibleEmission2 = sonicInvincibleEffect.emission;
         if (invincibleTime > 0) {
             //無敵エフェクト
-            invincibleEmission.rateOverTime = 100f;
+            invincibleEmission0.rateOverTime = (invincibleTrigger == 0) ? 100f : 0f;
+            invincibleEmission1.rateOverTime = (invincibleTrigger == 1) ? 100f : 0f;
+            invincibleEmission2.rateOverTime = (invincibleTrigger == 2) ? 100f : 0f;
 
             //エフェクトタイム
             invincibleTime -= Time.deltaTime;
             if (invincibleTime <= 0) {
                 invincible = false;
-                if (MusicManager.musicIndex == 5) {
+                if (MusicManager.musicIndex == 5 || MusicManager.musicIndex == 6) {
                     MusicManager.musicIndex = 0;
                 }
             }
         } else {
-            invincibleEmission.rateOverTime = 0f;
+            invincibleEmission0.rateOverTime = 0f;
+            invincibleEmission1.rateOverTime = 0f;
+            invincibleEmission2.rateOverTime = 0f;
         }
         if (metalTime > 0) {
             //エフェクトタイム
             metalTime -= Time.deltaTime;
             if (metalTime <= 0) {
                 metal = false;
-                if (MusicManager.musicIndex == 6) {
+                if (MusicManager.musicIndex == 7) {
                     MusicManager.musicIndex = 0;
                 }
             }
+        }
+
+        if (invincible && invincibleTrigger == 1 && !invulSound.isPlaying) {
+            invulSound.Play();
+        } else if ((!invincible && invincibleTrigger == 1 && invulSound.isPlaying) || invincibleTrigger != 1) {
+            invulSound.Stop();
         }
 
         //上を見上げている状態
@@ -470,18 +482,28 @@ public class PlayerInfo : PlayerController
         speedUp = true;
         speedUpTime = 20f;
     }
-    public void Invincible(float time){
+    public void Invincible(float time, int trigger){
         //無敵
-        MusicManager.musicIndex = 5;
+        switch (trigger) {
+            case 0:
+            MusicManager.musicIndex = 5;
+            break;
+
+            case 2:
+            MusicManager.musicIndex = 6;
+            break;
+        }
         invincible = true;
         invincibleTime = time;
+
+        invincibleTrigger = trigger;
     }
     public void MetalCookie(){
         //メタル
         metal = true;
         metalTime = 20f;
         if (playerType == 0) {
-            MusicManager.musicIndex = 6;
+            MusicManager.musicIndex = 7;
         }
     }
     public void setPlayerId(int id){

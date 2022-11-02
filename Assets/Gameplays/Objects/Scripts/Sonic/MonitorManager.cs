@@ -155,7 +155,7 @@ public class MonitorManager : MonoBehaviour
             break;
 
             case MonitorType.Invincible:
-            player.Invincible(20);
+            player.Invincible(20, 2);
             break;
 
             case MonitorType.Shield:

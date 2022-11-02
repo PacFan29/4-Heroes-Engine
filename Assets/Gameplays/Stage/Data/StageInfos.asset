@@ -18,6 +18,7 @@ MonoBehaviour:
       targetTime: 600
       stageType: 0
       openWorldAsDefault: 1
+      greenStarsFromScratch: 0
       subtitle: "\u30AA\u30FC\u30D7\u30F3\u30EF\u30FC\u30EB\u30C9"
       cleared: 0
       unlocked: 1
@@ -29,6 +30,7 @@ MonoBehaviour:
       targetTime: 300
       stageType: 0
       openWorldAsDefault: 0
+      greenStarsFromScratch: 0
       subtitle: "\u521D\u4EE3\u30B9\u30FC\u30D1\u30FC\u30DE\u30EA\u30AA\u30D6\u30E9\u30B6\u30FC\u30BA\u3088\u308A"
       cleared: 0
       unlocked: 1
@@ -40,6 +42,7 @@ MonoBehaviour:
       targetTime: 300
       stageType: 2
       openWorldAsDefault: 1
+      greenStarsFromScratch: 0
       subtitle: "\u30BD\u30CB\u30C3\u30AF\u30B9\u30C6\u30FC\u30B8"
       cleared: 0
       unlocked: 1
@@ -51,17 +54,19 @@ MonoBehaviour:
       targetTime: 60
       stageType: 1
       openWorldAsDefault: 0
+      greenStarsFromScratch: 0
       subtitle: "\u30DC\u30B9\u30B9\u30C6\u30FC\u30B8"
-      cleared: 0
+      cleared: 1
       unlocked: 1
-      highScore: 0
-      bestTime: 5999999
+      highScore: 45924
+      bestTime: 24457
       greenStars: 
-      bestRank: 0
+      bestRank: 5
     - targetScore: 300000
       targetTime: 1200
       stageType: 0
       openWorldAsDefault: 1
+      greenStarsFromScratch: 0
       subtitle: "\u30C6\u30B9\u30C8\u30B9\u30C6\u30FC\u30B8"
       cleared: 0
       unlocked: 1

@@ -88,6 +88,7 @@ public abstract class PlayerPhysics : DimensionManager
     //無敵
     public bool invincible = false;
     protected float invincibleTime;
+    protected int invincibleTrigger = 0;
     //メタル
     public bool metal = false;
     protected float metalTime;
@@ -100,7 +101,9 @@ public abstract class PlayerPhysics : DimensionManager
     [Header("エフェクト")]
     public GameObject dustTrail;
     public GameObject groundEffect;
-    public ParticleSystem invincibleEffect;
+    public ParticleSystem marioInvincibleEffect;
+    public ParticleSystem pacInvincibleEffect;
+    public ParticleSystem sonicInvincibleEffect;
 
     [Header("その他")]
     public GameObject skinGroup;
@@ -132,6 +135,7 @@ public abstract class PlayerPhysics : DimensionManager
     public AudioClip powerDownSound;
     public AudioClip pipeSound;
     public AudioClip stockSound;
+    public AudioSource invulSound;
     [Header("効果音(メタル状態)")]
     public AudioClip jumpSoundMetal;
     public AudioClip landSoundMetal;

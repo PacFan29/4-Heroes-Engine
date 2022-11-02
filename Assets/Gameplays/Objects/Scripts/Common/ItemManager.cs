@@ -145,9 +145,9 @@ public class ItemManager : MonoBehaviour
                 case ItemType.Invincible:
                 //スーパースター（無敵）
                 if (skinIndex == 1) {
-                    player.Invincible(7.5f);
+                    player.Invincible(7.5f, 1);
                 } else {
-                    player.Invincible(10);
+                    player.Invincible(10, 0);
                 }
                 MakeEffect(effect);
                 break;

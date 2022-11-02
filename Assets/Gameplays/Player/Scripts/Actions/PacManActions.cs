@@ -11,8 +11,6 @@ public abstract class PacManActions : MonoBehaviour
     private bool underwaterPrevious = false;
 
     [HideInInspector] public int actionId = 0;
-
-    public AudioSource invulSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -85,12 +83,6 @@ public abstract class PacManActions : MonoBehaviour
             this.GetComponent<CapsuleCollider>().height = 2.4f;
         } else {
             this.GetComponent<CapsuleCollider>().height = 3.5f;
-        }
-
-        if (info.invincible && !invulSound.isPlaying) {
-            invulSound.Play();
-        } else if (!info.invincible && invulSound.isPlaying) {
-            invulSound.Stop();
         }
 
         this.GetComponent<PlayerAnimManager>().actionId = actionId;

@@ -71,8 +71,10 @@ public class MusicManager : MonoBehaviour
             } else if (musicIndex == 5) {
                 InvincibilityMusic();
             } else if (musicIndex == 6) {
-                MetalMusic();
+                InvincibilityMusic(true);
             } else if (musicIndex == 7) {
+                MetalMusic();
+            } else if (musicIndex == 8) {
                 ClearMusic();
             }
         } else {
@@ -132,16 +134,20 @@ public class MusicManager : MonoBehaviour
         musicManager.Play();
         musicManager.loop = false;
     }
-    void InvincibilityMusic(){
+    void InvincibilityMusic(bool sonic = false){
         if (data.HUDType == GameType.Sonic || data.HUDType == GameType.SonicBoss) {
             musicManager.clip = sonicInvincibilityMusic;
         } else {
-            musicManager.clip = invincibilityMusic;
+            musicManager.clip = (sonic ? cSonicInvincibilityMusic : invincibilityMusic);
         }
         if (musicManager.pitch > 0) {
             musicManager.time = 0f;
         } else {
-            musicManager.time = invincibilityMusic.length;
+            if (data.HUDType == GameType.Sonic || data.HUDType == GameType.SonicBoss) {
+                musicManager.time = sonicInvincibilityMusic.length;
+            } else {
+                musicManager.time = (sonic ? cSonicInvincibilityMusic.length : invincibilityMusic.length);
+            }
         }
         musicManager.Play();
         musicManager.loop = false;
