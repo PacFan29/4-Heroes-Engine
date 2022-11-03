@@ -4913,7 +4913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 9129694653558405737}
   effect: {fileID: 3167245415946730365}
-  index: 3
+  index: 4
   score: 1200
 --- !u!82 &3167245415341883085
 AudioSource:

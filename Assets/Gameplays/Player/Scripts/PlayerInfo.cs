@@ -205,6 +205,12 @@ public class PlayerInfo : PlayerController
             }
         }
 
+        if (invincible && invincibleTrigger == 0) {
+            invincibleSpeedRate = 1.5f;
+        } else {
+            invincibleSpeedRate = 1.0f;
+        }
+
         if (invincible && invincibleTrigger == 1 && !invulSound.isPlaying) {
             invulSound.Play();
         } else if ((!invincible && invincibleTrigger == 1 && invulSound.isPlaying) || invincibleTrigger != 1) {

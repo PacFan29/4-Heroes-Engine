@@ -89,6 +89,7 @@ public abstract class PlayerPhysics : DimensionManager
     public bool invincible = false;
     protected float invincibleTime;
     protected int invincibleTrigger = 0;
+    protected float invincibleSpeedRate = 1.0f;
     //メタル
     public bool metal = false;
     protected float metalTime;
@@ -535,14 +536,14 @@ public abstract class PlayerPhysics : DimensionManager
         } else {
             if (getInput == Vector3.zero || groundRoll) {
                 //摩擦
-                if (XZmag < SpeedC["top"]){
+                if (XZmag < SpeedC["top"] * invincibleSpeedRate){
                     velocity.x -= Math.Min(Math.Abs(velocity.x), friction * Math.Abs(sForward.x)) * Math.Sign(velocity.x);
                     velocity.z -= Math.Min(Math.Abs(velocity.z), friction * Math.Abs(sForward.z)) * Math.Sign(velocity.z);
                     if (XZmag < friction) {
                         rollingNarrow(groundRoll);
                         skidding = false;
                     }
-                    if (XZmag > SpeedC["top"]) velocity = SpeedReachToTop(velocity, SpeedC["top"]);
+                    if (XZmag > SpeedC["top"] * invincibleSpeedRate) velocity = SpeedReachToTop(velocity, SpeedC["top"] * invincibleSpeedRate);
                 }
             }
             if (getInput != Vector3.zero) {
@@ -566,10 +567,10 @@ public abstract class PlayerPhysics : DimensionManager
                     if (Grounded && !groundRoll) dustTrailEffect();
                 } else {
                     skidding = false;
-                    if (XZmag < SpeedC["top"] * input.magnitude){
-                        velocity.x += getInput.x * acceleration;
-                        velocity.z += getInput.z * acceleration;
-                        if (XZmag > SpeedC["top"] * input.magnitude) velocity = SpeedReachToTop(velocity, SpeedC["top"]);
+                    if (XZmag < SpeedC["top"] * input.magnitude * invincibleSpeedRate){
+                        velocity.x += getInput.x * acceleration * invincibleSpeedRate;
+                        velocity.z += getInput.z * acceleration * invincibleSpeedRate;
+                        if (XZmag > SpeedC["top"] * input.magnitude * invincibleSpeedRate) velocity = SpeedReachToTop(velocity, SpeedC["top"] * invincibleSpeedRate);
                     }
                     float keepY = velocity.y;
                     if (!Mathf.Approximately(XZvel.sqrMagnitude, 0.0f)){

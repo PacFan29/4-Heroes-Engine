@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
 	public static bool ScoreShow = true;
 	public static bool timeIncrease = true;
 
-    public static int[] fruits = new int[8];
+    public static int[] fruits = new int[10];
     public static int hudAnimNo = 0;
 
     void Start()
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
 
         bossHPShow = false;
         timeIncrease = true;
-        fruits = new int[8];
+        fruits = new int[10];
     }
 
     void Update()
