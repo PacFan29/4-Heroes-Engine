@@ -16,11 +16,6 @@ public class StockItem : MonoBehaviour
     public Image icon;
     [Header("個数")]
     public Text amountText;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

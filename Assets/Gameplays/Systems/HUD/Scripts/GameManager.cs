@@ -76,6 +76,8 @@ public class GameManager : MonoBehaviour
     public static int[] fruits = new int[10];
     public static int hudAnimNo = 0;
 
+    public static bool isPaused = false;
+
     void Start()
     {
         players = new List<PlayerStatus>();

@@ -4980,7 +4980,7 @@ MonoBehaviour:
   sprite: {fileID: 2249575132260161035}
   effect: {fileID: 2249575130518568779}
   index: 9
-  score: 4800
+  score: 4000
 --- !u!82 &2249575132061137659
 AudioSource:
   m_ObjectHideFlags: 0

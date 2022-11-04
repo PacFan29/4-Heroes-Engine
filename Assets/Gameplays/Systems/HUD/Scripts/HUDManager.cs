@@ -53,7 +53,6 @@ public class HUDManager : MonoBehaviour {
 
 	[Header("ポーズ")]
 	public GameObject pauseMenu;
-	private bool isPaused = false;
 	[Header("ゲームオーバー")]
 	public Animator GameOverManager;
 	private int GameOverAnimNo = 0;
@@ -262,12 +261,12 @@ public class HUDManager : MonoBehaviour {
 
 		//ポーズ
 		if (Input.GetButtonDown("Start")) {
-			isPaused = !isPaused;
-			timeShow = isPaused; //ポーズ時にタイムを表示
+			GameManager.isPaused = !GameManager.isPaused;
+			timeShow = GameManager.isPaused; //ポーズ時にタイムを表示
 
-			Time.timeScale = isPaused ? 0f : 1f;
+			Time.timeScale = GameManager.isPaused ? 0f : 1f;
 		}
-		pauseMenu.SetActive(isPaused);
+		pauseMenu.SetActive(GameManager.isPaused);
 
 		GameOverManager.SetInteger("RouteID", GameOverAnimNo);
 	}
