@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   HUDType: 0
-  character: 2
+  character: 1
   HUDStyle: 0
   openWorldAsDefault: 1
-  characterIds: 08000000ffffffffffffffffffffffff
-  HPs: 11000000e7030000e7030000e7030000
+  characterIds: 05000000ffffffffffffffffffffffff
+  HPs: e7030000e7030000e7030000e7030000
   lives: 02000000020000000200000002000000
   powerUps: 00000000000000000000000000000000
   shields: 00000000000000000000000000000000
@@ -35,7 +35,7 @@ MonoBehaviour:
     limit: 1
     sprites:
     - {fileID: 21300000, guid: cc0d31a03e8b72c41bba261499ac4741, type: 3}
-  - amounts: 1
+  - amounts: 3
     megaManOnly: 0
     special: 0
     limit: 3
@@ -67,10 +67,10 @@ MonoBehaviour:
   - amounts: 0
     megaManOnly: 0
     special: 1
-    limit: 1
+    limit: 9
     sprites:
     - {fileID: 21300000, guid: 9046cc54e02b8674fade9302636e001c, type: 3}
-  greenStars: 010101
+  greenStars: 00000000000000
   totalTime: 0
   isCpPassed: 0
   CpPosition: {x: 0, y: 0, z: 0}
