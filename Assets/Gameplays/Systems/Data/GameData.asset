@@ -17,11 +17,11 @@ MonoBehaviour:
   character: 1
   HUDStyle: 0
   openWorldAsDefault: 1
-  characterIds: 05000000ffffffffffffffffffffffff
+  characterIds: 0c000000ffffffffffffffffffffffff
   HPs: e7030000e7030000e7030000e7030000
   lives: 02000000020000000200000002000000
   powerUps: 00000000000000000000000000000000
-  shields: 00000000000000000000000000000000
+  shields: 03000000000000000000000000000000
   stockItems:
   - amounts: 1
     megaManOnly: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     limit: 9
     sprites:
     - {fileID: 21300000, guid: 9046cc54e02b8674fade9302636e001c, type: 3}
-  greenStars: 00000000000000
+  greenStars: 01010101010101
   totalTime: 0
   isCpPassed: 0
   CpPosition: {x: 0, y: 0, z: 0}

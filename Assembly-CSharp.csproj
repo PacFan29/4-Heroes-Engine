@@ -82,6 +82,7 @@
      <Compile Include="Assets\Gameplays\Objects\Scripts\Mario\TrampolineManager.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Sonic\ItemCapsule.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\HUDManager.cs" />
+     <Compile Include="Assets\Gameplays\Systems\Scripts\FruitTargetList.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Utils\MeshUtility.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Sonic\SpringManager.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\BloomModel.cs" />
@@ -183,6 +184,7 @@
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\MarioGoal.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\CustomHUDs\HUDCommon.cs" />
+     <Compile Include="Assets\Gameplays\Systems\Scripts\ItemAmounts.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Sonic\MovingRingManager.cs" />
      <Compile Include="Assets\Gameplays\Player\Weapons\Scripts\Special Weapons\_02WaterJet.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\ExtensionMethods.cs" />
@@ -321,8 +323,6 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
-     <Compile Include="Assets\Gameplays\Systems\Scripts\FruitTargetList.cs" />
-     <Compile Include="Assets\Gameplays\Systems\Scripts\ItemAmounts.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
