@@ -11,6 +11,10 @@ public class FruitTarget : MonoBehaviour
     [Header("得点")]
     public int score = 100;
     private bool earned = false;
+
+    void FixedUpdate() {
+        sprite.transform.Rotate(0f, -3f, 0f, Space.Self);
+    }
     
     void OnTriggerEnter(Collider col){
         if (col.gameObject.tag == "Player" && col.gameObject.GetComponent<PlayerInfo>() != null && !earned){

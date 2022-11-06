@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour
 	public AudioClip clearMusic;
 
     public static AudioClip currentMusic;
-    public static int musicIndex = 0; //０＝通常、１＝やられBGM、２＝止める、３＝溺れる！！、４＝スピードアップ、５＝無敵、６＝メタルマリオ、７＝クリア
+    public static int musicIndex = 0;
     public static bool musicFade = false;
     private float musicOpacity = 1f;
 	private AudioSource musicManager;
@@ -32,7 +32,17 @@ public class MusicManager : MonoBehaviour
     {
         /*
         "All-Star Rest Area" = Begin : 0.582, End : 24.372
-        "Green Grove Act 1" = Begin : 1.834, End : 147.698
+
+        変数名：musicIndex
+        ０＝通常
+        １＝やられBGM
+        ２＝止める
+        ３＝溺れる！！
+        ４＝スピードアップ
+        ５＝無敵
+        ６＝無敵
+        ７＝メタルマリオ
+        ８＝クリア
         */
         musicIndex = 0;
         musicFade = false;
@@ -165,6 +175,7 @@ public class MusicManager : MonoBehaviour
 
     void ClearMusic(){
         musicOpacity = 1f;
+        musicFade = false;
         musicManager.clip = clearMusic;
         if (musicManager.pitch > 0) {
             musicManager.time = 0f;
