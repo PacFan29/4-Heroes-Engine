@@ -199,6 +199,7 @@
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\LayerShifter.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\BubblePipe.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\WarpBox.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Components\BloomComponent.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Mario\CoinRing.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\ZoneScreen.cs" />
@@ -323,7 +324,6 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
-     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\WarpBox.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

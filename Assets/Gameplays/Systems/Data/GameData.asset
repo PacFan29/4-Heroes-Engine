@@ -16,12 +16,12 @@ MonoBehaviour:
   HUDType: 0
   character: 1
   HUDStyle: 0
-  openWorldAsDefault: 1
+  openWorldAsDefault: 0
   characterIds: 0c000000ffffffffffffffffffffffff
-  HPs: e7030000e7030000e7030000e7030000
+  HPs: 00000000e7030000e7030000e7030000
   lives: 02000000020000000200000002000000
   powerUps: 00000000000000000000000000000000
-  shields: 03000000000000000000000000000000
+  shields: 00000000000000000000000000000000
   stockItems:
   - amounts: 1
     megaManOnly: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
     limit: 1
     sprites:
     - {fileID: 21300000, guid: cc0d31a03e8b72c41bba261499ac4741, type: 3}
-  - amounts: 3
+  - amounts: 0
     megaManOnly: 0
     special: 0
     limit: 3
@@ -43,7 +43,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 842a3eabba86650428e03577fc54f929, type: 3}
     - {fileID: 21300000, guid: 67ccb4efd909fd149be33bc02699450d, type: 3}
     - {fileID: 21300000, guid: b408821e289c9a84698ae6e5a729a67d, type: 3}
-  - amounts: 4
+  - amounts: 0
     megaManOnly: 0
     special: 0
     limit: 4
@@ -70,7 +70,7 @@ MonoBehaviour:
     limit: 9
     sprites:
     - {fileID: 21300000, guid: 9046cc54e02b8674fade9302636e001c, type: 3}
-  greenStars: 01010101010101
-  totalTime: 0
-  isCpPassed: 0
-  CpPosition: {x: 0, y: 0, z: 0}
+  greenStars: 
+  totalTime: 196453.83
+  isCpPassed: 1
+  CpPosition: {x: 1194.5, y: -92.72, z: 0}
