@@ -44,7 +44,7 @@ public abstract class MegaManActions : MonoBehaviour
 
         if (info.ButtonsDown["A"] && canJump && info.Grounded) {
             info.constantSetUp();
-            if (this.GetComponent<_08MegaMan>() != null && info.XZmag > 22.5f) {
+            if (this.GetComponent<_08MegaMan>() != null && info.XZmag > 30f) {
                 info.ForwardSetUp(info.skin.forward, 0f);
             }
             info.Crouching = false;

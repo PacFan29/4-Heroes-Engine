@@ -21,12 +21,14 @@ public class MusicManager : MonoBehaviour
 	public AudioClip drowningMusic;
 	public AudioClip clearMusic;
 
-    public static AudioClip currentMusic;
+    private AudioClip currentMusic;
     public static int musicIndex = 0;
     public static bool musicFade = false;
     private float musicOpacity = 1f;
 	private AudioSource musicManager;
     float Ttime;
+
+    float[] loopValues = new float[2];
     // Start is called before the first frame update
     void Awake()
     {
@@ -49,6 +51,10 @@ public class MusicManager : MonoBehaviour
         musicManager = GetComponent<AudioSource>();
 		musicManager.clip = stageMusic;
 		musicManager.Play();
+
+        currentMusic = stageMusic;
+        loopValues[0] = loopBegin;
+        loopValues[1] = loopEnd;
     }
 
     // Update is called once per frame
@@ -89,7 +95,7 @@ public class MusicManager : MonoBehaviour
             }
         } else {
             if (musicIndex == 0) {
-                musicManager.clip = stageMusic;
+                musicManager.clip = currentMusic;
                 musicManager.Play();
                 musicManager.loop = true;
             }
@@ -184,5 +190,24 @@ public class MusicManager : MonoBehaviour
         }
         musicManager.Play();
         musicManager.loop = false;
+    }
+
+    public void ChangeMusic(AudioClip music, float begin, float end) {
+        currentMusic = music;
+        loopBegin = begin;
+        loopEnd = end;
+        if (musicManager.loop) {
+            musicManager.clip = music;
+            musicManager.Play();
+        }
+    }
+    public void ReturnMusic() {
+        currentMusic = stageMusic;
+        loopBegin = loopValues[0];
+        loopEnd = loopValues[1];
+        if (musicManager.loop) {
+            musicManager.clip = stageMusic;
+            musicManager.Play();
+        }
     }
 }
