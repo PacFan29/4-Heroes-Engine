@@ -130,7 +130,7 @@ public class _10ProtoMan : MegaManActions
             Vector3 XZvel = new Vector3(info.finalVelocity.x, 0, info.finalVelocity.z);
             info.skin.transform.forward = XZvel.normalized;
             
-            if (Vector3.Angle(XZvel, info.input) >= 130 || !info.Grounded) {
+            if (Vector3.Angle(XZvel, info.input) >= 130) {
                 if (info.isNarrow()) {
                     info.ForwardSetUp(-XZvel.normalized, info.TopSpeed*2);
                 } else {
@@ -143,15 +143,14 @@ public class _10ProtoMan : MegaManActions
                     StopCoroutine("Dash");
                 }
             }
-        }
-
-        if (sliding && !info.Grounded) {
-            //info.axisInput = true;
-            info.Crouching = false;
-            sliding = false;
-            StopCoroutine("Dash");
-            info.constantSetUp();
-            if (info.input != Vector3.zero) info.ForwardSetUp(Vector3.zero, info.TopSpeed);
+            if (!info.Grounded) {
+                info.axisInput = true;
+                info.Crouching = false;
+                sliding = false;
+                StopCoroutine("Dash");
+                info.constantSetUp();
+                if (info.input != Vector3.zero) info.ForwardSetUp(Vector3.zero, info.TopSpeed);
+            }
         }
     }
 

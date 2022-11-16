@@ -34,8 +34,10 @@ public class _11Bass : MegaManActions
 
         if (info.ButtonsDown["X"] && (weaponId == 0 || weaponId >= 9)){
             info.ComboReset();
+            info.Crouching = true;
             StartCoroutine("ForteShoot");
         } else if (info.ButtonsUp["X"] && (weaponId == 0 || weaponId >= 9)) {
+            info.Crouching = false;
             StopCoroutine("ForteShoot");
         }
 
@@ -61,7 +63,7 @@ public class _11Bass : MegaManActions
         if (!canJump && info.ButtonsDown["A"] && !sliding && info.Grounded) {
             //info.axisInput = false;
             info.SoundPlay(dashSound);
-            StartCoroutine("Sliding");
+            StartCoroutine("Dash");
         }
         if (sliding) {
             info.dustTrailEffect();
@@ -69,24 +71,25 @@ public class _11Bass : MegaManActions
             Vector3 XZvel = new Vector3(info.finalVelocity.x, 0, info.finalVelocity.z);
             info.skin.transform.forward = XZvel.normalized;
             
-            if (Vector3.Angle(XZvel, info.input) >= 130 || !info.Grounded) {
+            if (Vector3.Angle(XZvel, info.input) >= 130) {
+                Debug.Log("Canceled");
                 info.ForwardSetUp(-XZvel.normalized, 5f);
                 sliding = false;
                 info.constantSetUp();
                 info.ForwardSetUp(Vector3.zero, 0);
                 info.axisInput = true;
 
-                StopCoroutine("Sliding");
+                StopCoroutine("Dash");
             }
-        }
-
-        if (sliding && !info.Grounded) {
-            //info.axisInput = true;
-            info.Crouching = false;
-            sliding = false;
-            StopCoroutine("Sliding");
-            info.constantSetUp();
-            if (info.input != Vector3.zero) info.ForwardSetUp(Vector3.zero, info.TopSpeed);
+            if (!info.Grounded) {
+                Debug.Log("Jumped");
+                info.axisInput = true;
+                info.Crouching = false;
+                sliding = false;
+                StopCoroutine("Dash");
+                info.constantSetUp();
+                if (info.input != Vector3.zero) info.ForwardSetUp(Vector3.zero, info.TopSpeed);
+            }
         }
     }
 
@@ -103,9 +106,10 @@ public class _11Bass : MegaManActions
 
             yield return new WaitForSeconds(0.075f);
         }
+        info.Crouching = false;
     }
 
-    IEnumerator Sliding() {
+    IEnumerator Dash() {
         sliding = true;
         info.ForwardSetUp(Vector3.zero, 40f);
         info.constantChange(true, "frc", 0);

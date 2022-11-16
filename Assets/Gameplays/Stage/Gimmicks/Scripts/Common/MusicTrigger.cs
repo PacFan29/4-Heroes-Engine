@@ -35,4 +35,10 @@ public class MusicTrigger : MonoBehaviour
             }
         }
     }
+
+    void OnTriggerStay(Collider other) {
+        if (other.gameObject.GetComponent<WarpPipe>() != null) {
+            other.gameObject.GetComponent<WarpPipe>().changeMusic = true;
+        }
+    }
 }

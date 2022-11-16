@@ -210,6 +210,7 @@
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\MarioCheckPoint.cs" />
      <Compile Include="Assets\Samples\Universal RP\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Gameplays\Player\Scripts\PlayerAnimManager.cs" />
+     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\MusicTrigger.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\MovingPlatform.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Utils\UOUtility.cs" />
      <Compile Include="Assets\Gameplays\Player\Weapons\Scripts\Special Weapons\_01SliceCatcher.cs" />
@@ -324,7 +325,6 @@
      <Compile Include="Assets\Samples\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\Gameplays\Enemies\Enemy\Mario\Scripts\_15Chuck.cs" />
-     <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\MusicTrigger.cs" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Samples\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\Samples\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

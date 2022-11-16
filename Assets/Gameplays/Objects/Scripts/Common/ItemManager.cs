@@ -14,10 +14,9 @@ public enum ItemType {
     Extend
 }
 
-public class ItemManager : MonoBehaviour
+public class ItemManager : DimensionManager
 {
     public GameData data;
-    private Rigidbody rb;
     private Vector3 velocity;
     private bool Grounded = false;
     private Vector3 objNormalVector = Vector3.zero;
@@ -196,6 +195,17 @@ public class ItemManager : MonoBehaviour
 
     void FixedUpdate() {
         if (!floating) {
+            switch (dimension){
+                case DimensionType.XWay2D:
+                //2D(X方向、Z固定)
+                velocity.z = 0f;
+                break;
+                
+                case DimensionType.ZWay2D:
+                //2D(Z方向、X固定)
+                velocity.x = 0f;
+                break;
+            }
             if (Grounded) {
                 if (velocity.y > 0) {
                     Grounded = false;

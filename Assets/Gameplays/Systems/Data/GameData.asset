@@ -35,7 +35,7 @@ MonoBehaviour:
     limit: 1
     sprites:
     - {fileID: 21300000, guid: cc0d31a03e8b72c41bba261499ac4741, type: 3}
-  - amounts: 0
+  - amounts: 1
     megaManOnly: 0
     special: 0
     limit: 3
@@ -70,7 +70,7 @@ MonoBehaviour:
     limit: 9
     sprites:
     - {fileID: 21300000, guid: 9046cc54e02b8674fade9302636e001c, type: 3}
-  greenStars: 
+  greenStars: 000000
   totalTime: 0
   isCpPassed: 0
   CpPosition: {x: 0, y: 0, z: 0}

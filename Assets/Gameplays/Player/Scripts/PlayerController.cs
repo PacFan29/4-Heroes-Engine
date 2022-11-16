@@ -59,7 +59,7 @@ public abstract class PlayerController : PlayerPhysics
         }
         //辞書を更新する
         foreach(string key in keyArray){
-            Axises[key] = (controlLockTimer <= 0 && canInput && GameManager.ready && Time.timeScale > 0) ? Input.GetAxisRaw(playerJudge(key)) : 0f;
+            Axises[key] = (controlLockTimer <= 0 && canInput && GameManager.ready && Time.timeScale > 0) ? Input.GetAxis(playerJudge(key)) : 0f;
         }
     }
     void SetButtons(){
@@ -88,7 +88,7 @@ public abstract class PlayerController : PlayerPhysics
     public Dictionary<string, float> GetAxises(){ return Axises; }
     public Dictionary<string, bool> GetButtons(){ return Buttons; }
     //プレイヤーに応じて
-    string playerJudge(string input){
+    public string playerJudge(string input){
         if (playerNumber > 0){ input += String.Format(" {0}", (playerNumber+1)); }
         return input;
     }

@@ -98,7 +98,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 7.65, z: 0.6}
+  m_Size: {x: 1, y: 7.65, z: 1}
   m_Center: {x: 0, y: 4.559676, z: 0}
 --- !u!114 &6270423963048591555
 MonoBehaviour:
@@ -115,7 +115,10 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: fc3ea490e0308a54f90012d9282e46d3, type: 2}
   villainFlag: {fileID: 3764111578068468038}
   playerFlag: {fileID: 2190705771624877440}
+  bottomPos: 0
+  upperPos: 0
   rate: 0
+  step: 0
   touchedSound: {fileID: 0}
   touchedTopSound: {fileID: 8300000, guid: 31610e6d4f74b544ebcea7cc82d7dae7, type: 3}
   downSound: {fileID: 0}

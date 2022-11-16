@@ -196,12 +196,17 @@ public class MusicManager : MonoBehaviour
         currentMusic = music;
         loopBegin = begin;
         loopEnd = end;
+        musicOpacity = 1f;
+        musicFade = false;
         if (musicManager.loop) {
             musicManager.clip = music;
             musicManager.Play();
         }
     }
     public void ReturnMusic() {
+        musicOpacity = 1f;
+        musicFade = false;
+
         currentMusic = stageMusic;
         loopBegin = loopValues[0];
         loopEnd = loopValues[1];
