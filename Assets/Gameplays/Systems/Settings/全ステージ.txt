@@ -42,11 +42,11 @@ WORLD 3-EX：速🌟
 WORLD 4-1：通🌟
 WORLD 4-2：速🌟
 WORLD 4-3：通🌟
-WORLD 4-4：通💀
+WORLD 4-4：通💀  ボス：デスエッグロボ  8回 × 10発
 WORLD 4-5：速🌟
 WORLD 4-6：通🌟
 WORLD 4-7：速🌟
-WORLD 4-8：速💀
+WORLD 4-8：速💀  ボス：メタルソニック  8回
 ―――――――――――――――
 WORLD 4-EX：速🌟
 
@@ -55,7 +55,7 @@ WORLD 5-2：速🌟
 WORLD 5-3：通🌟
 WORLD 5-4：速🌟
 WORLD 5-5：通🌟
-WORLD 5-6：速💀
+WORLD 5-6：速💀  ボス：ソニックマン  8回
 ―――――――――――――――
 WORLD 5-EX：速🌟
 
@@ -79,10 +79,10 @@ WORLD 7-EX：通🌟
 
 WORLD 8-1：速🌟
 WORLD 8-2：通🌟
-WORLD 8-3：速💀
+WORLD 8-3：速💀  ボス：クッパ  7回 × 8発
 WORLD 8-4：通🌟
 WORLD 8-5：速🌟
-WORLD 8-6：通💀  ボス：クッパ  7回 × 8発
+WORLD 8-6：通💀  ボス：Dr.ワイリー  7回 × 4発（第２形態も同様）
 WORLD 8-7：速🌟
 WORLD 8-8：通🌟
 WORLD 8-9：速💀  ボス：インフィニット  8回

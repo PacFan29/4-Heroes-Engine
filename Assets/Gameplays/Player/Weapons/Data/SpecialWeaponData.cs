@@ -15,7 +15,7 @@ public class SpecialWeapon
     public string Name = "武器名"; //武器名
     public Color WeaponColor = Color.red; //武器のカラー
     public WeaponTypes Type; //属性
-    public int Energy = 32; //残りエネルギー
+    public int Energy = 28; //残りエネルギー
     public int Consumption = 1; //消費エネルギー
     public GameObject prefab;
 
@@ -24,7 +24,7 @@ public class SpecialWeapon
     }
     public void Restore(int amount) {
         Energy += amount;
-        if (Energy > 32) Energy = 32;
+        if (Energy > 28) Energy = 28;
     }
     public void Consume() {
         Energy -= Consumption;

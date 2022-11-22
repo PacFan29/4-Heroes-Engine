@@ -28,10 +28,12 @@ public class HealthTemplate : MonoBehaviour
     }
 
     public virtual void HealthDisp() {
-        int max_health = GameManager.players[playerNo].getStatus()[1];
-		int health = GameManager.players[playerNo].getStatus()[2];
-        float health_percent = (float)health / max_health;
-        healthFill.fillAmount = (health_percent * (maxFill - minFill)) + minFill;
+        if (healthFill != null) {
+            int max_health = GameManager.players[playerNo].getStatus()[1];
+            int health = GameManager.players[playerNo].getStatus()[2];
+            float health_percent = (float)health / max_health;
+            healthFill.fillAmount = (health_percent * (maxFill - minFill)) + minFill;
+        }
     }
     public virtual void LivesDisp() {
         if (livesText != null) {

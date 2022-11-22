@@ -70,11 +70,24 @@ public class ItemManager : DimensionManager
             }
         }
 
+        int index = 0;
+        GameObject[] allPlayers = GameObject.FindGameObjectsWithTag("Player");
+        if (allPlayers.Length < 2) {
+            for (int i = 0; i < allPlayers.Length; i++){
+                //プレイヤー全員分1UP
+                if (allPlayers[i].GetComponent<PlayerInfo>() != null){
+                    if (allPlayers[i].GetComponent<PlayerInfo>().playerNumber == 0) {
+                        index = allPlayers[i].GetComponent<PlayerInfo>().playerType;
+                    }
+                }
+            }
+        }
+
         skinIndex = 0;
         switch (itemType){
             case ItemType.RestoreHP:
             //スーパーキノコ（HP 8回復）
-            restoreHP[0].SetActive(true);
+            restoreHP[index].SetActive(true);
             break;
 
             case ItemType.RestoreWP:
@@ -88,6 +101,10 @@ public class ItemManager : DimensionManager
                 invincible[(int)data.character].SetActive(true);
             }
             skinIndex = (int)data.character;
+
+            if (skinIndex == 1) {
+                floating = true;
+            }
             break;
                 
             case ItemType.FireFlower:
@@ -112,12 +129,11 @@ public class ItemManager : DimensionManager
                 
             case ItemType.Extend:
             //1UPキノコ
-            extend[0].SetActive(true);
+            extend[index].SetActive(true);
+            if (skinIndex == 1 || skinIndex == 1) {
+                floating = true;
+            }
             break;
-        }
-
-        if (skinIndex == 1) {
-            floating = true;
         }
     }
     void OnTriggerEnter(Collider col){

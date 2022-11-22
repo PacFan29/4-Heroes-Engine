@@ -203,7 +203,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		//スキルバー表示
 		Vector3 barScale = Vector3.one;
-		bool skillShow = false;
+		bool skillShow = (GameManager.players[playerNo].getStatus()[5] == 1);
 		if (skillShow) {
 			barScale = new Vector3(1f, 0.55f, 1f);
 			if (GameManager.extra){
@@ -214,7 +214,10 @@ public class PlayerHealth : MonoBehaviour {
 		}
 		healthAmount.gameObject.GetComponent<RectTransform>().localScale = barScale;
 		damage.gameObject.GetComponent<RectTransform>().localScale = barScale;
+
+		float skill_percent = (float)GameManager.players[playerNo].getStatus()[6] / 28f;
 		skillAmount.gameObject.SetActive(skillShow);
+		skillAmount.fillAmount = skill_percent;
 		
 		//残機（出力のみ、２桁まで）
 		LivesGroup.SetActive(HUDManager.HUDTypeGetter != GameType.BossRush && options.lives); //ボスラッシュ時のみ非表示

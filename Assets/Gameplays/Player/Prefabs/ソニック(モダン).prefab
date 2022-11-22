@@ -16775,6 +16775,20 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7c83fce725b14bc448a96e79181887c8, type: 3}
   footstepMetal: []
   footstepSand: []
+--- !u!114 &3722380812378921498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6610710488234163826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4d6caa6b58443438819fdb79a372ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 2708694513446790087}
+  mat: {fileID: 2100000, guid: 9e7a80585f049f143bf663dcb5c20ee4, type: 2}
 --- !u!1 &6645710825699056270
 GameObject:
   m_ObjectHideFlags: 0
@@ -28582,11 +28596,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bd23fb99d70ec8e4cb98f83df79040e9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a4257011e4bf75478dc1cc45dfcc278, type: 3}
---- !u!95 &6610710488243506264 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9500000, guid: 6a4257011e4bf75478dc1cc45dfcc278, type: 3}
-  m_PrefabInstance: {fileID: 6610710488234129720}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6610710488233992722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400170, guid: 6a4257011e4bf75478dc1cc45dfcc278, type: 3}
@@ -28595,5 +28604,10 @@ Transform:
 --- !u!1 &6610710488234163826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100170, guid: 6a4257011e4bf75478dc1cc45dfcc278, type: 3}
+  m_PrefabInstance: {fileID: 6610710488234129720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6610710488243506264 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 6a4257011e4bf75478dc1cc45dfcc278, type: 3}
   m_PrefabInstance: {fileID: 6610710488234129720}
   m_PrefabAsset: {fileID: 0}

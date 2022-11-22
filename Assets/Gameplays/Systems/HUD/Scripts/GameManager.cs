@@ -15,6 +15,8 @@ public class PlayerStatus
     public int MaxHP;
     public int Lives;
     public int Score;
+    public bool skillShow;
+    public int skillAmounts;
 
     public PlayerStatus(){
         ID = 0;
@@ -22,16 +24,22 @@ public class PlayerStatus
         HP = MaxHP;
         Lives = 2;
         Score = 0;
+        skillShow = false;
+        skillAmounts = 28;
     }
-    public void setStatus(int setID, int setMaxHP, int setHP, int setLives, int setScore){
+    public void setStatus(int setID, int setMaxHP, int setHP, int setLives, int setScore, bool showSkill = false, int skills = 28){
         ID = setID;
         MaxHP = setMaxHP;
         HP = setHP;
         Lives = setLives;
         Score = setScore;
+
+        skillShow = showSkill;
+        skillAmounts = skills;
     }
     public int[] getStatus(){
-        int[] allStatus = {ID, MaxHP, HP, Lives, Score};
+        int showSkill = skillShow ? 1 : 0;
+        int[] allStatus = {ID, MaxHP, HP, Lives, Score, showSkill, skillAmounts};
         return allStatus;
     }
 }

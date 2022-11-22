@@ -63,6 +63,7 @@
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Sonic\SpeedPadManager.cs" />
      <Compile Include="Assets\Samples\SplineMesh\Scripts\MeshProcessing\SourceMesh.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\PostProcessingProfile.cs" />
+     <Compile Include="Assets\Gameplays\Player\Scripts\MeshTrail.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\PostProcessingContext.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Common\GoalManager.cs" />

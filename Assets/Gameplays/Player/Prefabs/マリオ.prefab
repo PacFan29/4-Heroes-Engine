@@ -6938,6 +6938,7 @@ GameObject:
   - component: {fileID: 3745351628393999325}
   - component: {fileID: 5371270023762415736}
   - component: {fileID: 9086571261670473522}
+  - component: {fileID: 6068404044674010735}
   m_Layer: 7
   m_Name: Mario
   m_TagString: Untagged
@@ -7132,6 +7133,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6068404044674010735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3745351628393999323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4d6caa6b58443438819fdb79a372ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 3745351628402160010}
+  meshDestroyDelay: 3
+  positionToSpawn: {fileID: 3745351628393999324}
+  mat: {fileID: 2100000, guid: 05eae77e0cadc2941a63e2c1bad0ca7a, type: 2}
 --- !u!1 &3745351628402160052
 GameObject:
   m_ObjectHideFlags: 0
