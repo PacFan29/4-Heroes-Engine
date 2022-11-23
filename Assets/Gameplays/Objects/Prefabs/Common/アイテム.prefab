@@ -5105,7 +5105,7 @@ MonoBehaviour:
   itemType: 2
   restoreHP:
   - {fileID: 1192827299055323326}
-  - {fileID: 0}
+  - {fileID: 1192827299055323326}
   - {fileID: 1179745025315665931}
   - {fileID: 1884049007317601896}
   restoreWP: {fileID: 6624889310451552238}
@@ -5119,9 +5119,9 @@ MonoBehaviour:
   poison: {fileID: 5679129977515818883}
   extend:
   - {fileID: 7781632644808652347}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7781632644808652347}
+  - {fileID: 7781632644808652347}
+  - {fileID: 7781632644808652347}
   stock: 0
   healEffect: {fileID: 5017294428515030780, guid: 3aafd823b0edfad46a15bb413c39a570, type: 3}
   effect: {fileID: 5017294428515030780, guid: 6257c61e38215574f8d3d0774cdab01f, type: 3}

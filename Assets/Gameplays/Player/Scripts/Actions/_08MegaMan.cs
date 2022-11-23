@@ -28,6 +28,15 @@ public class _08MegaMan : MegaManActions
     {
         //共通アクションの実行
         actions();
+
+        if (GameManager.players.Count > info.playerNumber) {
+            //プレイヤークラスの値を設定
+            if (weaponId == 0 || weaponId >= 9) {
+                GameManager.players[info.playerNumber].setStatus(info.playerId, info.maxHP, info.HP, info.lives, info.localScore);
+            } else {
+                GameManager.players[info.playerNumber].setStatus(info.playerId, info.maxHP, info.HP, info.lives, info.localScore, true, weapons.weapons[weaponId - 1].Energy);
+            }
+        }
         
         /*
         ロックマンでしかできない技

@@ -171,4 +171,18 @@ public abstract class MegaManActions : MonoBehaviour
         GetComponent<CapsuleCollider>().isTrigger = false;
         info.skinGroup.SetActive(true);
     }
+
+    public void WPRestore(int value) {
+        if (weaponId == 0 || weaponId >= 9) {
+            info.scoreIncrease(-50);
+            info.scorePopUp(1000, false, this.transform.position);
+        } else {
+            if (weapons.weapons[weaponId - 1].Energy >= 28) {
+                info.scoreIncrease(-50);
+                info.scorePopUp(1000, false, this.transform.position);
+            } else {
+                weapons.weapons[weaponId - 1].Restore(value);
+            }
+        }
+    }
 }

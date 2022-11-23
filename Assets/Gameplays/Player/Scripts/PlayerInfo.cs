@@ -93,7 +93,7 @@ public class PlayerInfo : PlayerController
 
         if (GameManager.players.Count > playerNumber) {
             //プレイヤークラスの値を設定
-            if (playerId != 16) {
+            if (playerId != 16 && playerType != 2) {
                 GameManager.players[playerNumber].setStatus(playerId, maxHP, HP, lives, localScore);
             }
         }
@@ -722,12 +722,12 @@ public class PlayerInfo : PlayerController
             }
         }
     }
-    public void GotRestoreWP() {
+    public void GotRestoreWP(int value) {
         if (this.GetComponent<MegaManActions>() == null) {
             scoreIncrease(-50);
             scorePopUp(1000, false, this.transform.position);
         } else {
-            return;
+            this.GetComponent<MegaManActions>().WPRestore(value);
         }
     }
 

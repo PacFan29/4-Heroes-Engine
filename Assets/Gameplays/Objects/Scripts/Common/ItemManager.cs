@@ -154,7 +154,7 @@ public class ItemManager : DimensionManager
 
                 case ItemType.RestoreWP:
                 //アミーボ 武器（武器エネルギー 8回復）
-                player.GotRestoreWP();
+                player.GotRestoreWP(8);
                 break;
                 
                 case ItemType.Invincible:
