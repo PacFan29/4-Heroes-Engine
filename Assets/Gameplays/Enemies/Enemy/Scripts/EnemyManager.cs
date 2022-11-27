@@ -17,6 +17,9 @@ public abstract class EnemyManager : DimensionManager
     public bool defended = false;
     public bool spiked = false;
 
+    [Header("弱点")]
+    public WeaponTypes weakness;
+
     [Header("エフェクト")]
     public GameObject vanishEffect;
     public GameObject stompEffect;

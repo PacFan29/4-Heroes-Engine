@@ -19,10 +19,14 @@ public class SpecialWeaponsManager : MonoBehaviour
     void Update()
     {
         weaponId = megaMan.weaponId - 1;
+
+        int count = GameObject.FindGameObjectsWithTag("SpecialWeapon").Length;
         
         if (info.ButtonsDown["X"] && (weaponId >= 0 && weaponId <= 7)){
             SpecialWeapon weapon = megaMan.weapons.weapons[weaponId];
-            if (weapon.isConsumable()) {
+            bool canShoot = (weapon.isSingle && count < 1) || !weapon.isSingle;
+
+            if (weapon.isConsumable() && canShoot) {
                 weapon.Consume();
                 
                 if (weapon.prefab != null) {

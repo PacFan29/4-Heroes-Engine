@@ -74,6 +74,7 @@ MonoBehaviour:
     m_Bits: 1
   defended: 0
   spiked: 0
+  weakness: 7
   vanishEffect: {fileID: 8840219166905184182}
   stompEffect: {fileID: 4690657993333693366, guid: 13283df95584e9f4883d42802016e199, type: 3}
   hitEffect: {fileID: 4690657993333693366, guid: 613121f2993d6de479186796438e4ae0, type: 3}

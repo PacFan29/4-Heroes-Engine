@@ -183,6 +183,7 @@
      <Compile Include="Assets\Samples\SplineMesh\Scripts\Example\FollowSplineRot.cs" />
      <Compile Include="Assets\Gameplays\Objects\Scripts\Common\CoinManager.cs" />
      <Compile Include="Assets\Gameplays\Stage\Gimmicks\Scripts\Mario\MarioGoal.cs" />
+     <Compile Include="Assets\Gameplays\Player\Weapons\Scripts\Special Weapons\_06CoronaBurst.cs" />
      <Compile Include="Assets\Samples\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\Gameplays\Systems\HUD\Scripts\CustomHUDs\HUDCommon.cs" />
      <Compile Include="Assets\Gameplays\Systems\Scripts\ItemAmounts.cs" />

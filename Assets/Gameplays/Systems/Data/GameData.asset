@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   HUDType: 0
-  character: 2
+  character: 0
   HUDStyle: 0
   openWorldAsDefault: 1
   characterIds: 08000000ffffffffffffffffffffffff
   HPs: e7030000e7030000e7030000e7030000
   lives: 02000000020000000200000002000000
   powerUps: 00000000000000000000000000000000
-  shields: 00000000000000000000000000000000
+  shields: 04000000000000000000000000000000
   stockItems:
   - amounts: 1
     megaManOnly: 0

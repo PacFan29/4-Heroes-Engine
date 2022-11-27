@@ -18,6 +18,7 @@ public class SpecialWeapon
     public int Energy = 28; //残りエネルギー
     public int Consumption = 1; //消費エネルギー
     public GameObject prefab;
+    public bool isSingle = false;
 
     public bool isConsumable() {
         return Energy >= Consumption;

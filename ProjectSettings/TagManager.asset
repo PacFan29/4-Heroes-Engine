@@ -19,6 +19,7 @@ TagManager:
   - FloorMetal
   - FloorSand
   - Draggable
+  - SpecialWeapon
   layers:
   - Default
   - TransparentFX
