@@ -44,7 +44,7 @@ public class FireBall : ComboManager
         if (LayerMask.LayerToName(col.gameObject.layer) == "Enemy") {
             if (col.GetComponent<EnemyManager>() != null) {
                 EnemyManager enemy = col.GetComponent<EnemyManager>();
-                enemy.TakeDamage(true, player, 6, 1, false, this);
+                enemy.TakeDamage(true, player, 6, 1, false, this, WeaponTypes.Fire);
                 Destroy(gameObject);
             } else if (col.GetComponent<ShellManager>() != null) {
                 col.GetComponent<ShellManager>().Shot(player);

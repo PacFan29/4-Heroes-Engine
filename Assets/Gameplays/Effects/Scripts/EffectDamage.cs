@@ -8,6 +8,8 @@ public class EffectDamage : ComboManager
     private bool isTrigger = true;
 
     private float damageTime = 0f;
+
+    [HideInInspector] public WeaponTypes weaponType = WeaponTypes.None;
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,7 +28,7 @@ public class EffectDamage : ComboManager
         if (damageTime <= 0 && isTrigger) {
             if (LayerMask.LayerToName(col.gameObject.layer) == "Enemy") {
                 EnemyManager enemy = col.GetComponent<EnemyManager>();
-                enemy.TakeDamage(true, player, 6, 1, false, this);
+                enemy.TakeDamage(true, player, 6, 1, false, this, weaponType);
 
                 //damageTime = 0.25f;
             } else if (LayerMask.LayerToName(col.gameObject.layer) == "Boss"){

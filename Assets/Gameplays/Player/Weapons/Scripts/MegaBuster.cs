@@ -17,6 +17,9 @@ public class MegaBuster : ComboManager
     public GameObject[] fireBullets = new GameObject[4];
     public GameObject[] iceBullets = new GameObject[4];
     public GameObject[] thunderBullets = new GameObject[4];
+
+    private WeaponTypes weaponType;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,18 +78,22 @@ public class MegaBuster : ComboManager
         switch (powerUp) {
             case 0:
             normalBullets[level].SetActive(true);
+            weaponType = WeaponTypes.None;
             break;
                 
             case 1:
             fireBullets[level].SetActive(true);
+            weaponType = WeaponTypes.Fire;
             break;
 
             case 2:
             iceBullets[level].SetActive(true);
+            weaponType = WeaponTypes.Ice;
             break;
 
             case 3:
             thunderBullets[level].SetActive(true);
+            weaponType = WeaponTypes.Thunder;
             break;
         }
 
@@ -134,7 +141,7 @@ public class MegaBuster : ComboManager
         if (LayerMask.LayerToName(col.gameObject.layer) == "Enemy"){
             if (col.GetComponent<EnemyManager>() != null) {
                 EnemyManager enemy = col.GetComponent<EnemyManager>();
-                enemy.TakeDamage(true, player, power, 0, false, this);
+                enemy.TakeDamage(true, player, power, 0, false, this, weaponType);
                 if (power <= 1 || enemy.HP > 0 && level > 0) {
                     Destroy(gameObject);
                 }

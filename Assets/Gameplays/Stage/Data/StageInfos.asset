@@ -48,7 +48,7 @@ MonoBehaviour:
       unlocked: 1
       highScore: 0
       bestTime: 5999999
-      greenStars: 000000
+      greenStars: 010000
       bestRank: 0
     - targetScore: 50000
       targetTime: 60

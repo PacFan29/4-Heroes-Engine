@@ -6,7 +6,8 @@ using UnityEngine;
 public enum WeaponTypes {
     Fire, Ice, Thunder,
     Laser, Cutter, Water,
-    Needle, Bomb, Stone, Dash
+    Needle, Bomb, Stone, Dash,
+    None
 }
 [Serializable]
 public class SpecialWeapon

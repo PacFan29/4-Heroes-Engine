@@ -38,7 +38,7 @@ public class IceBall : ComboManager
     void OnTriggerStay(Collider col) {
         if (LayerMask.LayerToName(col.gameObject.layer) == "Enemy") {
             EnemyManager enemy = col.GetComponent<EnemyManager>();
-            enemy.TakeDamage(true, player, 6, 1, false, this);
+            enemy.TakeDamage(true, player, 6, 1, false, this, WeaponTypes.Ice);
             Destroy(gameObject);
         } else if (LayerMask.LayerToName(col.gameObject.layer) == "Boss"){
             BossManager boss = col.GetComponent<BossManager>();

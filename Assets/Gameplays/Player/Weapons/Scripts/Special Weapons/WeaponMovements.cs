@@ -16,6 +16,8 @@ public abstract class WeaponMovements : ComboManager
     protected Vector3 velocity;
     private Vector3 objNormalVector = Vector3.zero;
     protected Vector3 afterReflectVelo = Vector3.zero;
+
+    protected WeaponTypes weaponType = WeaponTypes.None;
     
     void Start()
     {
@@ -33,7 +35,7 @@ public abstract class WeaponMovements : ComboManager
         if (LayerMask.LayerToName(col.gameObject.layer) == "Enemy") {
             if (isAttacking) {
                 EnemyManager enemy = col.GetComponent<EnemyManager>();
-                enemy.TakeDamage(true, player, 6, 1, false, this);
+                enemy.TakeDamage(true, player, 1, 1, false, this, weaponType);
             }
             if (!canPenetrate) Destroy(gameObject);
         } else if (LayerMask.LayerToName(col.gameObject.layer) == "Boss"){

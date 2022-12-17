@@ -66,7 +66,7 @@ MonoBehaviour:
   dimension: 0
   layerPos: 0
   layerRate: 0
-  HP: 3
+  HP: 2
   Score: 200
   skin: {fileID: 3174617148700824127}
   GroundLayer:
@@ -74,6 +74,13 @@ MonoBehaviour:
     m_Bits: 1
   defended: 0
   spiked: 0
+  coins: 1
+  coinObj: {fileID: 1455162535617050316, guid: 6387df6d5ea960941812dbd1c41a970c, type: 3}
+  weaknesses:
+  - weakness: 4
+    damage: 6
+  - weakness: 2
+    damage: 6
   vanishEffect: {fileID: 8729608128069417587}
   stompEffect: {fileID: 4690657993333693366, guid: 13283df95584e9f4883d42802016e199, type: 3}
   hitEffect: {fileID: 4690657993333693366, guid: 613121f2993d6de479186796438e4ae0, type: 3}

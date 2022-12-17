@@ -11,6 +11,8 @@ public class _06CoronaBurst : WeaponMovements
     private void Awake() {
         StartCoroutine("LifeTime");
         goalPos = this.transform.position + this.transform.forward * 10f;
+
+        weaponType = WeaponTypes.Fire;
     }
 
     // Update is called once per frame
@@ -28,5 +30,6 @@ public class _06CoronaBurst : WeaponMovements
     public void OnDestroy() {
         EffectDamage expl = Instantiate(explosion, transform.position, Quaternion.identity).GetComponent<EffectDamage>();
         expl.player = player;
+        expl.weaponType = weaponType;
     }
 }

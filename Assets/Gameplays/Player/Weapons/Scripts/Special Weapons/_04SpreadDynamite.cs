@@ -12,10 +12,13 @@ public class _04SpreadDynamite : WeaponMovements
     {
         velocity = this.transform.forward * 25f;
         afterReflectVelo = velocity;
+
+        weaponType = WeaponTypes.Bomb;
     }
 
     void OnDestroy() {
         EffectDamage expl = Instantiate(explosion, this.transform.position, Quaternion.identity).GetComponent<EffectDamage>();
         expl.player = player;
+        expl.weaponType = weaponType;
     }
 }

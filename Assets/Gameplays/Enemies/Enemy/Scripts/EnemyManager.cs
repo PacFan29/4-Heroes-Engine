@@ -3,6 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
+public class WeaknessDamage {
+    [Header("弱点")]
+    public WeaponTypes weakness;
+    [Header("ダメージ（マイナスで回復）")]
+    public int damage;
+}
+
 public abstract class EnemyManager : DimensionManager
 {
     [Header("ステータス")]
@@ -16,9 +24,13 @@ public abstract class EnemyManager : DimensionManager
     public LayerMask GroundLayer;
     public bool defended = false;
     public bool spiked = false;
+    
+    [Header("ステータス")]
+    public int coins = 1;
+    public GameObject coinObj;
 
     [Header("弱点")]
-    public WeaponTypes weakness;
+    public WeaknessDamage[] weaknesses;
 
     [Header("エフェクト")]
     public GameObject vanishEffect;
@@ -169,14 +181,27 @@ public abstract class EnemyManager : DimensionManager
         return Vector3.Distance(Camera.main.transform.position, this.transform.position) <= 128;
     }
 
-    public void TakeDamage(bool atkByPl, PlayerInfo playerObj, float damage, int normalAtk, bool stomped, ComboManager comboM){
+    public void TakeDamage(bool atkByPl, PlayerInfo playerObj, float damage, int normalAtk, bool stomped, ComboManager comboM, WeaponTypes weapon = WeaponTypes.None){
+        bool weaknessExist = false;
+        bool doubleRate = false;
+        int wDamage = 0;
+        foreach (WeaknessDamage weakness in weaknesses) {
+            if (weakness.weakness == weapon && weapon != WeaponTypes.None) {
+                weaknessExist = true;
+                doubleRate = (weakness.damage >= 3);
+                wDamage = weakness.damage;
+                break;
+            }
+        }
+        Debug.Log(weaknessExist);
+
         if (active) {
             if (defended) {
                 this.GetComponent<EnemyMovements>().DamageDefended();
                 return;
             }
             attackedByPlayer = atkByPl;
-            HP -= damage;
+            HP -= weaknessExist ? wDamage : damage;
             if (stomped) {
                 SoundPlay(stompedSound);
 
@@ -214,6 +239,10 @@ public abstract class EnemyManager : DimensionManager
 
             if (attackedByPlayer && combo > 0){
                 int pts;
+                if (doubleRate && NormalAttack == 1) {
+                    NormalAttack = 0;
+                }
+
                 switch (NormalAttack) {
                     case 1:
                     //属性攻撃
@@ -231,7 +260,7 @@ public abstract class EnemyManager : DimensionManager
                     break;
                 }
                 //弱点を突けたら得点2倍
-                player.scorePopUp(pts, false, this.transform.position);
+                player.scorePopUp(pts, doubleRate, this.transform.position);
 
                 if (player.rateTime > 0) player.rateTime += 0.5f;
             }
@@ -271,7 +300,18 @@ public abstract class EnemyManager : DimensionManager
         vanishEffect.SetActive(true);
         vanishEffect.transform.SetParent(null);
 
+        Vector3 thisPos = this.transform.position;
+
         skin.SetActive(false);
+
+        for (int i = 0; i < coins; i++) {
+            CoinManager c = Instantiate(coinObj, thisPos, Quaternion.identity).GetComponent<CoinManager>();
+            c.targetPlayer = player.gameObject;
+            c.StartCoroutine(c.SplitCoin());
+            
+            yield return new WaitForSeconds(0.2f);
+        }
+
         while (vanishEffect != null) {
             yield return null;
         }

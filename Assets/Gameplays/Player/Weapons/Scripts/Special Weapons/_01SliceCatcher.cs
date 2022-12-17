@@ -13,6 +13,8 @@ public class _01SliceCatcher : WeaponMovements
     {
         startPos = this.transform.position;
         StartCoroutine("Movement");
+
+        weaponType = WeaponTypes.Cutter;
     }
 
     void Update() {

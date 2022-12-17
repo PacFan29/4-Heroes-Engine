@@ -30,7 +30,11 @@ public class CoinManager : MonoBehaviour
     }
     void FixedUpdate()
     {
-        this.transform.Rotate(0f, -3f, 0f, Space.Self);
+        if (split) {
+            this.transform.Rotate(0f, -30f, 0f, Space.Self);
+        } else {
+            this.transform.Rotate(0f, -3f, 0f, Space.Self);
+        }
 
         if (magnetised && !split) {
             int sx = Math.Sign(targetPlayer.transform.position.x - this.transform.position.x);
