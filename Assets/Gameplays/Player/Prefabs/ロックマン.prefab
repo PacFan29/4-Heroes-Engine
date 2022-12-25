@@ -6687,10 +6687,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpVoices: []
-  AttackVoices: []
+  AttackVoices:
+  - {fileID: 8300000, guid: 0f33ee5711aee164f8344c723e137904, type: 3}
+  - {fileID: 8300000, guid: 12d658170cd56a446a529f80f4fb3d94, type: 3}
+  - {fileID: 8300000, guid: ebbecbdcd3f79b641bba17df266b5ac5, type: 3}
   ClearVoices: []
-  HurtVoices: []
-  DeathVoices: []
+  HurtVoices:
+  - {fileID: 8300000, guid: cdb4426b55d93cf4b8fc7736be6bffb3, type: 3}
+  - {fileID: 8300000, guid: 590886b22a93be24b9dec5377bee8fb6, type: 3}
+  - {fileID: 8300000, guid: e1f94bbf9c0785a4eba0f4d85f063443, type: 3}
+  DeathVoices:
+  - {fileID: 8300000, guid: 47269327661be9e46a5951652e701841, type: 3}
   FallenVoices: []
 --- !u!136 &7253738437757831175
 CapsuleCollider:

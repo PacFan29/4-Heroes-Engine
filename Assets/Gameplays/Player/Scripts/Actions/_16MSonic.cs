@@ -251,7 +251,7 @@ public class _16MSonic : SonicActions
             } else {
                 info.constantChange(true, "acc", info.Acceleration * 5);
                 info.constantChange(true, "frc", info.Acceleration * -5);
-                info.constantChange(true, "top", 60);
+                info.constantChange(true, "top", 70);
                 info.constantChange(false, "airacc", info.AirAcc * 5);
             }
 

@@ -73,7 +73,7 @@ MonoBehaviour:
     Name: "\u30D5\u30E9\u30C3\u30B7\u30E5\u30C0\u30C3\u30B7\u30E5 "
     WeaponColor: {r: 1, g: 0.9118239, b: 0, a: 1}
     Type: 9
-    Energy: 22
+    Energy: 28
     Consumption: 2
     prefab: {fileID: 0}
     isSingle: 0
